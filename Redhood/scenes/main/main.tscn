@@ -176,4 +176,4 @@ position = Vector2(162, 90)
 zoom = Vector2(0.665, 0.665)
 
 [node name="Slime" parent="." instance=ExtResource("3_nobh4")]
-position = Vector2(117, -24)
+position = Vector2(258, 100)
