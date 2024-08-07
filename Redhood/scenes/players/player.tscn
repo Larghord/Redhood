@@ -1,0 +1,97 @@
+[gd_scene load_steps=15 format=3 uid="uid://pbattpuig1yt"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_r2puq"]
+[ext_resource type="Texture2D" uid="uid://cu6f1h6r7jdmt" path="res://scenes/players/player/RedHood-Idle.png" id="2_nq12d"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sv82w"]
+atlas = ExtResource("2_nq12d")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8po28"]
+atlas = ExtResource("2_nq12d")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_322ao"]
+atlas = ExtResource("2_nq12d")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eh1wx"]
+atlas = ExtResource("2_nq12d")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7j1lr"]
+atlas = ExtResource("2_nq12d")
+region = Rect2(192, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c85fj"]
+atlas = ExtResource("2_nq12d")
+region = Rect2(240, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p6f87"]
+atlas = ExtResource("2_nq12d")
+region = Rect2(288, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ieuo"]
+atlas = ExtResource("2_nq12d")
+region = Rect2(336, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ya0ud"]
+atlas = ExtResource("2_nq12d")
+region = Rect2(384, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ej30"]
+atlas = ExtResource("2_nq12d")
+region = Rect2(432, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_q5mj3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sv82w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8po28")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_322ao")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eh1wx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7j1lr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c85fj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p6f87")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ieuo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ya0ud")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ej30")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g1skf"]
+height = 32.0
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_r2puq")
+
+[node name="PlayerSprite" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_q5mj3")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.913524
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_g1skf")
