@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cu6f1h6r7jdmt"
-path="res://.godot/imported/RedHood-Idle.png-8782039c01b8d214442ad9d0e7cbf93d.ctex"
+uid="uid://cqge5dwja7k8c"
+path="res://.godot/imported/player katana attack-sheathe 80x64.png-5762082bb61c730d4aac4ed985e2125e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/players/player/RedHood-Idle.png"
-dest_files=["res://.godot/imported/RedHood-Idle.png-8782039c01b8d214442ad9d0e7cbf93d.ctex"]
+source_file="res://scenes/players/player/Animations/player katana attack-sheathe 80x64.png"
+dest_files=["res://.godot/imported/player katana attack-sheathe 80x64.png-5762082bb61c730d4aac4ed985e2125e.ctex"]
 
 [params]
 
