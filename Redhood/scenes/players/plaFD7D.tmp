@@ -517,5 +517,6 @@ shape = SubResource("CapsuleShape2D_g1skf")
 [node name="RayCast2D" type="RayCast2D" parent="."]
 target_position = Vector2(11, 0)
 
-[node name="RayCast2D2" type="RayCast2D" parent="."]
-target_position = Vector2(-11, 0)
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
