@@ -37,7 +37,6 @@ radius = 8.0
 [node name="Slime" type="RigidBody2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-modulate = Color(1, 0, 0.945098, 1)
 sprite_frames = SubResource("SpriteFrames_ljele")
 animation = &"idle"
 autoplay = "idle"
