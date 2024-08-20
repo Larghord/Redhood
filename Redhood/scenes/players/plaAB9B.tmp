@@ -1,9 +1,8 @@
-[gd_scene load_steps=41 format=3 uid="uid://pbattpuig1yt"]
+[gd_scene load_steps=38 format=3 uid="uid://pbattpuig1yt"]
 
 [ext_resource type="Script" path="res://scenes/players/scripts/player.gd" id="1_r2puq"]
-[ext_resource type="Texture2D" uid="uid://bawsys6i8b8ji" path="res://scenes/players/animations/Shadow/Shadow-Idle.png" id="3_p6wyj"]
+[ext_resource type="Texture2D" uid="uid://dyrq3sfki5uo4" path="res://scenes/players/animations/Player Idle.png" id="2_2fuba"]
 [ext_resource type="Texture2D" uid="uid://l3oh63j1pdot" path="res://scenes/players/animations/player jump 48x48.png" id="3_qqdps"]
-[ext_resource type="Texture2D" uid="uid://btuid3fvitlsm" path="res://scenes/players/animations/player run 48x48.png" id="4_y4aq7"]
 [ext_resource type="Texture2D" uid="uid://g5135ae81lev" path="res://scenes/players/animations/Player Walk.png" id="8_1bfam"]
 [ext_resource type="Script" path="res://scripts/state_machine.gd" id="10_bsbc5"]
 [ext_resource type="Script" path="res://scenes/players/scripts/state_machine/player_idle.gd" id="11_f54cr"]
@@ -15,21 +14,45 @@
 atlas = ExtResource("3_qqdps")
 region = Rect2(96, 0, 48, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_icmty"]
-atlas = ExtResource("3_p6wyj")
-region = Rect2(0, 0, 160, 160)
+[sub_resource type="AtlasTexture" id="AtlasTexture_rno6d"]
+atlas = ExtResource("2_2fuba")
+region = Rect2(0, 0, 48, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_jmwc6"]
-atlas = ExtResource("3_p6wyj")
-region = Rect2(160, 0, 160, 160)
+[sub_resource type="AtlasTexture" id="AtlasTexture_vnuc7"]
+atlas = ExtResource("2_2fuba")
+region = Rect2(48, 0, 48, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_70fmn"]
-atlas = ExtResource("3_p6wyj")
-region = Rect2(320, 0, 160, 160)
+[sub_resource type="AtlasTexture" id="AtlasTexture_426i7"]
+atlas = ExtResource("2_2fuba")
+region = Rect2(96, 0, 48, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_3c4ys"]
-atlas = ExtResource("3_p6wyj")
-region = Rect2(480, 0, 160, 160)
+[sub_resource type="AtlasTexture" id="AtlasTexture_auqah"]
+atlas = ExtResource("2_2fuba")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4pjw0"]
+atlas = ExtResource("2_2fuba")
+region = Rect2(192, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xp8vc"]
+atlas = ExtResource("2_2fuba")
+region = Rect2(240, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o0cnu"]
+atlas = ExtResource("2_2fuba")
+region = Rect2(288, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8xk3o"]
+atlas = ExtResource("2_2fuba")
+region = Rect2(336, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_saopx"]
+atlas = ExtResource("2_2fuba")
+region = Rect2(384, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w5g18"]
+atlas = ExtResource("2_2fuba")
+region = Rect2(432, 0, 48, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_s0cx5"]
 atlas = ExtResource("3_qqdps")
@@ -38,38 +61,6 @@ region = Rect2(0, 0, 48, 48)
 [sub_resource type="AtlasTexture" id="AtlasTexture_0kq3l"]
 atlas = ExtResource("3_qqdps")
 region = Rect2(48, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_6mwso"]
-atlas = ExtResource("4_y4aq7")
-region = Rect2(0, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_5man0"]
-atlas = ExtResource("4_y4aq7")
-region = Rect2(48, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_oorrl"]
-atlas = ExtResource("4_y4aq7")
-region = Rect2(96, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ng05g"]
-atlas = ExtResource("4_y4aq7")
-region = Rect2(144, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_o37il"]
-atlas = ExtResource("4_y4aq7")
-region = Rect2(192, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_if535"]
-atlas = ExtResource("4_y4aq7")
-region = Rect2(240, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_v66je"]
-atlas = ExtResource("4_y4aq7")
-region = Rect2(288, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_l4yay"]
-atlas = ExtResource("4_y4aq7")
-region = Rect2(336, 0, 48, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_f2nuk"]
 atlas = ExtResource("8_1bfam")
@@ -115,16 +106,34 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_icmty")
+"texture": SubResource("AtlasTexture_rno6d")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_jmwc6")
+"texture": SubResource("AtlasTexture_vnuc7")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_70fmn")
+"texture": SubResource("AtlasTexture_426i7")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_3c4ys")
+"texture": SubResource("AtlasTexture_auqah")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4pjw0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xp8vc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o0cnu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8xk3o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_saopx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w5g18")
 }],
 "loop": true,
 "name": &"idle",
@@ -139,35 +148,6 @@ animations = [{
 }],
 "loop": false,
 "name": &"jump",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_6mwso")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_5man0")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_oorrl")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ng05g")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_o37il")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_if535")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_v66je")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_l4yay")
-}],
-"loop": true,
-"name": &"run",
 "speed": 5.0
 }, {
 "frames": [{
@@ -201,8 +181,7 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g1skf"]
-radius = 22.0
-height = 104.0
+height = 32.0
 
 [sub_resource type="Animation" id="Animation_62eve"]
 resource_name = "fall"
@@ -333,43 +312,44 @@ _data = {
 script = ExtResource("1_r2puq")
 
 [node name="AnimatedSprite" type="AnimatedSprite2D" parent="."]
-position = Vector2(-3, -48)
+position = Vector2(0, -16)
 sprite_frames = SubResource("SpriteFrames_xkude")
-animation = &"idle"
-autoplay = "idle"
+animation = &"fall"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2(0, -52)
+position = Vector2(0, -16)
 shape = SubResource("CapsuleShape2D_g1skf")
 
-[node name="WallCheckRight" type="RayCast2D" parent="."]
-position = Vector2(0, -61)
-target_position = Vector2(24, 0)
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2(0, -16)
+target_position = Vector2(11, 0)
 
-[node name="WallCheckLeft" type="RayCast2D" parent="."]
-position = Vector2(0, -61)
-target_position = Vector2(-20, 0)
+[node name="RayCast2D2" type="RayCast2D" parent="."]
+position = Vector2(0, -16)
+target_position = Vector2(-11, 0)
 
 [node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("starting_state")]
 script = ExtResource("10_bsbc5")
 starting_state = NodePath("Idle")
 
-[node name="Idle" type="Node" parent="StateMachine" node_paths=PackedStringArray("fall_state", "jump_state")]
+[node name="Idle" type="Node" parent="StateMachine" node_paths=PackedStringArray("fall_state", "jump_state", "move_state")]
 script = ExtResource("11_f54cr")
 fall_state = NodePath("../Fall")
 jump_state = NodePath("../Jump")
+move_state = NodePath("../Move")
 
-[node name="Fall" type="Node" parent="StateMachine" node_paths=PackedStringArray("idle_state")]
+[node name="Fall" type="Node" parent="StateMachine" node_paths=PackedStringArray("idle_state", "move_state")]
 script = ExtResource("12_rsi1h")
 idle_state = NodePath("../Idle")
+move_state = NodePath("../Move")
 
-[node name="Jump" type="Node" parent="StateMachine" node_paths=PackedStringArray("fall_state", "idle_state")]
+[node name="Jump" type="Node" parent="StateMachine" node_paths=PackedStringArray("fall_state", "idle_state", "move_state")]
 script = ExtResource("13_xdhc5")
 fall_state = NodePath("../Fall")
 idle_state = NodePath("../Idle")
+move_state = NodePath("../Move")
 
-[node name="Walk" type="Node" parent="StateMachine" node_paths=PackedStringArray("fall_state", "idle_state", "jump_state")]
+[node name="Move" type="Node" parent="StateMachine" node_paths=PackedStringArray("fall_state", "idle_state", "jump_state")]
 script = ExtResource("14_r6y5c")
 fall_state = NodePath("../Fall")
 idle_state = NodePath("../Idle")
