@@ -3,14 +3,14 @@ extends State
 @export var fall_state: State
 @export var idle_state: State
 @export var jump_state: State
-@export var run_state: State
+@export var walk_state: State
 func enter() -> void:
-	animation_name = "walk"
+	animation_name = "run"
 	super()
 
 func process_input(_event: InputEvent) -> State:
-	if Input.is_action_just_pressed("run"):
-		return run_state
+	if !Input.is_action_pressed("run"):
+		return walk_state
 	return null
 
 func process_physics(delta: float) -> State:
