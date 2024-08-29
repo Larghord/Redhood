@@ -5,6 +5,7 @@ extends State
 @export var jump_state: State
 @export var run_state: State
 func enter() -> void:
+	parent.speed_modifier = parent.DEFAULT_MODIFIER
 	animation_name = "walk"
 	super()
 

@@ -3,6 +3,7 @@ extends State
 @export var fall_state: State
 @export var jump_state: State
 @export var walk_state: State
+@export var run_state: State
 
 func enter() -> void:
 	animation_name = "idle"
@@ -14,6 +15,8 @@ func process_input(_event: InputEvent) -> State:
 		parent.apply_jump_foce()
 		return jump_state
 	if Input.get_axis("move_left","move_right"):
+		if Input.is_action_pressed("run"):
+			return run_state
 		return walk_state
 	return null
 

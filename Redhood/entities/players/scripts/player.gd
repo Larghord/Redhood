@@ -3,11 +3,12 @@ extends CharacterBody2D
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite
 @onready var animations: AnimationPlayer = $AnimationPlayer
-@onready var state_machine = $StateMachine
+@onready var state_machine: Node = $StateMachine
 
 const MOVE_SPEED: float = 200
 const JUMP_FORCE: float = 400.0
-const DEFAULT_MODIFIER = 1
+const DEFAULT_MODIFIER: float = 1.0
+const RUN_MODIFIER: float = DEFAULT_MODIFIER + 1.0
 
 var speed_modifier = DEFAULT_MODIFIER
 

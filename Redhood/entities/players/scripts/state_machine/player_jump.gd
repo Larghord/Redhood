@@ -3,6 +3,7 @@ extends State
 @export var fall_state: State
 @export var idle_state: State
 @export var walk_state: State
+@export var run_state: State
 
 func enter() -> void:
 	animation_name = "jump"
@@ -20,6 +21,8 @@ func process_physics(delta: float) -> State:
 	
 	if parent.is_on_floor():
 		if direction != 0:
+			if Input.is_action_pressed("run"):
+				return run_state
 			return walk_state
 		return idle_state
 	
