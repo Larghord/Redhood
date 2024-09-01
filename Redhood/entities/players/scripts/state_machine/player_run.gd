@@ -3,19 +3,16 @@ extends State
 @export var fall_state: State
 @export var idle_state: State
 @export var jump_state: State
-@export var walk_state: State
+
 func enter() -> void:
 	parent.speed_modifier = parent.RUN_MODIFIER
+	parent.jump_modifier = parent.DEFAULT_MODIFIER
+	parent.in_coyote_time = true
 	animation_name = "run"
 	super()
 
-func process_input(_event: InputEvent) -> State:
-	if !Input.is_action_pressed("run"):
-		return walk_state
-	return null
-
 func process_physics(delta: float) -> State:
-	if Input.is_action_just_pressed('jump') and parent.is_on_floor():
+	if Input.is_action_just_pressed('jump') and parent.in_coyote_time:
 		parent.apply_jump_foce()
 		return jump_state
 	parent.velocity.y += gravity * delta
@@ -29,5 +26,11 @@ func process_physics(delta: float) -> State:
 	parent.move(direction)
 	
 	if !parent.is_on_floor():
-		return fall_state
+		if !parent.in_coyote_time:
+			return fall_state
+		elif parent.coyote_timer.is_stopped():
+			parent.start_coyote_time()
+	if parent.is_on_floor():
+		if !parent.coyote_timer.is_stopped():
+			parent.stop_coyote_time()
 	return null

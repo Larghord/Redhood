@@ -1,6 +1,7 @@
-[gd_scene load_steps=44 format=3 uid="uid://pbattpuig1yt"]
+[gd_scene load_steps=48 format=3 uid="uid://pbattpuig1yt"]
 
 [ext_resource type="Script" path="res://entities/players/scripts/player.gd" id="1_r2puq"]
+[ext_resource type="Texture2D" uid="uid://ufugsv5gu0t5" path="res://entities/players/animations/Shadow/Shadow-Crouch-Idle.png" id="2_ub4ut"]
 [ext_resource type="Texture2D" uid="uid://dpo5qib3rrsqc" path="res://entities/players/animations/Shadow/Shadow-Jump.png" id="2_uvp3o"]
 [ext_resource type="Texture2D" uid="uid://bawsys6i8b8ji" path="res://entities/players/animations/Shadow/Shadow-Idle.png" id="3_p6wyj"]
 [ext_resource type="Texture2D" uid="uid://c2ik5jjr46mke" path="res://entities/players/animations/Shadow/Shadow-Run.png" id="4_w2wof"]
@@ -9,8 +10,48 @@
 [ext_resource type="Script" path="res://entities/players/scripts/state_machine/player_idle.gd" id="11_f54cr"]
 [ext_resource type="Script" path="res://entities/players/scripts/state_machine/player_run.gd" id="11_ilegj"]
 [ext_resource type="Script" path="res://entities/players/scripts/state_machine/player_fall.gd" id="12_rsi1h"]
+[ext_resource type="Script" path="res://entities/players/crouch_idle.gd" id="13_r60b4"]
 [ext_resource type="Script" path="res://entities/players/scripts/state_machine/player_jump.gd" id="13_xdhc5"]
-[ext_resource type="Script" path="res://entities/players/scripts/state_machine/player_walk.gd" id="14_r6y5c"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wh042"]
+atlas = ExtResource("2_ub4ut")
+region = Rect2(0, 0, 160, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ra4me"]
+atlas = ExtResource("2_ub4ut")
+region = Rect2(160, 0, 160, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u0c34"]
+atlas = ExtResource("2_ub4ut")
+region = Rect2(320, 0, 160, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n2jvm"]
+atlas = ExtResource("2_ub4ut")
+region = Rect2(480, 0, 160, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vf6ku"]
+atlas = ExtResource("2_ub4ut")
+region = Rect2(640, 0, 160, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5iy38"]
+atlas = ExtResource("2_ub4ut")
+region = Rect2(800, 0, 160, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_124bc"]
+atlas = ExtResource("2_ub4ut")
+region = Rect2(960, 0, 160, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0abmt"]
+atlas = ExtResource("2_ub4ut")
+region = Rect2(1120, 0, 160, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ibary"]
+atlas = ExtResource("2_ub4ut")
+region = Rect2(1280, 0, 160, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3hcnp"]
+atlas = ExtResource("2_ub4ut")
+region = Rect2(1440, 0, 160, 160)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1vw6o"]
 atlas = ExtResource("2_uvp3o")
@@ -106,6 +147,41 @@ region = Rect2(1120, 0, 160, 160)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_xkude"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wh042")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ra4me")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u0c34")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n2jvm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vf6ku")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5iy38")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_124bc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0abmt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ibary")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3hcnp")
+}],
+"loop": true,
+"name": &"crouch idle",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_1vw6o")
@@ -205,123 +281,13 @@ animations = [{
 radius = 22.0
 height = 104.0
 
-[sub_resource type="Animation" id="Animation_7jr31"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimatedSprite:animation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"run"]
-}
-
-[sub_resource type="Animation" id="Animation_62eve"]
-resource_name = "fall"
-length = 0.1
-step = 0.1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimatedSprite:animation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"fall"]
-}
-
-[sub_resource type="Animation" id="Animation_phwli"]
-resource_name = "idle"
-loop_mode = 1
-step = 0.1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimatedSprite:animation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"idle"]
-}
-
-[sub_resource type="Animation" id="Animation_vpjli"]
-resource_name = "jump"
-length = 0.2
-step = 0.1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimatedSprite:animation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"jump"]
-}
-
-[sub_resource type="Animation" id="Animation_fou1q"]
-resource_name = "run"
-step = 0.1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimatedSprite:animation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"run"]
-}
-
-[sub_resource type="Animation" id="Animation_ufl0k"]
-resource_name = "walk"
-length = 0.8
-loop_mode = 1
-step = 0.1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimatedSprite:animation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"walk"]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_v7l4i"]
-_data = {
-"RESET": SubResource("Animation_7jr31"),
-"fall": SubResource("Animation_62eve"),
-"idle": SubResource("Animation_phwli"),
-"jump": SubResource("Animation_vpjli"),
-"run": SubResource("Animation_fou1q"),
-"walk": SubResource("Animation_ufl0k")
-}
-
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_r2puq")
 
 [node name="AnimatedSprite" type="AnimatedSprite2D" parent="."]
 position = Vector2(-3, -48)
 sprite_frames = SubResource("SpriteFrames_xkude")
-animation = &"run"
+animation = &"crouch idle"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -341,41 +307,34 @@ target_position = Vector2(-20, 0)
 script = ExtResource("10_bsbc5")
 starting_state = NodePath("Idle")
 
-[node name="Idle" type="Node" parent="StateMachine" node_paths=PackedStringArray("fall_state", "jump_state", "walk_state", "run_state")]
+[node name="Idle" type="Node" parent="StateMachine" node_paths=PackedStringArray("fall_state", "jump_state", "run_state", "crouch_state")]
 script = ExtResource("11_f54cr")
 fall_state = NodePath("../Fall")
 jump_state = NodePath("../Jump")
-walk_state = NodePath("../Walk")
 run_state = NodePath("../Run")
+crouch_state = NodePath("../CrouchIdle")
 
-[node name="Fall" type="Node" parent="StateMachine" node_paths=PackedStringArray("idle_state", "walk_state", "run_state")]
+[node name="Fall" type="Node" parent="StateMachine" node_paths=PackedStringArray("idle_state", "run_state", "crouch_state")]
 script = ExtResource("12_rsi1h")
 idle_state = NodePath("../Idle")
-walk_state = NodePath("../Walk")
 run_state = NodePath("../Run")
+crouch_state = NodePath("../CrouchIdle")
 
-[node name="Jump" type="Node" parent="StateMachine" node_paths=PackedStringArray("fall_state", "idle_state", "walk_state", "run_state")]
+[node name="Jump" type="Node" parent="StateMachine" node_paths=PackedStringArray("fall_state", "idle_state", "run_state")]
 script = ExtResource("13_xdhc5")
 fall_state = NodePath("../Fall")
 idle_state = NodePath("../Idle")
-walk_state = NodePath("../Walk")
 run_state = NodePath("../Run")
 
-[node name="Walk" type="Node" parent="StateMachine" node_paths=PackedStringArray("fall_state", "idle_state", "jump_state", "run_state")]
-script = ExtResource("14_r6y5c")
-fall_state = NodePath("../Fall")
-idle_state = NodePath("../Idle")
-jump_state = NodePath("../Jump")
-run_state = NodePath("../Run")
-
-[node name="Run" type="Node" parent="StateMachine" node_paths=PackedStringArray("fall_state", "idle_state", "jump_state", "walk_state")]
+[node name="Run" type="Node" parent="StateMachine" node_paths=PackedStringArray("fall_state", "idle_state", "jump_state")]
 script = ExtResource("11_ilegj")
 fall_state = NodePath("../Fall")
 idle_state = NodePath("../Idle")
 jump_state = NodePath("../Jump")
-walk_state = NodePath("../Walk")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_v7l4i")
-}
+[node name="CrouchIdle" type="Node" parent="StateMachine" node_paths=PackedStringArray("idle_state", "fall_state", "jump_state", "run_state")]
+script = ExtResource("13_r60b4")
+idle_state = NodePath("../Idle")
+fall_state = NodePath("../Fall")
+jump_state = NodePath("../Jump")
+run_state = NodePath("../Run")

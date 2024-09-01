@@ -1,11 +1,14 @@
 extends State
 
 @export var idle_state: State
-@export var walk_state: State
 @export var run_state: State
+@export var crouch_state:State
 
 func enter() -> void:
 	animation_name = "fall"
+	parent.in_coyote_time = false
+	parent.jump_modifier = parent.DEFAULT_MODIFIER
+	parent.stop_coyote_time()
 	super()
 
 func process_physics(delta: float) -> State:
@@ -16,9 +19,10 @@ func process_physics(delta: float) -> State:
 	parent.move(direction)
 	
 	if parent.is_on_floor():
+		parent.in_coyote_time = true
 		if direction != 0:
-			if Input.is_action_pressed("run"):
-				return run_state
-			return walk_state
+			return run_state
+		if Input.is_action_pressed("crouch"):
+			return crouch_state
 		return idle_state
 	return null
