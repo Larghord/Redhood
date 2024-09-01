@@ -1,18 +1,33 @@
 class_name Player
 extends CharacterBody2D
 
+
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite
 @onready var state_machine: Node = $StateMachine
 
-const MOVE_SPEED: float = 200.0
-const JUMP_FORCE: float = 650.0
+@onready var jump_velocity: float = ((2.0 * JUMP_HEIGHT) / JUMP_TIME_TO_PEAK) * -1.0
+@onready var jump_gravity: float = ((-2.0 * JUMP_HEIGHT) / pow(JUMP_TIME_TO_PEAK,2)) * -1.0
+@onready var fall_gravity: float = ((-2.0 * JUMP_HEIGHT) / pow(JUMP_TIME_TO_DESCENT,2)) * -1.0
+
+#Use to reset modifiers to 1.0
 const DEFAULT_MODIFIER: float = 1.0
+
+#Jump Const
+const JUMP_HEIGHT: float = 250.0
+const JUMP_TIME_TO_PEAK: float = 0.5
+const JUMP_TIME_TO_DESCENT: float = 0.45
+const JUMP_BUFFER_TIME: float =0.2
+const MAX_JUMP_COUNT: int = 2
+const COYOTE_TIME: float = 0.2
+
+#Movement Const
+const MOVE_SPEED: float = 200.0
 const RUN_MODIFIER: float = DEFAULT_MODIFIER + 1.5
-const COYOTE_TIME: float = 0.1
-const JUMP_BUFFER_TIME: float = 0.5
 
 var in_coyote_time: bool = true
 var in_jump_buffer: bool = false
+
+var jump_count: int = 0
 
 var speed_modifier: float = DEFAULT_MODIFIER
 var jump_modifier: float = DEFAULT_MODIFIER
@@ -22,6 +37,7 @@ var coyote_timer:Timer = Timer.new()
 
 func _ready() -> void:
 	create_coyote_timer()
+	create_jump_buffer_timer()
 	state_machine.init(self)
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -45,7 +61,7 @@ func move(direction) -> void:
 
 #Makes character jump
 func apply_jump_foce() -> void:
-	velocity.y = -JUMP_FORCE * jump_modifier
+	velocity.y = jump_velocity * jump_modifier
 
 
 #Coyote State Controls
@@ -69,12 +85,15 @@ func _coyote_timedout() -> void:
 
 #Jump Buffer Controls
 func create_jump_buffer_timer() -> void:
+	add_child(jump_buffer_timer)
 	jump_buffer_timer.one_shot = true
 	jump_buffer_timer.autostart = false
 	jump_buffer_timer.wait_time = JUMP_BUFFER_TIME
+	jump_buffer_timer.timeout.connect(jump_buffer_timedout)
 
 func start_jump_buffer_time() -> void:
 	jump_buffer_timer.start()
+	in_jump_buffer = true
 
 func stop_jump_buffer_time() -> void:
 	jump_buffer_timer.stop()

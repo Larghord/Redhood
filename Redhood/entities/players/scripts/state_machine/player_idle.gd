@@ -14,7 +14,6 @@ func enter() -> void:
 
 func process_input(_event: InputEvent) -> State:
 	if Input.is_action_just_pressed('jump') and parent.in_coyote_time:
-		parent.apply_jump_foce()
 		return jump_state
 	if Input.get_axis("move_left","move_right"):
 		return run_state
@@ -22,7 +21,7 @@ func process_input(_event: InputEvent) -> State:
 		return crouch_state
 	return null
 
-func process_physics(_delta: float) -> State:	
+func process_physics(_delta: float) -> State:
 	if !parent.is_on_floor():
 		if !parent.in_coyote_time:
 			return fall_state

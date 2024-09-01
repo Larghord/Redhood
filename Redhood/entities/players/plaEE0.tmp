@@ -283,6 +283,9 @@ height = 104.0
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_r2puq")
+jump_height = 100.0
+jump_time_to_peak = 0.5
+jump_time_to_descent = 0.5
 
 [node name="AnimatedSprite" type="AnimatedSprite2D" parent="."]
 position = Vector2(-3, -48)
@@ -314,12 +317,11 @@ jump_state = NodePath("../Jump")
 run_state = NodePath("../Run")
 crouch_state = NodePath("../CrouchIdle")
 
-[node name="Fall" type="Node" parent="StateMachine" node_paths=PackedStringArray("idle_state", "run_state", "crouch_state", "jump_state")]
+[node name="Fall" type="Node" parent="StateMachine" node_paths=PackedStringArray("idle_state", "run_state", "crouch_state")]
 script = ExtResource("12_rsi1h")
 idle_state = NodePath("../Idle")
 run_state = NodePath("../Run")
 crouch_state = NodePath("../CrouchIdle")
-jump_state = NodePath("../Jump")
 
 [node name="Jump" type="Node" parent="StateMachine" node_paths=PackedStringArray("fall_state", "idle_state", "run_state")]
 script = ExtResource("13_xdhc5")

@@ -13,7 +13,6 @@ func enter() -> void:
 
 func process_physics(delta: float) -> State:
 	if Input.is_action_just_pressed('jump') and parent.in_coyote_time:
-		parent.apply_jump_foce()
 		return jump_state
 	parent.velocity.y += gravity * delta
 	
