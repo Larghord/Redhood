@@ -3,6 +3,7 @@ extends State
 @export var fall_state: State
 @export var idle_state: State
 @export var jump_state: State
+@export var crouch_walk_state: State
 
 func enter() -> void:
 	parent.speed_modifier = parent.RUN_MODIFIER
