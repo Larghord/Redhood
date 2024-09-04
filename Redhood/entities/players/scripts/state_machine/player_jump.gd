@@ -5,42 +5,45 @@ extends State
 @export var run_state: State
 @export var wall_landing_state: State
 
-const JUMP_RELEASE_WAIT: float = parent.JUMP_TIME_TO_PEAK * 0.4
 
-var can_release_jump: bool = true
-var initial_run: bool = false
+var _jump_release_time: float
+var _can_release_jump: bool = true
+var _initial_run: bool = false
+
 
 func enter() -> void:
 	parent.apply_jump_force()
 	animation_name = "jump"
 	parent.in_coyote_time = false
 	parent.in_jump_buffer = false
-	parent.jump_modifier = parent.DEFAULT_MODIFIER
+	parent.jump_modifier =(parent.jump_count + 1) / parent.DEFAULT_MODIFIER 
+	_jump_release_time = (parent.JUMP_TIME_TO_PEAK * parent.jump_modifier) * 0.4
 	parent.jump_count += 1
 	parent.stop_coyote_time()
-	can_release_jump = false
-	get_tree().create_timer(JUMP_RELEASE_WAIT).timeout.connect(jump_release_timedout)
+	_can_release_jump = false
+	get_tree().create_timer(_jump_release_time).timeout.connect(_jump_release_timedout)
 	
-	initial_run = true
+	_initial_run = true
 	super()
+
 
 func process_input(_event: InputEvent) -> State:
 	return null
 
+
 func process_physics(delta: float) -> State:
-	if parent.is_on_wall_only() && can_release_jump:
-		if parent.wall_check_left.is_colliding() && Input.is_action_pressed("move_left"):
+	parent.velocity.y += parent.jump_gravity * delta
+	if parent.is_on_wall_only() && _can_release_jump:
+		if parent.wall_normal == Vector2.RIGHT && Input.is_action_pressed("move_left"):
 			return wall_landing_state
-		elif parent.wall_check_right.is_colliding() && Input.is_action_pressed("move_right"):
+		elif parent.wall_normal == Vector2.LEFT && Input.is_action_pressed("move_right"):
 			return wall_landing_state
 	
-	if !Input.is_action_pressed("jump") and can_release_jump:
+	if !Input.is_action_pressed("jump") and _can_release_jump:
 		parent.velocity.y =  0
 		return fall_state
-		
-	parent.velocity.y += parent.jump_gravity * delta
 	
-	if Input.is_action_just_pressed("jump") and parent.jump_count >= parent.MAX_JUMP_COUNT and !initial_run:
+	if Input.is_action_just_pressed("jump") and parent.jump_count >= parent.MAX_JUMP_COUNT and !_initial_run:
 		if parent.jump_buffer_timer.is_stopped():
 			parent.start_jump_buffer_time()
 		elif parent.jump_count < parent.MAX_JUMP_COUNT:
@@ -53,7 +56,7 @@ func process_physics(delta: float) -> State:
 	parent.velocity.y += parent.jump_gravity * delta
 	parent.move(direction)
 	
-	initial_run = false
+	_initial_run = false
 	if parent.is_on_floor():
 		parent.in_coyote_time = true
 		parent.jump_count = 0
@@ -65,5 +68,6 @@ func process_physics(delta: float) -> State:
 	
 	return null
 
-func jump_release_timedout() -> void:
-	can_release_jump = true
+
+func _jump_release_timedout() -> void:
+	_can_release_jump = true

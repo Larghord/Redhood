@@ -5,12 +5,14 @@ extends State
 @export var crouch_state:State
 @export var jump_state:State
 
+
 func enter() -> void:
 	animation_name = "fall"
 	parent.in_coyote_time = false
 	parent.jump_modifier = parent.DEFAULT_MODIFIER
 	parent.stop_coyote_time()
 	super()
+
 
 func process_physics(delta: float) -> State:
 	parent.velocity.y += parent.fall_gravity * delta
@@ -22,10 +24,10 @@ func process_physics(delta: float) -> State:
 			return jump_state
 	
 	var direction := Input.get_axis("move_left", "move_right")
-	
 	parent.move(direction)
 	
 	if parent.is_on_floor():
+		parent.last_wall_norm = Vector2.ZERO
 		parent.in_coyote_time = true
 		parent.jump_count = 0
 		if parent.in_jump_buffer:

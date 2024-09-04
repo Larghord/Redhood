@@ -5,8 +5,6 @@ extends CharacterBody2D
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite
 @onready var state_machine: Node = $StateMachine
 @onready var collision: CollisionShape2D = $CollisionShape2D
-@onready var wall_check_right: RayCast2D = $WallCheckRight
-@onready var wall_check_left: RayCast2D = $WallCheckLeft
 
 @onready var jump_velocity: float = ((2.0 * JUMP_HEIGHT) / JUMP_TIME_TO_PEAK) * -1.0
 @onready var jump_gravity: float = ((-2.0 * JUMP_HEIGHT) / pow(JUMP_TIME_TO_PEAK,2)) * -1.0
@@ -21,9 +19,8 @@ const JUMP_TIME_TO_PEAK: float = 0.75
 const JUMP_TIME_TO_DESCENT: float = 0.415
 const JUMP_BUFFER_TIME: float =0.2
 const COYOTE_TIME: float = 0.2
-const WALL_JUMP_X_POWER: float = 200
+const WALL_PUSH_POWER: float = 500.0
 const MAX_JUMP_COUNT: int = 2
-
 
 # Movement Const
 const MOVE_SPEED: float = 200.0
@@ -43,6 +40,8 @@ var speed_modifier: float = DEFAULT_MODIFIER
 
 # Controls Var
 var is_wall_detected: bool = false
+var wall_normal: Vector2
+var last_wall_norm: Vector2
 
 # Timers
 var double_tap_timer:Timer = Timer.new()
@@ -61,10 +60,8 @@ func _unhandled_input(event: InputEvent) -> void:
 
 
 func _physics_process(delta: float) -> void:
-	if (
-		(wall_check_left.is_colliding() && is_on_wall()) || 
-		(wall_check_right.is_colliding() && is_on_wall())
-	):
+	wall_normal = get_wall_normal()
+	if wall_normal:
 		is_wall_detected = true
 	else:
 		is_wall_detected = false
@@ -91,13 +88,13 @@ func move(direction) -> void:
 
 #Makes character jump
 func apply_jump_force() -> void:
-	velocity.y = jump_velocity * jump_modifier
+	velocity.y = jump_velocity * jump_modifier 
 
-func apply_wall_jump_force(last_wall:bool) -> void:
-	if last_wall:
-		velocity = Vector2(MOVE_SPEED * 20, -1000.0 * 10)
-	elif !last_wall:
-		velocity = Vector2(-MOVE_SPEED * 20, -1000.0 * 10)
+
+func apply_wall_jump() -> void:
+	velocity.y = jump_velocity * jump_modifier 
+	velocity.x = WALL_PUSH_POWER
+
 
 #Coyote State Controls
 func create_coyote_timer() -> void:

@@ -5,6 +5,7 @@ extends State
 @export var jump_state: State
 @export var crouch_walk_state: State
 
+
 func enter() -> void:
 	parent.speed_modifier = parent.RUN_MODIFIER
 	parent.jump_modifier = parent.DEFAULT_MODIFIER
@@ -12,13 +13,13 @@ func enter() -> void:
 	animation_name = "run"
 	super()
 
+
 func process_physics(delta: float) -> State:
 	if Input.is_action_just_pressed('jump') and parent.in_coyote_time:
 		return jump_state
-	parent.velocity.y += gravity * delta
+	parent.velocity.y += parent.fall_gravity * delta
 	
 	var direction := Input.get_axis("move_left","move_right")
-		
 	
 	if direction == 0:
 		return idle_state
