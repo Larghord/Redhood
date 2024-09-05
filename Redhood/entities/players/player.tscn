@@ -539,12 +539,13 @@ idle_state = NodePath("../Idle")
 run_state = NodePath("../Run")
 wall_landing_state = NodePath("../WallLand")
 
-[node name="Fall" type="Node" parent="StateMachine" node_paths=PackedStringArray("idle_state", "run_state", "crouch_state", "jump_state")]
+[node name="Fall" type="Node" parent="StateMachine" node_paths=PackedStringArray("idle_state", "run_state", "crouch_state", "jump_state", "wall_landing_state")]
 script = ExtResource("12_rsi1h")
 idle_state = NodePath("../Idle")
 run_state = NodePath("../Run")
 crouch_state = NodePath("../CrouchIdle")
 jump_state = NodePath("../Jump")
+wall_landing_state = NodePath("../WallLand")
 
 [node name="WallLand" type="Node" parent="StateMachine" node_paths=PackedStringArray("fall_state", "wall_jump_state")]
 script = ExtResource("17_qo0r6")

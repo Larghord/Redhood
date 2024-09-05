@@ -8,6 +8,7 @@ func enter() -> void:
 	parent.last_wall_norm = parent.wall_normal
 	parent.is_currently_attached = true
 	animation_name = "wall land"
+	parent.velocity.y = 0
 	parent.jump_count = 0
 	parent.jump_modifier = parent.DEFAULT_MODIFIER
 	parent.wall_time = 1.0
