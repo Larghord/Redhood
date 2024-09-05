@@ -31,7 +31,9 @@ const DOUBLE_TAP_TIME: float = 0.2
 # Jump Variables
 var in_coyote_time: bool = true
 var in_jump_buffer: bool = false
-var can_stick_on_wall: bool = true
+var can_attach_to_walls: bool = true
+var is_on_wall = false
+var wall_time = 0.0
 var jump_count: int = 0
 var jump_modifier: float = DEFAULT_MODIFIER
 
@@ -47,14 +49,15 @@ var wall_normal: Vector2
 var last_wall_norm: Vector2
 
 # Timers
-var double_tap_timer:Timer = Timer.new()
-var jump_buffer_timer:Timer = Timer.new()
-var coyote_timer:Timer = Timer.new()
-
+var double_tap_timer: Timer = Timer.new()
+var jump_buffer_timer: Timer = Timer.new()
+var coyote_timer: Timer = Timer.new()
+var wall_timer: Timer = Timer.new()
 
 func _ready() -> void:
 	create_coyote_timer()
 	create_jump_buffer_timer()
+	create_wall_timer()
 	state_machine.init(self)
 
 
@@ -169,3 +172,24 @@ func stop_double_tap_timer() -> void:
 
 func double_tap_timedout() -> void:
 	pass
+
+
+# Double Tap Timer
+func create_wall_timer() -> void:
+	add_child(wall_timer)
+	wall_timer.one_shot = true
+	wall_timer.autostart = false
+	wall_timer.timeout.connect(wall_timedout)
+
+
+func start_wall_timer() -> void:
+	wall_timer.wait_time = wall_time
+	wall_timer.start()
+
+
+func stop_wall_timer() -> void:
+	wall_timer.stop()
+
+
+func wall_timedout() -> void:
+	is_on_wall = false

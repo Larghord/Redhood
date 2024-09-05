@@ -33,7 +33,7 @@ func process_input(_event: InputEvent) -> State:
 
 func process_physics(delta: float) -> State:
 	parent.velocity.y += parent.jump_gravity * delta
-	if parent.is_on_wall_only() && _can_release_jump:
+	if parent.is_on_wall_only() && _can_release_jump && parent.can_attach_to_walls:
 		if parent.wall_normal == Vector2.RIGHT && Input.is_action_pressed("move_left"):
 			return wall_landing_state
 		elif parent.wall_normal == Vector2.LEFT && Input.is_action_pressed("move_right"):

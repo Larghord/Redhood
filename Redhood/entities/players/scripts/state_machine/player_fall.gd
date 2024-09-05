@@ -29,6 +29,7 @@ func process_physics(delta: float) -> State:
 	parent.move(direction)
 	
 	if parent.is_on_floor():
+		parent.can_attach_to_walls = true
 		parent.last_wall_norm = Vector2.ZERO
 		parent.in_coyote_time = true
 		parent.jump_count = 0
