@@ -24,6 +24,8 @@ func process_physics(delta: float) -> State:
 			return jump_state
 	
 	var direction := Input.get_axis("move_left", "move_right")
+	print(str(parent.last_wall_norm) + "," + str(direction))
+	print(parent.speed_modifier)
 	parent.move(direction)
 	
 	if parent.is_on_floor():

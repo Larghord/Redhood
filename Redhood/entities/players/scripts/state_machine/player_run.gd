@@ -7,7 +7,7 @@ extends State
 
 
 func enter() -> void:
-	parent.speed_modifier = parent.RUN_MODIFIER
+	parent.speed_modifier = parent.DEFAULT_MODIFIER
 	parent.jump_modifier = parent.DEFAULT_MODIFIER
 	parent.in_coyote_time = true
 	animation_name = "run"

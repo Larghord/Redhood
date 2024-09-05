@@ -19,10 +19,12 @@ func enter() -> void:
 
 
 func process_physics(_delta: float) -> State:
+	if parent.last_wall_norm != Vector2.RIGHT && Input.is_action_just_released("move_right"):
+		_is_on_wall = false
+	if parent.last_wall_norm != Vector2.LEFT && Input.is_action_just_released("move_left"):
+		_is_on_wall = false
 	if Input.is_action_just_pressed("jump"):
 		return wall_jump_state
-	if Input.is_action_pressed("crouch"):
-		return fall_state
 	if !_is_on_wall:
 		return fall_state
 	return null

@@ -23,8 +23,7 @@ const WALL_PUSH_POWER: float = 500.0
 const MAX_JUMP_COUNT: int = 2
 
 # Movement Const
-const MOVE_SPEED: float = 200.0
-const RUN_MODIFIER: float = DEFAULT_MODIFIER + 1.5
+const MOVE_SPEED: float = 500.0
 
 # Controls Const
 const DOUBLE_TAP_TIME: float = 0.2
@@ -32,11 +31,15 @@ const DOUBLE_TAP_TIME: float = 0.2
 # Jump Variables
 var in_coyote_time: bool = true
 var in_jump_buffer: bool = false
+var can_stick_on_wall: bool = true
 var jump_count: int = 0
 var jump_modifier: float = DEFAULT_MODIFIER
 
 # Movement Variables
 var speed_modifier: float = DEFAULT_MODIFIER
+var friction_multiplier:float:
+	set(value):
+		friction_multiplier = value
 
 # Controls Var
 var is_wall_detected: bool = false
@@ -92,9 +95,16 @@ func apply_jump_force() -> void:
 
 
 func apply_wall_jump() -> void:
-	velocity.y = jump_velocity * jump_modifier 
-	velocity.x = WALL_PUSH_POWER
-
+	if last_wall_norm == Vector2.RIGHT:
+		velocity.x = WALL_PUSH_POWER
+	elif  last_wall_norm == Vector2.LEFT:
+		velocity.x = -WALL_PUSH_POWER
+	sprite.scale.x = sign(velocity.x) * abs(sprite.scale.x)
+	if sprite.scale.x < 0:
+		collision.position.x = -6.5
+	else:
+		collision.position.x = 0.5
+	velocity.y = jump_velocity * jump_modifier
 
 #Coyote State Controls
 func create_coyote_timer() -> void:
