@@ -6,8 +6,6 @@ extends State
 @export var wall_landing_state: State
 
 
-var _jump_release_time: float
-var _can_release_jump: bool = true
 var _initial_run: bool = false
 
 
@@ -17,12 +15,11 @@ func enter() -> void:
 	parent.in_coyote_time = false
 	parent.in_jump_buffer = false
 	parent.jump_modifier =(parent.jump_count + 1) / parent.DEFAULT_MODIFIER 
-	_jump_release_time = (parent.JUMP_TIME_TO_PEAK * parent.jump_modifier) * 0.4
+	parent.jump_release_time = (parent.JUMP_TIME_TO_PEAK * parent.jump_modifier) * 0.4
 	parent.jump_count += 1
 	parent.stop_coyote_time()
-	_can_release_jump = false
-	get_tree().create_timer(_jump_release_time).timeout.connect(_jump_release_timedout)
-	
+	parent.can_release_jump = false
+	parent.start_jump_release_timer()
 	_initial_run = true
 	super()
 
@@ -33,13 +30,13 @@ func process_input(_event: InputEvent) -> State:
 
 func process_physics(delta: float) -> State:
 	parent.velocity.y += parent.jump_gravity * delta
-	if parent.is_on_wall_only() && _can_release_jump && parent.can_attach_to_walls:
+	if parent.is_on_wall_only() && parent.can_release_jump && parent.can_attach_to_walls:
 		if parent.wall_normal == Vector2.RIGHT && Input.is_action_pressed("move_left"):
 			return wall_landing_state
 		elif parent.wall_normal == Vector2.LEFT && Input.is_action_pressed("move_right"):
 			return wall_landing_state
 	
-	if !Input.is_action_pressed("jump") and _can_release_jump:
+	if !Input.is_action_pressed("jump") and parent.can_release_jump:
 		parent.velocity.y =  0
 		return fall_state
 	
@@ -69,5 +66,5 @@ func process_physics(delta: float) -> State:
 	return null
 
 
-func _jump_release_timedout() -> void:
-	_can_release_jump = true
+func exit() -> void:
+	parent.stop_jump_release_timer()

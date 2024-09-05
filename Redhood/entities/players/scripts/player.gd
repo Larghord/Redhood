@@ -32,16 +32,16 @@ const DOUBLE_TAP_TIME: float = 0.2
 var in_coyote_time: bool = true
 var in_jump_buffer: bool = false
 var can_attach_to_walls: bool = true
-var is_on_wall = false
+var is_currently_attached = false
+var can_release_jump: bool = true
 var wall_time = 0.0
 var jump_count: int = 0
 var jump_modifier: float = DEFAULT_MODIFIER
+var jump_release_time: float = 0.0
 
 # Movement Variables
 var speed_modifier: float = DEFAULT_MODIFIER
-var friction_multiplier:float:
-	set(value):
-		friction_multiplier = value
+var friction_multiplier:float
 
 # Controls Var
 var is_wall_detected: bool = false
@@ -53,11 +53,13 @@ var double_tap_timer: Timer = Timer.new()
 var jump_buffer_timer: Timer = Timer.new()
 var coyote_timer: Timer = Timer.new()
 var wall_timer: Timer = Timer.new()
+var jump_release_timer: Timer = Timer.new()
 
 func _ready() -> void:
 	create_coyote_timer()
 	create_jump_buffer_timer()
 	create_wall_timer()
+	create_jump_release_timer()
 	state_machine.init(self)
 
 
@@ -174,7 +176,7 @@ func double_tap_timedout() -> void:
 	pass
 
 
-# Double Tap Timer
+# Wall Timer
 func create_wall_timer() -> void:
 	add_child(wall_timer)
 	wall_timer.one_shot = true
@@ -192,4 +194,24 @@ func stop_wall_timer() -> void:
 
 
 func wall_timedout() -> void:
-	is_on_wall = false
+	is_currently_attached = false
+
+# Jump Release Timer
+func create_jump_release_timer() -> void:
+	add_child(jump_release_timer)
+	jump_release_timer.one_shot = true
+	jump_release_timer.autostart = false
+	jump_release_timer.timeout.connect(jump_release_timedout)
+
+
+func start_jump_release_timer() -> void:
+	jump_release_timer.wait_time = jump_release_time
+	jump_release_timer.start()
+
+
+func stop_jump_release_timer() -> void:
+	jump_release_timer.stop()
+
+
+func jump_release_timedout() -> void:
+	can_release_jump = true

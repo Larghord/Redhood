@@ -3,12 +3,10 @@ extends  State
 @export var fall_state:State
 @export var wall_jump_state:State
 
-var _is_on_wall: bool
-
 
 func enter() -> void:
 	parent.last_wall_norm = parent.wall_normal
-	parent.is_on_wall = true
+	parent.is_currently_attached = true
 	animation_name = "wall land"
 	parent.jump_count = 0
 	parent.jump_modifier = parent.DEFAULT_MODIFIER
@@ -19,12 +17,12 @@ func enter() -> void:
 
 func process_physics(_delta: float) -> State:
 	if parent.last_wall_norm != Vector2.RIGHT && Input.is_action_just_released("move_right"):
-		parent.is_on_wall = false
+		parent.is_currently_attached = false
 	if parent.last_wall_norm != Vector2.LEFT && Input.is_action_just_released("move_left"):
-		parent.is_on_wall = false
+		parent.is_currently_attached = false
 	if Input.is_action_just_pressed("jump"):
 		return wall_jump_state
-	if !parent.is_on_wall:
+	if !parent.is_currently_attached:
 		parent.can_attach_to_walls = false
 		return fall_state
 	return null
