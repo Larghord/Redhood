@@ -45,6 +45,8 @@ var friction_multiplier:float
 
 # Controls Var
 var is_wall_detected: bool = false
+var is_in_wall_stick_zone: bool = false
+var wall_downward_friction: float
 var wall_normal: Vector2
 var last_wall_norm: Vector2
 
@@ -215,3 +217,7 @@ func stop_jump_release_timer() -> void:
 
 func jump_release_timedout() -> void:
 	can_release_jump = true
+
+func set_wall_stick(wall_stick: bool, wall_friction: float = 0.5):
+	is_in_wall_stick_zone = wall_stick
+	wall_downward_friction = wall_friction

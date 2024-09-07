@@ -1,6 +1,7 @@
 class_name State extends Node
 
 var animation_name: String = "idle"
+var gravity: int = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 var parent: Player
 

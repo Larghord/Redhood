@@ -15,7 +15,6 @@ func enter() -> void:
 	parent.in_coyote_time = false
 	parent.in_jump_buffer = false
 	parent.jump_modifier = parent.DEFAULT_MODIFIER / (parent.jump_count + 1)
-	print(parent.jump_modifier)
 	parent.jump_release_time = (parent.JUMP_TIME_TO_PEAK * parent.jump_modifier) * 0.4
 	parent.jump_count += 1
 	parent.stop_coyote_time()
@@ -31,11 +30,12 @@ func process_input(_event: InputEvent) -> State:
 
 func process_physics(delta: float) -> State:
 	parent.velocity.y += parent.jump_gravity * delta
-	if parent.is_on_wall_only() && parent.can_release_jump && parent.can_attach_to_walls:
-		if parent.wall_normal == Vector2.RIGHT && Input.is_action_pressed("move_left"):
-			return wall_landing_state
-		elif parent.wall_normal == Vector2.LEFT && Input.is_action_pressed("move_right"):
-			return wall_landing_state
+	if parent.is_in_wall_stick_zone:
+		if parent.is_on_wall_only() && parent.can_release_jump && parent.can_attach_to_walls:
+			if parent.wall_normal == Vector2.RIGHT && Input.is_action_pressed("move_left"):
+				return wall_landing_state
+			elif parent.wall_normal == Vector2.LEFT && Input.is_action_pressed("move_right"):
+				return wall_landing_state
 	
 	if !Input.is_action_pressed("jump") and parent.can_release_jump:
 		parent.velocity.y =  0

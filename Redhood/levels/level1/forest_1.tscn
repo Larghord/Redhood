@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://cnjp71l5duvsj"]
+[gd_scene load_steps=7 format=4 uid="uid://cnjp71l5duvsj"]
 
 [ext_resource type="Texture2D" uid="uid://bqmfweuxx53li" path="res://assets/world/world1/World1.png" id="1_6hu47"]
 [ext_resource type="PackedScene" uid="uid://pbattpuig1yt" path="res://entities/players/player.tscn" id="2_xc366"]
 [ext_resource type="Texture2D" uid="uid://dfitj8gh0fly1" path="res://assets/world/world1/TempBackground.png" id="3_vh2h4"]
+[ext_resource type="PackedScene" uid="uid://dymmm2tjh5gkt" path="res://assets/tools/wall_land_zone/wall_land_zone.tscn" id="4_62i6n"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lmlav"]
 texture = ExtResource("1_6hu47")
@@ -195,3 +196,30 @@ z_index = -4096
 position = Vector2(-39, 638)
 scale = Vector2(2, 2)
 texture = ExtResource("3_vh2h4")
+
+[node name="WallStickSurfaces" type="Node" parent="."]
+
+[node name="Normal" type="Node" parent="WallStickSurfaces"]
+
+[node name="NormalWallZone" parent="WallStickSurfaces/Normal" instance=ExtResource("4_62i6n")]
+position = Vector2(47, -86)
+scale = Vector2(1, 20)
+
+[node name="Slick" type="Node" parent="WallStickSurfaces"]
+
+[node name="SlicklWallZone" parent="WallStickSurfaces/Slick" instance=ExtResource("4_62i6n")]
+position = Vector2(3499, 509)
+scale = Vector2(1, 15)
+wall_type = 1
+
+[node name="Stick" type="Node" parent="WallStickSurfaces"]
+
+[node name="StoclyalWallZone" parent="WallStickSurfaces/Stick" instance=ExtResource("4_62i6n")]
+position = Vector2(3266, 633)
+scale = Vector2(1, 10)
+wall_type = 2
+
+[node name="WallLandZone" parent="WallStickSurfaces/Stick" instance=ExtResource("4_62i6n")]
+position = Vector2(2161, 149)
+scale = Vector2(1, 5)
+wall_type = 1

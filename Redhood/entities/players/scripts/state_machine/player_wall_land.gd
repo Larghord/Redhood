@@ -1,5 +1,6 @@
 extends  State
 
+@export var idle_state: State
 @export var fall_state:State
 @export var wall_jump_state:State
 
@@ -11,12 +12,15 @@ func enter() -> void:
 	parent.velocity.y = 0
 	parent.jump_count = 0
 	parent.jump_modifier = parent.DEFAULT_MODIFIER
-	parent.wall_time = 1.0
-	parent.start_wall_timer()
+	#parent.wall_time = 1.0
+	#parent.start_wall_timer()
 	super()
 
 
 func process_physics(_delta: float) -> State:
+	parent.velocity.y += (gravity * parent.wall_downward_friction) * _delta
+	print(parent.wall_downward_friction)
+	parent.move_and_slide()
 	if parent.last_wall_norm != Vector2.RIGHT && Input.is_action_just_released("move_right"):
 		parent.is_currently_attached = false
 	if parent.last_wall_norm != Vector2.LEFT && Input.is_action_just_released("move_left"):
@@ -26,7 +30,9 @@ func process_physics(_delta: float) -> State:
 	if !parent.is_currently_attached:
 		parent.can_attach_to_walls = false
 		return fall_state
+	if parent.is_on_floor():
+		return idle_state
 	return null
 
-func exit() -> void:
-	parent.stop_wall_timer()
+#func exit() -> void:
+#	parent.stop_wall_timer()
