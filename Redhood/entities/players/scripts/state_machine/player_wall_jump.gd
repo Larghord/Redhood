@@ -23,7 +23,7 @@ func enter() -> void:
 	parent.in_coyote_time = false
 	parent.in_jump_buffer = false
 	_jump_release_time = parent.JUMP_TIME_TO_PEAK * parent.jump_modifier
-	_wall_stick_min_time = _jump_release_time * 0.5
+	_wall_stick_min_time = 0.1
 	_can_control = false
 	_can_stick_to_walls = false
 	_initial_run = true 

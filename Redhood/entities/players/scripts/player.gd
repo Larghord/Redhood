@@ -5,6 +5,8 @@ extends CharacterBody2D
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite
 @onready var state_machine: Node = $StateMachine
 @onready var collision: CollisionShape2D = $CollisionShape2D
+@onready var left_detection: RayCast2D = $LeftDetection
+@onready var right_detection: RayCast2D = $RightDetection
 
 @onready var jump_velocity: float = ((2.0 * JUMP_HEIGHT) / JUMP_TIME_TO_PEAK) * -1.0
 @onready var jump_gravity: float = ((-2.0 * JUMP_HEIGHT) / pow(JUMP_TIME_TO_PEAK,2)) * -1.0
@@ -56,6 +58,7 @@ var jump_buffer_timer: Timer = Timer.new()
 var coyote_timer: Timer = Timer.new()
 var wall_timer: Timer = Timer.new()
 var jump_release_timer: Timer = Timer.new()
+var frame_buffer_timer: Timer = Timer.new()
 
 func _ready() -> void:
 	create_coyote_timer()
@@ -71,7 +74,7 @@ func _unhandled_input(event: InputEvent) -> void:
 
 func _physics_process(delta: float) -> void:
 	wall_normal = get_wall_normal()
-	if wall_normal:
+	if wall_normal && (left_detection.is_colliding() || right_detection.is_colliding()):
 		is_wall_detected = true
 	else:
 		is_wall_detected = false
@@ -217,6 +220,7 @@ func stop_jump_release_timer() -> void:
 
 func jump_release_timedout() -> void:
 	can_release_jump = true
+
 
 func set_wall_stick(wall_stick: bool, wall_friction: float = 0.5):
 	is_in_wall_stick_zone = wall_stick

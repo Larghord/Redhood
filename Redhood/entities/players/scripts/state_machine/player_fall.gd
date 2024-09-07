@@ -16,7 +16,6 @@ func enter() -> void:
 
 func process_physics(delta: float) -> State:
 	parent.velocity.y += parent.fall_gravity * delta
-	
 	if parent.is_in_wall_stick_zone:
 		if parent.is_on_wall_only() && parent.can_release_jump && parent.can_attach_to_walls:
 			if parent.wall_normal == Vector2.RIGHT && Input.is_action_pressed("move_left"):
