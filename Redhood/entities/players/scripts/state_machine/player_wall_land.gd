@@ -31,9 +31,11 @@ func process_physics(_delta: float) -> State:
 		return fall_state
 	if parent.is_on_floor():
 		return idle_state
-	elif !parent.is_wall_detected:
+	elif !parent.is_wall_detected && parent.velocity.y <0.0:
 		parent.velocity.y = gravity * parent.wall_downward_friction * 2
 		parent.move_and_slide()
+		return fall_state
+	elif !parent.is_wall_detected && parent.velocity.y >0.0:
 		return fall_state
 	return null
 
