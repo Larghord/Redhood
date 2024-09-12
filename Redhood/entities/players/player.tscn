@@ -14,7 +14,7 @@
 [ext_resource type="Script" path="res://entities/players/scripts/state_machine/player_idle.gd" id="11_f54cr"]
 [ext_resource type="Script" path="res://entities/players/scripts/state_machine/player_run.gd" id="11_ilegj"]
 [ext_resource type="Script" path="res://entities/players/scripts/state_machine/player_fall.gd" id="12_rsi1h"]
-[ext_resource type="Script" path="res://entities/players/crouch_idle.gd" id="13_r60b4"]
+[ext_resource type="Script" path="res://entities/players/scripts/crouch_idle.gd" id="13_r60b4"]
 [ext_resource type="Script" path="res://entities/players/scripts/state_machine/player_jump.gd" id="13_xdhc5"]
 [ext_resource type="Script" path="res://entities/players/scripts/state_machine/player_wall_land.gd" id="17_qo0r6"]
 [ext_resource type="Script" path="res://entities/players/scripts/state_machine/player_wall_jump.gd" id="18_wbsj1"]
@@ -501,19 +501,14 @@ script = ExtResource("1_r2puq")
 [node name="AnimatedSprite" type="AnimatedSprite2D" parent="."]
 position = Vector2(-3, -48)
 sprite_frames = SubResource("SpriteFrames_xkude")
-animation = &"jump"
+animation = &"idle"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 position = Vector2(0.5, -52)
 shape = SubResource("RectangleShape2D_ugptu")
 
-[node name="LeftDetection" type="RayCast2D" parent="."]
-position = Vector2(0, -114)
-target_position = Vector2(-40, 0)
-
-[node name="RightDetection" type="RayCast2D" parent="."]
+[node name="WallDetection" type="RayCast2D" parent="."]
 position = Vector2(0, -114)
 target_position = Vector2(30, 0)
 
@@ -521,32 +516,12 @@ target_position = Vector2(30, 0)
 script = ExtResource("10_bsbc5")
 starting_state = NodePath("Idle")
 
-[node name="Idle" type="Node" parent="StateMachine" node_paths=PackedStringArray("fall_state", "jump_state", "run_state", "crouch_state")]
-script = ExtResource("11_f54cr")
-fall_state = NodePath("../Fall")
-jump_state = NodePath("../Jump")
-run_state = NodePath("../Run")
-crouch_state = NodePath("../CrouchIdle")
-
 [node name="CrouchIdle" type="Node" parent="StateMachine" node_paths=PackedStringArray("idle_state", "fall_state", "jump_state", "run_state")]
 script = ExtResource("13_r60b4")
 idle_state = NodePath("../Idle")
 fall_state = NodePath("../Fall")
 jump_state = NodePath("../Jump")
 run_state = NodePath("../Run")
-
-[node name="Run" type="Node" parent="StateMachine" node_paths=PackedStringArray("fall_state", "idle_state", "jump_state")]
-script = ExtResource("11_ilegj")
-fall_state = NodePath("../Fall")
-idle_state = NodePath("../Idle")
-jump_state = NodePath("../Jump")
-
-[node name="Jump" type="Node" parent="StateMachine" node_paths=PackedStringArray("fall_state", "idle_state", "run_state", "wall_landing_state")]
-script = ExtResource("13_xdhc5")
-fall_state = NodePath("../Fall")
-idle_state = NodePath("../Idle")
-run_state = NodePath("../Run")
-wall_landing_state = NodePath("../WallLand")
 
 [node name="Fall" type="Node" parent="StateMachine" node_paths=PackedStringArray("idle_state", "run_state", "crouch_state", "jump_state", "wall_landing_state")]
 script = ExtResource("12_rsi1h")
@@ -556,11 +531,25 @@ crouch_state = NodePath("../CrouchIdle")
 jump_state = NodePath("../Jump")
 wall_landing_state = NodePath("../WallLand")
 
-[node name="WallLand" type="Node" parent="StateMachine" node_paths=PackedStringArray("idle_state", "fall_state", "wall_jump_state")]
-script = ExtResource("17_qo0r6")
-idle_state = NodePath("../Idle")
+[node name="Idle" type="Node" parent="StateMachine" node_paths=PackedStringArray("fall_state", "jump_state", "run_state", "crouch_state")]
+script = ExtResource("11_f54cr")
 fall_state = NodePath("../Fall")
-wall_jump_state = NodePath("../WallJump")
+jump_state = NodePath("../Jump")
+run_state = NodePath("../Run")
+crouch_state = NodePath("../CrouchIdle")
+
+[node name="Jump" type="Node" parent="StateMachine" node_paths=PackedStringArray("fall_state", "idle_state", "run_state", "wall_landing_state")]
+script = ExtResource("13_xdhc5")
+fall_state = NodePath("../Fall")
+idle_state = NodePath("../Idle")
+run_state = NodePath("../Run")
+wall_landing_state = NodePath("../WallLand")
+
+[node name="Run" type="Node" parent="StateMachine" node_paths=PackedStringArray("fall_state", "idle_state", "jump_state")]
+script = ExtResource("11_ilegj")
+fall_state = NodePath("../Fall")
+idle_state = NodePath("../Idle")
+jump_state = NodePath("../Jump")
 
 [node name="WallJump" type="Node" parent="StateMachine" node_paths=PackedStringArray("fall_state", "idle_state", "run_state", "jump_state", "wall_landing_state")]
 script = ExtResource("18_wbsj1")
@@ -570,22 +559,22 @@ run_state = NodePath("../Run")
 jump_state = NodePath("../Jump")
 wall_landing_state = NodePath("../WallLand")
 
-[node name="InProgressStates" type="Node" parent="."]
+[node name="WallLand" type="Node" parent="StateMachine" node_paths=PackedStringArray("idle_state", "fall_state", "wall_jump_state")]
+script = ExtResource("17_qo0r6")
+idle_state = NodePath("../Idle")
+fall_state = NodePath("../Fall")
+wall_jump_state = NodePath("../WallJump")
 
-[node name="Interact" type="Node" parent="InProgressStates"]
+[node name="Timers" type="Node" parent="."]
 
-[node name="CrouchWalk" type="Node" parent="InProgressStates"]
+[node name="CoyoteTimer" type="Timer" parent="Timers"]
+wait_time = 0.2
+one_shot = true
 
-[node name="Slide" type="Node" parent="InProgressStates"]
+[node name="JumpBufferTimer" type="Timer" parent="Timers"]
+wait_time = 0.3
+one_shot = true
 
-[node name="DoubleJump" type="Node" parent="InProgressStates"]
-
-[node name="GroundPound" type="Node" parent="InProgressStates"]
-
-[node name="Glide" type="Node" parent="InProgressStates"]
-
-[node name="LedgeHang" type="Node" parent="InProgressStates"]
-
-[node name="Hurt" type="Node" parent="InProgressStates"]
-
-[node name="Death" type="Node" parent="InProgressStates"]
+[node name="JumpReleaseTimer" type="Timer" parent="Timers"]
+wait_time = 0.5
+one_shot = true

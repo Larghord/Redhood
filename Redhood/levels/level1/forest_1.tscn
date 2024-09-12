@@ -204,6 +204,8 @@ texture = ExtResource("3_vh2h4")
 [node name="NormalWallZone" parent="WallStickSurfaces/Normal" instance=ExtResource("4_62i6n")]
 position = Vector2(47, -86)
 scale = Vector2(1, 20)
+gravity_point_center = Vector2(-1, 1)
+gravity_direction = Vector2(-1, 1)
 
 [node name="Slick" type="Node" parent="WallStickSurfaces"]
 
@@ -214,12 +216,7 @@ wall_type = 1
 
 [node name="Stick" type="Node" parent="WallStickSurfaces"]
 
-[node name="StoclyalWallZone" parent="WallStickSurfaces/Stick" instance=ExtResource("4_62i6n")]
+[node name="StickyWallZone" parent="WallStickSurfaces/Stick" instance=ExtResource("4_62i6n")]
 position = Vector2(3266, 633)
 scale = Vector2(1, 10)
 wall_type = 2
-
-[node name="WallLandZone" parent="WallStickSurfaces/Stick" instance=ExtResource("4_62i6n")]
-position = Vector2(2161, 149)
-scale = Vector2(1, 5)
-wall_type = 1

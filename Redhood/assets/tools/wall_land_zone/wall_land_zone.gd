@@ -18,7 +18,7 @@ func _ready() -> void:
 		0:
 			wall_friction = 0.25
 		1:
-			wall_friction = -1.0
+			wall_friction = 1.0
 		2:
 			wall_friction = 0.0
 
