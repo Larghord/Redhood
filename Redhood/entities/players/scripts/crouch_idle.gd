@@ -28,7 +28,7 @@ func process_input(_event: InputEvent) -> State:
 
 func process_physics(_delta: float) -> State:	
 	if !parent.is_on_floor():
-		if !parent.in_coyote_time:
+		if !parent.allow_coyote_time:
 			return fall_state
 		elif parent.coyote_timer.is_stopped():
 			parent.coyote_timer.start()

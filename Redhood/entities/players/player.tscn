@@ -568,7 +568,7 @@ wall_jump_state = NodePath("../WallJump")
 [node name="Timers" type="Node" parent="."]
 
 [node name="CoyoteTimer" type="Timer" parent="Timers"]
-wait_time = 0.2
+wait_time = 0.15
 one_shot = true
 
 [node name="JumpBufferTimer" type="Timer" parent="Timers"]

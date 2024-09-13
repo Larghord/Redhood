@@ -83,10 +83,11 @@ func _process(delta: float) -> void:
 
 #region Control Methods
 func move(direction) -> void:
-	if (last_wall_norm == Vector2.RIGHT and direction < 0.0) or (last_wall_norm == Vector2.LEFT and direction > 0.0):
-		speed_modifier = 0.35
-	else:
-		speed_modifier = DEFAULT_MODIFIER
+	if !(state_machine.get_last_state().name == "WallLand" and state_machine.get_current_state().name == "Fall"):
+		if (last_wall_norm == Vector2.RIGHT and direction < 0.0) or (last_wall_norm == Vector2.LEFT and direction > 0.0):
+			speed_modifier = 0.35
+		else:
+			speed_modifier = DEFAULT_MODIFIER
 	
 	if direction:
 		velocity.x = direction * (MOVE_SPEED * speed_modifier)
@@ -118,7 +119,7 @@ func apply_wall_jump() -> void:
 
 
 func check_wall_land() -> bool:
-	if is_in_wall_stick_zone and is_wall_detected and is_on_wall_only() and can_release_jump and can_attach_to_walls:
+	if is_in_wall_stick_zone and is_wall_detected and can_release_jump and can_attach_to_walls:
 		if (wall_normal == Vector2.RIGHT and Input.is_action_pressed("move_left")) or (wall_normal == Vector2.LEFT and Input.is_action_pressed("move_right")):
 			return true
 	return false
