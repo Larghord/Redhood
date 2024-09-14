@@ -15,7 +15,7 @@ func enter() -> void:
 
 
 func process_input(_event: InputEvent) -> State:
-	if Input.is_action_just_pressed('jump') and parent.allow_coyote_time:
+	if Input.is_action_just_pressed('jump'):
 		return jump_state
 	if Input.get_axis("move_left","move_right"):
 		return run_state
@@ -26,11 +26,5 @@ func process_physics(_delta: float) -> State:
 	if Input.is_action_pressed("crouch"):
 		return crouch_state
 	if !parent.is_on_floor():
-		if !parent.allow_coyote_time:
 			return fall_state
-		elif parent.coyote_timer.is_stopped():
-			parent.coyote_timer.start()
-	if parent.is_on_floor():
-		if !parent.coyote_timer.is_stopped():
-			parent.coyote_timer.stop()
 	return null

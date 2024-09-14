@@ -578,7 +578,3 @@ one_shot = true
 [node name="JumpReleaseTimer" type="Timer" parent="Timers"]
 wait_time = 0.5
 one_shot = true
-
-[node name="DetachTimer" type="Timer" parent="Timers"]
-wait_time = 0.2
-one_shot = true

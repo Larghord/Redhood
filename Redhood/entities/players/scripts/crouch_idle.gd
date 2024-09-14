@@ -9,13 +9,12 @@ extends State
 func enter() -> void:
 	animation_name = "crouch idle"
 	parent.velocity.x = 0
-	parent.allow_coyote_time = true
 	parent.jump_modifier = 2.0
 	super()
 
 
 func process_input(_event: InputEvent) -> State:
-	if Input.is_action_just_pressed('jump') and parent.allow_coyote_time:
+	if Input.is_action_just_pressed('jump'):
 		return jump_state
 	if Input.get_axis("move_left","move_right"):
 		parent.jump_modifier = parent.DEFAULT_MODIFIER
@@ -26,13 +25,7 @@ func process_input(_event: InputEvent) -> State:
 	return null
 
 
-func process_physics(_delta: float) -> State:	
+func process_physics(_delta: float) -> State:
 	if !parent.is_on_floor():
-		if !parent.allow_coyote_time:
-			return fall_state
-		elif parent.coyote_timer.is_stopped():
-			parent.coyote_timer.start()
-	if parent.is_on_floor():
-		if !parent.coyote_timer.is_stopped():
-			parent.coyote_timer.stop()
+		return fall_state
 	return null

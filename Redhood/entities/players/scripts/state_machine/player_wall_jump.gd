@@ -17,7 +17,7 @@ func enter() -> void:
 	parent.apply_wall_jump()
 	parent.allow_coyote_time  = false
 	parent.in_jump_buffer = false
-	parent.jump_release_timer.wait_time = (parent.JUMP_TIME_TO_PEAK * parent.jump_modifier) * 0.6
+	parent.jump_release_timer.wait_time = (parent.JUMP_TIME_TO_PEAK * parent.jump_modifier) * 0.4
 	parent.can_release_jump = false
 	_initial_run = true 
 	parent.jump_release_timer.start()

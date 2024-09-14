@@ -1,11 +1,17 @@
 class_name Player
 extends CharacterBody2D
 
+@export var MAX_SPEED: float = 600.0
+@export var acceleration: float = 30.0
+@export_range(0.0,1.0) var friction:float = 0.35
+@export_range(0.0,1.0) var turn_friction: float = 0.35
+
 #region OnReady's
 # Timers
 @onready var coyote_timer: Timer = $Timers/CoyoteTimer
 @onready var jump_buffer_timer: Timer = $Timers/JumpBufferTimer
 @onready var jump_release_timer: Timer = $Timers/JumpReleaseTimer
+@onready var detach_timer: Timer = $Timers/DetachTimer
 
 # Player
 @onready var collision: CollisionShape2D = $CollisionShape2D
@@ -17,6 +23,7 @@ extends CharacterBody2D
 @onready var fall_gravity: float = ((-2.0 * JUMP_HEIGHT) / pow(JUMP_TIME_TO_DESCENT,2)) * -1.0
 @onready var jump_gravity: float = ((-2.0 * JUMP_HEIGHT) / pow(JUMP_TIME_TO_PEAK,2)) * -1.0
 @onready var jump_velocity: float = ((2.0 * JUMP_HEIGHT) / JUMP_TIME_TO_PEAK) * -1.0
+
 #endregion
 
 #region Const
@@ -39,6 +46,7 @@ var in_jump_buffer: bool = false
 var is_currently_attached = false
 var is_in_wall_stick_zone: bool = false
 var is_wall_detected: bool = false
+
 #endregion
 
 #region Int and Floats
@@ -66,6 +74,7 @@ func _ready() -> void:
 	coyote_timer.timeout.connect(_on_coyote_timeout)
 	jump_buffer_timer.timeout.connect(_on_jump_buffer_timeout)
 	jump_release_timer.timeout.connect(_on_jump_release_timeout)
+	detach_timer.timeout.connect(_on_detach_timeout)
 
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -83,24 +92,21 @@ func _process(delta: float) -> void:
 
 #region Control Methods
 func move(direction) -> void:
-	if !(state_machine.get_last_state().name == "WallLand" and state_machine.get_current_state().name == "Fall"):
-		if (last_wall_norm == Vector2.RIGHT and direction < 0.0) or (last_wall_norm == Vector2.LEFT and direction > 0.0):
-			speed_modifier = 0.35
-		else:
-			speed_modifier = DEFAULT_MODIFIER
-	
 	if direction:
-		velocity.x = direction * (MOVE_SPEED * speed_modifier)
-		flip_player()
-	else:
-		velocity.x = move_toward(velocity.x, 0, (MOVE_SPEED * speed_modifier))
+		if sign(direction) != sign(velocity.x) and velocity.x != 0 and is_on_floor():
+				velocity.x = lerp(velocity.x, direction, turn_friction)
+		else:
+			velocity.x = clamp(velocity.x + (acceleration * sign(direction)), -MAX_SPEED, MAX_SPEED)
+		flip_player(direction)
+	elif !state_machine.get_last_state().name == "WallJump" and !state_machine.get_current_state().name == "WallJump":
+		velocity.x = lerp(velocity.x, 0.0, friction)
 	move_and_slide()
 
 
-func flip_player() -> void:
-	sprite.scale.x = sign(velocity.x) * abs(sprite.scale.x)
+func flip_player(direction) -> void:
+	sprite.scale.x = sign(direction) * abs(sprite.scale.x)
 	collision.position.x = -6.5 if sprite.scale.x < 0 else 0.5
-	wall_detection.target_position.x = sign(velocity.x) * abs(wall_detection.target_position.x)
+	wall_detection.target_position.x = sign(direction) * abs(wall_detection.target_position.x)
 
 
 func handle_wall_detection() -> void:
@@ -114,12 +120,12 @@ func apply_jump_force() -> void:
 
 func apply_wall_jump() -> void:
 	velocity.x = WALL_PUSH_POWER * sign(last_wall_norm.x)
-	flip_player()
+	flip_player(sign(last_wall_norm.x))
 	apply_jump_force()
 
 
 func check_wall_land() -> bool:
-	if is_in_wall_stick_zone and is_wall_detected and can_release_jump and can_attach_to_walls:
+	if is_in_wall_stick_zone and is_wall_detected and can_attach_to_walls:
 		if (wall_normal == Vector2.RIGHT and Input.is_action_pressed("move_left")) or (wall_normal == Vector2.LEFT and Input.is_action_pressed("move_right")):
 			return true
 	return false
@@ -136,6 +142,9 @@ func _on_jump_buffer_timeout() -> void:
 
 func _on_jump_release_timeout() -> void:
 	can_release_jump = true
+
+func _on_detach_timeout() -> void:
+	can_attach_to_walls = true
 #endregion
 
 

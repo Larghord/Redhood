@@ -22,7 +22,7 @@ func process_physics(delta: float) -> State:
 	
 	var direction := Input.get_axis("move_left","move_right")
 	
-	if direction == 0:
+	if direction == 0 && parent.velocity.x == 0:
 		return idle_state
 	
 	parent.move(direction)
