@@ -33,7 +33,7 @@ const MAX_JUMP_COUNT: int = 2
 const DEFAULT_MODIFIER: float = 1.0
 const JUMP_HEIGHT: float = 300.0
 const JUMP_TIME_TO_PEAK: float = 0.5
-const JUMP_TIME_TO_DESCENT: float = 0.415
+const JUMP_TIME_TO_DESCENT: float = 0.5
 const MOVE_SPEED: float = 500.0
 const WALL_PUSH_POWER: float = 500.0
 #endregion

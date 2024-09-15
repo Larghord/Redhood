@@ -36,6 +36,8 @@ func process_physics(delta: float) -> State:
 		parent.can_attach_to_walls = true
 		parent.last_wall_norm = Vector2.ZERO
 		parent.jump_count = 0
+		if sign(direction) != sign(parent.motion.x):
+			parent.motion.x = 0
 		if parent.in_jump_buffer:
 			return jump_state
 		if direction != 0:

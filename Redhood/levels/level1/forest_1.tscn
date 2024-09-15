@@ -190,6 +190,7 @@ position = Vector2(192, 567)
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(-4, -46)
 zoom = Vector2(0.85, 0.85)
+process_callback = 0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 visible = false
