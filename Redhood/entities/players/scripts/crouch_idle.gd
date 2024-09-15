@@ -8,8 +8,10 @@ extends State
 
 func enter() -> void:
 	animation_name = "crouch idle"
-	parent.velocity.x = 0
+	parent.motion.x = 0
 	parent.jump_modifier = 2.0
+	if parent.is_on_floor():
+		parent.motion.y = 0.0
 	super()
 
 

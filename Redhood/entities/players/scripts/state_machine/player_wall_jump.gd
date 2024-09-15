@@ -5,6 +5,7 @@ extends State
 @export var run_state: State
 @export var jump_state: State
 @export var wall_landing_state: State
+@export var wall_jump_state: State
 
 
 var _direction:float = 0.0
@@ -25,22 +26,22 @@ func enter() -> void:
 
 
 func process_physics(delta: float) -> State:
-	parent.velocity.y += parent.jump_gravity * delta
+	parent.motion.y += parent.jump_gravity * delta
 	if parent.check_wall_land():
-			return wall_landing_state
+		if parent.in_jump_buffer:
+			return wall_jump_state
+		return wall_landing_state
 	
-	if Input.is_action_just_pressed("jump") and parent.jump_count >= parent.MAX_JUMP_COUNT and !_initial_run:
+	if Input.is_action_just_pressed("jump") and parent.jump_count >= parent.current_max_jumps and !_initial_run:
 		if parent.jump_buffer_timer.is_stopped():
 			parent.jump_buffer_timer.start()
 	
-	if parent.velocity.y > 0.1:
+	if parent.motion.y > 0.1:
 		return fall_state
 	
 	if parent.can_release_jump:
 		_direction = Input.get_axis("move_left", "move_right")
 		parent.move(_direction)
-	else:
-		parent.move_and_slide()
 	
 	_initial_run = false
 	if parent.is_on_floor():

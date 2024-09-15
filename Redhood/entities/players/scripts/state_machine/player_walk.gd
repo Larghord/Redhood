@@ -16,7 +16,7 @@ func process_physics(delta: float) -> State:
 	if Input.is_action_just_pressed('jump') and parent.is_on_floor():
 		parent.apply_jump_foce()
 		return jump_state
-	parent.velocity.y += gravity * delta
+	parent.motion.y += gravity * delta
 	
 	var direction := Input.get_axis("move_left","move_right")
 		

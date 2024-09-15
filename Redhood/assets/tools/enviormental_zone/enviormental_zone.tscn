@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://8d5i660pu0lg"]
+
+[ext_resource type="Script" path="res://assets/tools/enviormental_zone/enviormental_zone.gd" id="1_oik07"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u3ikh"]
+size = Vector2(100, 100)
+
+[node name="EnviormentalZone" type="Area2D"]
+script = ExtResource("1_oik07")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_u3ikh")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

@@ -14,14 +14,15 @@ func enter() -> void:
 
 
 func process_physics(delta: float) -> State:
-	parent.velocity.y += parent.fall_gravity * delta
+	parent.motion.y += parent.fall_gravity * delta
+	
 	if parent.check_wall_land():
 		return wall_landing_state
 	
 	if Input.is_action_just_pressed("jump"):
-		if parent.jump_buffer_timer.is_stopped() and parent.jump_count >= parent.MAX_JUMP_COUNT:
+		if parent.jump_buffer_timer.is_stopped() and parent.jump_count >= parent.current_max_jumps:
 			parent.jump_buffer_timer.start()
-		elif parent.jump_count < parent.MAX_JUMP_COUNT:
+		elif parent.jump_count < parent.current_max_jumps:
 			return jump_state
 	
 	var direction := Input.get_axis("move_left", "move_right")

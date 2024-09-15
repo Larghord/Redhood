@@ -18,11 +18,12 @@ func enter() -> void:
 func process_physics(delta: float) -> State:
 	if Input.is_action_just_pressed('jump') and parent.allow_coyote_time:
 		return jump_state
-	parent.velocity.y += parent.fall_gravity * delta
+	if !parent.is_on_floor():
+		parent.motion.y += parent.fall_gravity * delta
 	
 	var direction := Input.get_axis("move_left","move_right")
 	
-	if direction == 0 && parent.velocity.x == 0:
+	if direction == 0:
 		return idle_state
 	
 	parent.move(direction)
@@ -36,3 +37,7 @@ func process_physics(delta: float) -> State:
 		if !parent.coyote_timer.is_stopped():
 			parent.coyote_timer.stop()
 	return null
+
+func exit() -> void:
+	if !parent.coyote_timer.is_stopped():
+			parent.coyote_timer.stop()

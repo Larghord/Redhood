@@ -8,8 +8,9 @@ extends State
 
 func enter() -> void:
 	animation_name = "idle"
-	parent.velocity.x = 0
+	parent.motion.x = 0
 	if parent.is_on_floor():
+		parent.motion.y = 0.0
 		parent.allow_coyote_time = true
 	super()
 

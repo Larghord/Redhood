@@ -1,10 +1,9 @@
 class_name Player
 extends CharacterBody2D
 
-@export var MAX_SPEED: float = 600.0
-@export var acceleration: float = 30.0
+@export var MAX_SPEED: float = 700.0
+@export var acceleration: float = 20.0
 @export_range(0.0,1.0) var friction:float = 0.35
-@export_range(0.0,1.0) var turn_friction: float = 0.35
 
 #region OnReady's
 # Timers
@@ -46,24 +45,33 @@ var in_jump_buffer: bool = false
 var is_currently_attached = false
 var is_in_wall_stick_zone: bool = false
 var is_wall_detected: bool = false
-
+var is_wall_friction_set: bool = false
+var external_forces_applied: bool = false
 #endregion
 
 #region Int and Floats
 # Int Variables
 var jump_count: int = 0
+@export_range(1,MAX_JUMP_COUNT) var current_max_jumps: int:
+	set(value):
+		if value < MAX_JUMP_COUNT:
+			current_max_jumps = value
+		else:
+			current_max_jumps = MAX_JUMP_COUNT
 
 # Float Variables
 var jump_modifier: float = DEFAULT_MODIFIER
 var speed_modifier: float = DEFAULT_MODIFIER
-var friction_multiplier:float
-var wall_downward_friction: float
 #endregion
 
 #region Other Variables
 # Vector2 Variables
 var wall_normal: Vector2
 var last_wall_norm: Vector2
+var external_forces: Vector2 = Vector2.ZERO
+var wall_friction: Vector2 = Vector2.ZERO
+var motion: Vector2 = Vector2.ZERO
+var temp_external: Vector2
 #endregion
 
 #region Main Methods
@@ -84,6 +92,8 @@ func _unhandled_input(event: InputEvent) -> void:
 func _physics_process(delta: float) -> void:
 	handle_wall_detection()
 	state_machine.process_physics(delta)
+	apply_external_forces()
+	move_and_slide()
 
 
 func _process(delta: float) -> void:
@@ -93,14 +103,13 @@ func _process(delta: float) -> void:
 #region Control Methods
 func move(direction) -> void:
 	if direction:
-		if sign(direction) != sign(velocity.x) and velocity.x != 0 and is_on_floor():
-				velocity.x = lerp(velocity.x, direction, turn_friction)
+		if sign(direction) != sign(motion.x) and motion.x != 0 and is_on_floor():
+				motion.x = lerp(motion.x, direction, friction)
 		else:
-			velocity.x = clamp(velocity.x + (acceleration * sign(direction)), -MAX_SPEED, MAX_SPEED)
+				motion.x = clamp(motion.x + (acceleration * sign(direction)), -MAX_SPEED, MAX_SPEED)
 		flip_player(direction)
 	elif !state_machine.get_last_state().name == "WallJump" and !state_machine.get_current_state().name == "WallJump":
-		velocity.x = lerp(velocity.x, 0.0, friction)
-	move_and_slide()
+		motion.x = lerp(motion.x, 0.0, friction)
 
 
 func flip_player(direction) -> void:
@@ -114,12 +123,17 @@ func handle_wall_detection() -> void:
 	is_wall_detected = wall_normal && wall_detection.is_colliding()
 
 
+func apply_external_forces():
+	velocity = motion + external_forces.lerp(external_forces, friction);
+
+
 func apply_jump_force() -> void:
-	velocity.y = jump_velocity * jump_modifier 
+	motion.y = jump_velocity * jump_modifier 
+	jump_modifier = DEFAULT_MODIFIER
 
 
 func apply_wall_jump() -> void:
-	velocity.x = WALL_PUSH_POWER * sign(last_wall_norm.x)
+	motion.x = WALL_PUSH_POWER * sign(last_wall_norm.x)
 	flip_player(sign(last_wall_norm.x))
 	apply_jump_force()
 
@@ -127,7 +141,14 @@ func apply_wall_jump() -> void:
 func check_wall_land() -> bool:
 	if is_in_wall_stick_zone and is_wall_detected and can_attach_to_walls:
 		if (wall_normal == Vector2.RIGHT and Input.is_action_pressed("move_left")) or (wall_normal == Vector2.LEFT and Input.is_action_pressed("move_right")):
+			if !is_wall_friction_set:
+				set_external_forces(wall_friction)
+				is_wall_friction_set = true
 			return true
+	
+	if is_wall_friction_set:
+		set_external_forces(-wall_friction)
+		is_wall_friction_set = false
 	return false
 #endregion
 
@@ -149,7 +170,13 @@ func _on_detach_timeout() -> void:
 
 
 #region External Influnces
-func set_wall_stick(wall_stick: bool, wall_friction: float = 1.0):
+func set_wall_stick(wall_stick: bool, force: Vector2):
 	is_in_wall_stick_zone = wall_stick
-	wall_downward_friction = wall_friction
+	wall_friction = force
+
+
+func set_external_forces(forces:Vector2) -> void:
+	external_forces += forces
+	if abs(external_forces) > Vector2.ZERO:
+		external_forces_applied = true
 #endregion

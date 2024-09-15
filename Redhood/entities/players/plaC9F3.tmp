@@ -497,7 +497,10 @@ size = Vector2(25, 104)
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_r2puq")
-current_max_jumps = 2
+MAX_SPEED = null
+acceleration = null
+friction = null
+current_max_jumps = 1
 
 [node name="AnimatedSprite" type="AnimatedSprite2D" parent="."]
 position = Vector2(-3, -48)
@@ -563,12 +566,11 @@ jump_state = NodePath("../Jump")
 wall_landing_state = NodePath("../WallLand")
 wall_jump_state = NodePath(".")
 
-[node name="WallLand" type="Node" parent="StateMachine" node_paths=PackedStringArray("idle_state", "fall_state", "wall_jump_state", "jump_state")]
+[node name="WallLand" type="Node" parent="StateMachine" node_paths=PackedStringArray("idle_state", "fall_state", "wall_jump_state")]
 script = ExtResource("17_qo0r6")
 idle_state = NodePath("../Idle")
 fall_state = NodePath("../Fall")
 wall_jump_state = NodePath("../WallJump")
-jump_state = NodePath("../Jump")
 
 [node name="Timers" type="Node" parent="."]
 
