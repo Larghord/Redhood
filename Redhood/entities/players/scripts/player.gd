@@ -13,10 +13,12 @@ extends CharacterBody2D
 @onready var detach_timer: Timer = $Timers/DetachTimer
 
 # Player
-@onready var collision: CollisionShape2D = $CollisionShape2D
+@onready var top_collision: CollisionShape2D = $TopCollisionShape
+@onready var bottom_collision: CollisionShape2D = $BottomCollisionShape
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite
 @onready var state_machine: Node = $StateMachine
 @onready var wall_detection: RayCast2D = $WallDetection
+@onready var ledge_detection: RayCast2D = $LedgeDetection
 
 # Physics
 @onready var fall_gravity: float = ((-2.0 * JUMP_HEIGHT) / pow(JUMP_TIME_TO_DESCENT,2)) * -1.0
@@ -114,8 +116,10 @@ func move(direction) -> void:
 
 func flip_player(direction) -> void:
 	sprite.scale.x = sign(direction) * abs(sprite.scale.x)
-	collision.position.x = -6.5 if sprite.scale.x < 0 else 0.5
+	top_collision.position.x = -6.5 if sprite.scale.x < 0 else 0.5
+	bottom_collision.position.x = -6.5 if sprite.scale.x < 0 else 0.5
 	wall_detection.target_position.x = sign(direction) * abs(wall_detection.target_position.x)
+	ledge_detection.target_position.x = sign(direction) * abs(ledge_detection.target_position.x)
 
 
 func handle_wall_detection() -> void:
@@ -124,7 +128,7 @@ func handle_wall_detection() -> void:
 
 
 func apply_external_forces():
-	velocity = motion + external_forces.lerp(external_forces, friction);
+	velocity = motion + external_forces.lerp(external_forces, friction)
 
 
 func apply_jump_force() -> void:

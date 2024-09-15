@@ -11,6 +11,7 @@ func enter() -> void:
 	parent.is_currently_attached = true
 	animation_name = "wall land"
 	parent.motion.y = 0
+	parent.motion.x = 0
 	parent.jump_count = 1
 	parent.jump_modifier = parent.DEFAULT_MODIFIER
 	super()
@@ -23,11 +24,11 @@ func process_physics(_delta: float) -> State:
 	if parent.last_wall_norm != Vector2.LEFT and Input.is_action_just_released("move_left"):
 		parent.is_currently_attached = false
 		
-	if parent.external_forces_applied:
+	if parent.external_forces_applied and parent.external_forces.y < 0.0:
 		parent.jump_modifier = ( parent.external_forces.y / parent.jump_velocity) + 1.0 
 
 		
-	if !parent.wall_detection.is_colliding() and  parent.wall_normal == parent.last_wall_norm:
+	if !parent.wall_detection.is_colliding() and  parent.wall_normal == parent.last_wall_norm and parent.external_forces.y < 0.0:
 		return jump_state
 	
 	if Input.is_action_just_pressed("jump"):

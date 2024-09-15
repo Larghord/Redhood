@@ -6,6 +6,7 @@ extends State
 @export var jump_state: State
 @export var wall_landing_state: State
 @export var wall_jump_state: State
+@export var ledge_grab_state: State
 
 var _initial_run: bool = false
 
@@ -18,8 +19,8 @@ func enter() -> void:
 	parent.coyote_timer.stop()
 	parent.can_release_jump = false
 	parent.jump_count += 1
-	parent.jump_modifier = parent.jump_modifier / (parent.jump_count)
 	parent.jump_release_timer.wait_time = (parent.JUMP_TIME_TO_PEAK * parent.jump_modifier) * 0.4
+	parent.jump_modifier = parent.jump_modifier / (parent.jump_count)
 	parent.jump_release_timer.start()
 	parent.last_wall_norm = Vector2.ZERO
 	_initial_run = true
@@ -34,7 +35,7 @@ func process_physics(delta: float) -> State:
 			return wall_jump_state
 		return wall_landing_state
 	
-	if !Input.is_action_pressed("jump") and parent.can_release_jump:
+	if (!Input.is_action_pressed("jump") and parent.can_release_jump) or parent.is_on_ceiling():
 		parent.motion.y =  0
 		return fall_state
 	

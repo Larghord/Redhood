@@ -9,17 +9,16 @@ extends State
 func enter() -> void:
 	parent.speed_modifier = parent.DEFAULT_MODIFIER
 	parent.jump_modifier = parent.DEFAULT_MODIFIER
+	parent.motion.y = 0
 	if parent.is_on_floor():
 		parent.allow_coyote_time = true
 	animation_name = "run"
 	super()
 
 
-func process_physics(delta: float) -> State:
+func process_physics(_delta: float) -> State:
 	if Input.is_action_just_pressed('jump') and parent.allow_coyote_time:
 		return jump_state
-	if !parent.is_on_floor():
-		parent.motion.y += parent.fall_gravity * delta
 	
 	var direction := Input.get_axis("move_left","move_right")
 	

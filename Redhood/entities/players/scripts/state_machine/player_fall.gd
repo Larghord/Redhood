@@ -5,6 +5,7 @@ extends State
 @export var crouch_state:State
 @export var jump_state:State
 @export var wall_landing_state: State
+@export var ledge_grab_state: State
 
 func enter() -> void:
 	animation_name = "fall"
@@ -15,6 +16,9 @@ func enter() -> void:
 
 func process_physics(delta: float) -> State:
 	parent.motion.y += parent.fall_gravity * delta
+	
+	if parent.ledge_detection.is_colliding() and not parent.wall_detection.is_colliding() and not parent.is_on_floor() and parent.state_machine.get_last_state().name != "Run" and parent.state_machine.get_last_state().name != "LedgeGrab" and !Input.is_action_pressed("crouch"):
+		return ledge_grab_state
 	
 	if parent.check_wall_land():
 		return wall_landing_state
