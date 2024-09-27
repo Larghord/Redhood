@@ -17,7 +17,7 @@ func enter() -> void:
 func process_physics(delta: float) -> State:
 	parent.motion.y += parent.fall_gravity * delta
 	
-	if parent.ledge_detection.is_colliding() and not parent.wall_detection.is_colliding() and not parent.is_on_floor() and parent.state_machine.get_last_state().name != "Run" and parent.state_machine.get_last_state().name != "LedgeGrab" and !Input.is_action_pressed("crouch"):
+	if parent.ledge_detection.is_colliding() and not parent.wall_detection.is_colliding() and not parent.is_on_floor() and parent.state_machine.get_last_state.name != "Run" and parent.state_machine.get_last_state.name != "LedgeGrab" and !Input.is_action_pressed("crouch"):
 		return ledge_grab_state
 	
 	if parent.check_wall_land():

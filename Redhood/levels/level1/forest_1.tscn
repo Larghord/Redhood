@@ -185,7 +185,9 @@ tile_map_data = PackedByteArray("AAAGAPr/AAAEAAQAAAAJAAsAAAABAAEAAAAJAAwAAAABAAI
 tile_set = SubResource("TileSet_jt41p")
 
 [node name="Player" parent="." instance=ExtResource("2_xc366")]
-position = Vector2(192, 567)
+position = Vector2(-4045, 1458)
+current_max_jumps = 1
+metadata/_edit_group_ = true
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(-4, -46)

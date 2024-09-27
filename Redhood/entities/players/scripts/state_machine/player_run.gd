@@ -3,7 +3,7 @@ extends State
 @export var fall_state: State
 @export var idle_state: State
 @export var jump_state: State
-@export var crouch_walk_state: State
+@export var slide_state: State
 
 
 func enter() -> void:
@@ -15,6 +15,10 @@ func enter() -> void:
 	animation_name = "run"
 	super()
 
+func process_input(_event: InputEvent) -> State:
+	if Input.is_action_pressed("crouch"):
+			return slide_state
+	return null
 
 func process_physics(_delta: float) -> State:
 	if Input.is_action_just_pressed('jump') and parent.allow_coyote_time:

@@ -4,6 +4,13 @@ extends Node
 
 var _current_state = null
 var _last_state = null
+var get_last_state: State:
+	get:
+		return _last_state
+
+var get_current_state: State:
+	get:
+		return _current_state
 
 func init(parent:Player) -> void:
 	for child in get_children():
@@ -35,9 +42,3 @@ func process_frame(delta: float) -> void:
 	var new_state = _current_state.process_frame(delta)
 	if new_state:
 		change_state(new_state)
-
-func get_last_state() -> State:
-	return _last_state
-
-func get_current_state() -> State:
-	return _current_state

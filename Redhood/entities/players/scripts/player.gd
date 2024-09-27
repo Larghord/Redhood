@@ -2,7 +2,7 @@ class_name Player
 extends CharacterBody2D
 
 @export var MAX_SPEED: float = 700.0
-@export var acceleration: float = 20.0
+@export var acceleration: float = 50.0
 @export_range(0.0,1.0) var friction:float = 0.35
 
 #region OnReady's
@@ -24,6 +24,7 @@ extends CharacterBody2D
 @onready var fall_gravity: float = ((-2.0 * JUMP_HEIGHT) / pow(JUMP_TIME_TO_DESCENT,2)) * -1.0
 @onready var jump_gravity: float = ((-2.0 * JUMP_HEIGHT) / pow(JUMP_TIME_TO_PEAK,2)) * -1.0
 @onready var jump_velocity: float = ((2.0 * JUMP_HEIGHT) / JUMP_TIME_TO_PEAK) * -1.0
+@onready var slide_velocity: float = ((2.0 * SLIDE_DISTANCE) / TIME_TO_SLIDE) * -1.0
 
 #endregion
 
@@ -32,8 +33,11 @@ extends CharacterBody2D
 const MAX_JUMP_COUNT: int = 2
 const DEFAULT_MODIFIER: float = 1.0
 const JUMP_HEIGHT: float = 300.0
+const SLIDE_DISTANCE: float = 300.0
 const JUMP_TIME_TO_PEAK: float = 0.5
 const JUMP_TIME_TO_DESCENT: float = 0.5
+const TIME_TO_SLIDE: float = 0.5
+const HANG_TIME: float = 0.015
 const MOVE_SPEED: float = 500.0
 const WALL_PUSH_POWER: float = 500.0
 #endregion
@@ -110,7 +114,7 @@ func move(direction) -> void:
 		else:
 				motion.x = clamp(motion.x + (acceleration * sign(direction)), -MAX_SPEED, MAX_SPEED)
 		flip_player(direction)
-	elif !state_machine.get_last_state().name == "WallJump" and !state_machine.get_current_state().name == "WallJump":
+	elif !state_machine.get_last_state.name == "WallJump" and !state_machine.get_current_state.name == "WallJump":
 		motion.x = lerp(motion.x, 0.0, friction)
 
 
@@ -128,7 +132,10 @@ func handle_wall_detection() -> void:
 
 
 func apply_external_forces():
-	velocity = motion + external_forces.lerp(external_forces, friction)
+	if velocity.x <= MAX_SPEED or external_forces_applied or state_machine.get_current_state.name != "Run" :
+		velocity = motion + external_forces.lerp(external_forces, friction)
+	else:
+		velocity.x = lerp(velocity.x,MAX_SPEED, 0.05)
 
 
 func apply_jump_force() -> void:
@@ -181,6 +188,5 @@ func set_wall_stick(wall_stick: bool, force: Vector2):
 
 func set_external_forces(forces:Vector2) -> void:
 	external_forces += forces
-	if abs(external_forces) > Vector2.ZERO:
-		external_forces_applied = true
+	external_forces_applied = abs(external_forces) > Vector2.ZERO
 #endregion

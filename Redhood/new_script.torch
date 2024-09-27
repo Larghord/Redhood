@@ -1,0 +1,92 @@
+[orchestration type="OScript" load_steps=7 format=3 uid="uid://re4l4vejmbm0"]
+
+[obj type="OScriptFunction" id="OScriptFunction_ieb4a"]
+guid = "13A4038A-7193-4430-ABD1-B797C7EB888E"
+method = {
+"name": &"_process",
+"flags": 8,
+"args": [{
+"name": &"delta",
+"type": 3
+}]
+}
+id = 2
+
+[obj type="OScriptGraph" id="OScriptGraph_ouxyf"]
+graph_name = &"EventGraph"
+zoom = 0.909091
+flags = 8
+nodes = Array[int]([1, 2, 3])
+functions = Array[int]([2])
+
+[obj type="OScriptNodeVariableGet" id="OScriptNodeVariableGet_vbgqj"]
+variable_name = &"Test"
+id = 1
+position = Vector2(0, 300)
+pin_data = Array[Dictionary]([{
+"pin_name": &"value",
+"type": 4,
+"dir": 1,
+"flags": 2050,
+"label": "Test",
+"dv": "",
+"usage": 4102
+}])
+
+[obj type="OScriptNodeEvent" id="OScriptNodeEvent_vjvat"]
+function_id = "13A4038A-7193-4430-ABD1-B797C7EB888E"
+id = 2
+position = Vector2(0, 140)
+pin_data = Array[Dictionary]([{
+"pin_name": &"ExecOut",
+"dir": 1,
+"flags": 4
+}, {
+"pin_name": &"delta",
+"type": 3,
+"dir": 1,
+"flags": 2
+}])
+
+[obj type="OScriptNodeCallBuiltinFunction" id="OScriptNodeCallBuiltinFunction_ymcl2"]
+function_name = &"print"
+flags = 33
+method = {
+"name": &"print",
+"flags": 17,
+"args": [{
+"name": &"arg1",
+"usage": 131078
+}]
+}
+variable_arg_count = 0
+id = 3
+position = Vector2(300, 180)
+pin_data = Array[Dictionary]([{
+"pin_name": &"ExecIn",
+"flags": 4
+}, {
+"pin_name": &"ExecOut",
+"dir": 1,
+"flags": 4
+}, {
+"pin_name": &"arg1",
+"flags": 2,
+"usage": 131078
+}])
+
+[obj type="OScriptVariable" id="OScriptVariable_06s8m"]
+name = "Test"
+category = "Default"
+exported = true
+classification = "type:String"
+type = 4
+default_value = ""
+
+[resource]
+base_type = &"Node"
+variables = Array[OScriptVariable]([SubResource("OScriptVariable_06s8m")])
+functions = Array[OScriptFunction]([SubResource("OScriptFunction_ieb4a")])
+connections = Array[int]([2, 0, 3, 0, 1, 0, 3, 1])
+nodes = Array[OScriptNode]([SubResource("OScriptNodeVariableGet_vbgqj"), SubResource("OScriptNodeEvent_vjvat"), SubResource("OScriptNodeCallBuiltinFunction_ymcl2")])
+graphs = Array[OScriptGraph]([SubResource("OScriptGraph_ouxyf")])
