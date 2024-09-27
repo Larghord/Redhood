@@ -520,7 +520,7 @@ current_max_jumps = 2
 [node name="AnimatedSprite" type="AnimatedSprite2D" parent="."]
 position = Vector2(-3, -48)
 sprite_frames = SubResource("SpriteFrames_xkude")
-animation = &"slide"
+animation = &"idle"
 autoplay = "idle"
 
 [node name="TopCollisionShape" type="CollisionShape2D" parent="."]
