@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dnbkkrv7arg1i"
+path="res://.godot/imported/Medium Metal Room.wav-1c3f8713343cccc52abafd69c7b2b4dc.sample"
+
+[deps]
+
+source_file="res://Wwise/Originals/Plugins/iZotope Hybrid Reverb/Medium Metal Room.wav"
+dest_files=["res://.godot/imported/Medium Metal Room.wav-1c3f8713343cccc52abafd69c7b2b4dc.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
