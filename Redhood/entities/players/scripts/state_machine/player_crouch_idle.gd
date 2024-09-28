@@ -4,6 +4,7 @@ extends State
 @export var fall_state: State
 @export var jump_state: State
 @export var run_state: State
+@export var crouch_walk_state: State
 
 
 func enter() -> void:
@@ -19,7 +20,7 @@ func process_input(_event: InputEvent) -> State:
 		return jump_state
 	if Input.get_axis("move_left","move_right"):
 		parent.jump_modifier = parent.DEFAULT_MODIFIER
-		return run_state
+		return crouch_walk_state
 	if Input.is_action_just_released("crouch"):
 		parent.jump_modifier = parent.DEFAULT_MODIFIER
 		return idle_state

@@ -1,4 +1,4 @@
-[gd_scene load_steps=86 format=3 uid="uid://pbattpuig1yt"]
+[gd_scene load_steps=87 format=3 uid="uid://pbattpuig1yt"]
 
 [ext_resource type="Script" path="res://entities/players/scripts/player.gd" id="1_r2puq"]
 [ext_resource type="Texture2D" uid="uid://dq1iqsf8ta7nv" path="res://entities/players/animations/Shadow/shadow-push-idle.png" id="2_k2obk"]
@@ -17,6 +17,7 @@
 [ext_resource type="Script" path="res://entities/players/scripts/state_machine/player_fall.gd" id="12_rsi1h"]
 [ext_resource type="Script" path="res://entities/players/scripts/state_machine/player_crouch_idle.gd" id="13_r60b4"]
 [ext_resource type="Script" path="res://entities/players/scripts/state_machine/player_jump.gd" id="13_xdhc5"]
+[ext_resource type="Script" path="res://entities/players/crouch_walk.gd" id="14_ss5qv"]
 [ext_resource type="Script" path="res://entities/players/scripts/state_machine/player_wall_land.gd" id="17_qo0r6"]
 [ext_resource type="Script" path="res://entities/players/scripts/state_machine/player_wall_jump.gd" id="18_wbsj1"]
 [ext_resource type="Script" path="res://entities/players/scripts/state_machine/player_ledge_grab.gd" id="19_stlxy"]
@@ -520,7 +521,7 @@ current_max_jumps = 2
 [node name="AnimatedSprite" type="AnimatedSprite2D" parent="."]
 position = Vector2(-3, -48)
 sprite_frames = SubResource("SpriteFrames_xkude")
-animation = &"idle"
+animation = &"crouch walk"
 autoplay = "idle"
 
 [node name="TopCollisionShape" type="CollisionShape2D" parent="."]
@@ -543,10 +544,19 @@ target_position = Vector2(30, 0)
 script = ExtResource("10_bsbc5")
 starting_state = NodePath("Idle")
 
-[node name="CrouchIdle" type="Node" parent="StateMachine" node_paths=PackedStringArray("idle_state", "fall_state", "jump_state", "run_state")]
+[node name="CrouchIdle" type="Node" parent="StateMachine" node_paths=PackedStringArray("idle_state", "fall_state", "jump_state", "run_state", "crouch_walk_state")]
 script = ExtResource("13_r60b4")
 idle_state = NodePath("../Idle")
 fall_state = NodePath("../Fall")
+jump_state = NodePath("../Jump")
+run_state = NodePath("../Run")
+crouch_walk_state = NodePath("../CrouchWalk")
+
+[node name="CrouchWalk" type="Node" parent="StateMachine" node_paths=PackedStringArray("fall_state", "crouch_state", "idle_state", "jump_state", "run_state")]
+script = ExtResource("14_ss5qv")
+fall_state = NodePath("../Fall")
+crouch_state = NodePath("../CrouchIdle")
+idle_state = NodePath("../Idle")
 jump_state = NodePath("../Jump")
 run_state = NodePath("../Run")
 

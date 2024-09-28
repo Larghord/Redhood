@@ -112,7 +112,7 @@ func move(direction) -> void:
 		if sign(direction) != sign(motion.x) and motion.x != 0 and is_on_floor():
 				motion.x = lerp(motion.x, direction, friction)
 		else:
-				motion.x = clamp(motion.x + (acceleration * sign(direction)), -MAX_SPEED, MAX_SPEED)
+				motion.x = clamp(motion.x + (acceleration * sign(direction)), -MAX_SPEED * speed_modifier, MAX_SPEED * speed_modifier)
 		flip_player(direction)
 	elif !state_machine.get_last_state.name == "WallJump" and !state_machine.get_current_state.name == "WallJump":
 		motion.x = lerp(motion.x, 0.0, friction)
