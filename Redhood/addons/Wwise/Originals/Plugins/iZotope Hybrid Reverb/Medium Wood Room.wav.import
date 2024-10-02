@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c1r5eih1qjkgs"
+path="res://.godot/imported/Medium Wood Room.wav-7e4c8e8b5fa7e1b767778b2d8ae8ef79.sample"
+
+[deps]
+
+source_file="res://addons/Wwise/Originals/Plugins/iZotope Hybrid Reverb/Medium Wood Room.wav"
+dest_files=["res://.godot/imported/Medium Wood Room.wav-7e4c8e8b5fa7e1b767778b2d8ae8ef79.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

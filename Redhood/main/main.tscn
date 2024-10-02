@@ -15,8 +15,6 @@ bank = {
 }
 load_on = 1
 
-[node name="AkBank2" type="AkBank" parent="AkBank"]
-
 [node name="AkEvent2D" type="AkEvent2D" parent="AkBank"]
 event = {
 "id": 3157003241,
@@ -24,4 +22,4 @@ event = {
 }
 trigger_on = 1
 
-[node name="AkListener2D" type="AkListener2D" parent="."]
+[node name="AkListener2D" type="AkListener2D" parent="AkBank"]
