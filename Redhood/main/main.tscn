@@ -7,3 +7,19 @@
 script = ExtResource("1_3e0f5")
 
 [node name="Forest1" parent="." instance=ExtResource("2_oshje")]
+
+[node name="AkBank" type="AkBank" parent="."]
+bank = {
+"id": 1355168291,
+"name": "Init"
+}
+load_on = 1
+
+[node name="AkBank" type="AkBank" parent="AkBank"]
+bank = {
+"id": 2218482606,
+"name": "Default_soundbank"
+}
+load_on = 1
+
+[node name="AkListener2D" type="AkListener2D" parent="AkBank"]

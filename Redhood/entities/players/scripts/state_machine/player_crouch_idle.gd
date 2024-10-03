@@ -12,6 +12,7 @@ func enter() -> void:
 	parent.motion.x = 0
 	parent.jump_modifier = 2.0
 	parent.motion.y = 0.0
+	parent.crouch.post_event()
 	super()
 
 

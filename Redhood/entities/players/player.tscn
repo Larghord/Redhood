@@ -639,3 +639,53 @@ one_shot = true
 [node name="DetachTimer" type="Timer" parent="Timers"]
 wait_time = 0.2
 one_shot = true
+
+[node name="SoundEvents" type="Node" parent="."]
+
+[node name="Jump" type="AkEvent2D" parent="SoundEvents"]
+event = {
+"id": 3833651337,
+"name": "Jump"
+}
+
+[node name="Fall" type="AkEvent2D" parent="SoundEvents"]
+event = {
+"id": 2512384458,
+"name": "Fall"
+}
+
+[node name="Run" type="AkEvent2D" parent="SoundEvents"]
+event = {
+"id": 712161704,
+"name": "Run"
+}
+
+[node name="WallLand" type="AkEvent2D" parent="SoundEvents"]
+event = {
+"id": 3202311090,
+"name": "WallLand"
+}
+
+[node name="WallJump" type="AkEvent2D" parent="SoundEvents"]
+event = {
+"id": 377821069,
+"name": "WallJump"
+}
+
+[node name="Land" type="AkEvent2D" parent="SoundEvents"]
+event = {
+"id": 674522502,
+"name": "Land"
+}
+
+[node name="LedgeGrab" type="AkEvent2D" parent="SoundEvents"]
+event = {
+"id": 1941804606,
+"name": "LedgeGrab"
+}
+
+[node name="Crouch" type="AkEvent2D" parent="SoundEvents"]
+event = {
+"id": 2655407367,
+"name": "Crouch"
+}

@@ -13,6 +13,7 @@ func enter() -> void:
 	if parent.is_on_floor():
 		parent.allow_coyote_time = true
 	animation_name = "run"
+	parent.Run_sound.post_event()
 	super()
 
 func process_input(_event: InputEvent) -> State:
@@ -44,3 +45,4 @@ func process_physics(_delta: float) -> State:
 func exit() -> void:
 	if !parent.coyote_timer.is_stopped():
 			parent.coyote_timer.stop()
+	parent.Run_sound.stop_event()
