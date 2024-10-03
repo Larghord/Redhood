@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PluginInfo Platform="Windows" BasePlatform="Windows">
 	<PluginLibs>
+		<PluginLib LibName="Wwise Parametric EQ" LibId="6881283" Type="Effect" DLL="AkParametricEQ" StaticLib="AkParametricEQFX"/>
+		<PluginLib LibName="Wwise Synth One" LibId="9699330" Type="Source" DLL="AkSynthOne" StaticLib="AkSynthOneSource"/>
 		<PluginLib LibName="System" LibId="11403271" Type="AudioDevice"/>
 		<PluginLib LibName="No Output" LibId="11862023" Type="AudioDevice"/>
 	</PluginLibs>
-	<FileHash>{0A13F4BA-B100-584C-1D1C-B9267B7D267A}</FileHash>
+	<FileHash>{AF62BF07-573E-08C7-FA67-50A1CA1DB5A0}</FileHash>
 </PluginInfo>

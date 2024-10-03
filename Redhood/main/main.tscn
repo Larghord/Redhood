@@ -15,11 +15,17 @@ bank = {
 }
 load_on = 1
 
-[node name="AkEvent2D" type="AkEvent2D" parent="AkBank"]
+[node name="AkBank" type="AkBank" parent="AkBank"]
+bank = {
+"id": 4154996803,
+"name": "Test_soundbank"
+}
+load_on = 1
+
+[node name="AkEvent2D" type="AkEvent2D" parent="AkBank/AkBank"]
 event = {
 "id": 3157003241,
 "name": "Test"
 }
-trigger_on = 1
 
 [node name="AkListener2D" type="AkListener2D" parent="AkBank"]

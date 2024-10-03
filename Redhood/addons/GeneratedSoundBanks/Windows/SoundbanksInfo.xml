@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{AB9F0343-CD85-AB9E-58D8-B63D74A50185}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{824ECB51-5FC9-520E-BCAA-AC23E41424AF}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -162,23 +162,36 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="2727318990" Type="User" Language="SFX" Hash="{65B2E11D-7332-537B-18C2-3B34C9986CD2}">
-			<ShortName>Test_2</ShortName>
-			<Path>Test_2.bnk</Path>
+		<SoundBank Id="4154996803" Type="User" Language="SFX" Hash="{A3A83076-6FC4-1591-9ECA-EE7FD6FFF4F2}">
+			<ShortName>Test_soundbank</ShortName>
+			<Path>Test_soundbank.bnk</Path>
 			<Media>
 				<File Id="730329172" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>xfchiba_walking_sprinting_0.wav</ShortName>
-					<CachePath>SFX/xfchiba_walking_sprinting_0_818F3B66.wem</CachePath>
+					<CachePath>SFX/xfchiba_walking_sprinting_0_FBC78EF0.wem</CachePath>
 				</File>
 			</Media>
+			<Plugins>
+				<Custom>
+					<Plugin Id="292199" Name="FM 03" LibName="Wwise Synth One" LibId="9699330"/>
+					<Plugin Id="667002179" Name="Wwise Parametric EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
+				</Custom>
+			</Plugins>
 			<Events>
 				<Event Id="3157003241" Name="Test">
 					<MediaRefs>
 						<MediaRef Id="730329172"/>
 					</MediaRefs>
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="292199"/>
+							<PluginRef Id="667002179"/>
+						</Custom>
+					</PluginRefs>
 				</Event>
 			</Events>
+			<GameParameters/>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{6800C55C-D3B0-2259-5E37-9443DE293837}</FileHash>
+	<FileHash>{4D6741ED-A303-683F-C375-CF505BC97BBC}</FileHash>
 </SoundBanksInfo>

@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{DC84C542-C9B4-4F78-BCDC-4198731387CB}" SchemaVersion="119">
 	<Metadatas>
-		<WorkUnit Name="Default Work Unit" ID="{DC84C542-C9B4-4F78-BCDC-4198731387CB}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{DC84C542-C9B4-4F78-BCDC-4198731387CB}" PersistMode="Standalone">
+			<ChildrenList>
+				<Metadata Name="New_Wwise_System_Output_Settings" ID="{7B385BED-6A3E-43BB-B377-1C829ECB02F0}" PluginName="Wwise System Output Settings" CompanyID="0" PluginID="900" PluginType="9"/>
+			</ChildrenList>
+		</WorkUnit>
 	</Metadatas>
 </WwiseDocument>
