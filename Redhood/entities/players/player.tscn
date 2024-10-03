@@ -1,4 +1,4 @@
-[gd_scene load_steps=84 format=3 uid="uid://pbattpuig1yt"]
+[gd_scene load_steps=83 format=3 uid="uid://pbattpuig1yt"]
 
 [ext_resource type="Script" path="res://entities/players/scripts/player.gd" id="1_r2puq"]
 [ext_resource type="Texture2D" uid="uid://dq1iqsf8ta7nv" path="res://entities/players/animations/Shadow/shadow-push-idle.png" id="2_k2obk"]
@@ -16,7 +16,6 @@
 [ext_resource type="Script" path="res://entities/players/scripts/state_machine/player_fall.gd" id="12_rsi1h"]
 [ext_resource type="Script" path="res://entities/players/scripts/state_machine/player_crouch_idle.gd" id="13_r60b4"]
 [ext_resource type="Script" path="res://entities/players/scripts/state_machine/player_jump.gd" id="13_xdhc5"]
-[ext_resource type="Script" path="res://entities/players/Run_sound.gd" id="17_42qdh"]
 [ext_resource type="Script" path="res://entities/players/scripts/state_machine/player_wall_land.gd" id="17_qo0r6"]
 [ext_resource type="Script" path="res://entities/players/scripts/state_machine/player_wall_jump.gd" id="18_wbsj1"]
 [ext_resource type="Script" path="res://entities/players/scripts/state_machine/player_ledge_grab.gd" id="19_stlxy"]
@@ -507,7 +506,7 @@ current_max_jumps = 2
 [node name="AnimatedSprite" type="AnimatedSprite2D" parent="."]
 position = Vector2(-3, -48)
 sprite_frames = SubResource("SpriteFrames_xkude")
-animation = &"idle"
+animation = &"run"
 autoplay = "idle"
 
 [node name="TopCollisionShape" type="CollisionShape2D" parent="."]
@@ -569,13 +568,6 @@ fall_state = NodePath("../Fall")
 idle_state = NodePath("../Idle")
 jump_state = NodePath("../Jump")
 
-[node name="AkEvent2D" type="AkEvent2D" parent="StateMachine/Run"]
-event = {
-"id": 3157003241,
-"name": "Test"
-}
-script = ExtResource("17_42qdh")
-
 [node name="WallJump" type="Node" parent="StateMachine" node_paths=PackedStringArray("fall_state", "idle_state", "run_state", "jump_state", "wall_landing_state", "wall_jump_state")]
 script = ExtResource("18_wbsj1")
 fall_state = NodePath("../Fall")
@@ -614,3 +606,53 @@ one_shot = true
 [node name="DetachTimer" type="Timer" parent="Timers"]
 wait_time = 0.2
 one_shot = true
+
+[node name="SoundEvents" type="Node" parent="."]
+
+[node name="Jump" type="AkEvent2D" parent="SoundEvents"]
+event = {
+"id": 3833651337,
+"name": "Jump"
+}
+
+[node name="Fall" type="AkEvent2D" parent="SoundEvents"]
+event = {
+"id": 2512384458,
+"name": "Fall"
+}
+
+[node name="Run" type="AkEvent2D" parent="SoundEvents"]
+event = {
+"id": 712161704,
+"name": "Run"
+}
+
+[node name="WallLand" type="AkEvent2D" parent="SoundEvents"]
+event = {
+"id": 3202311090,
+"name": "WallLand"
+}
+
+[node name="WallJump" type="AkEvent2D" parent="SoundEvents"]
+event = {
+"id": 377821069,
+"name": "WallJump"
+}
+
+[node name="Land" type="AkEvent2D" parent="SoundEvents"]
+event = {
+"id": 674522502,
+"name": "Land"
+}
+
+[node name="LedgeGrab" type="AkEvent2D" parent="SoundEvents"]
+event = {
+"id": 1941804606,
+"name": "LedgeGrab"
+}
+
+[node name="Crouch" type="AkEvent2D" parent="SoundEvents"]
+event = {
+"id": 2655407367,
+"name": "Crouch"
+}

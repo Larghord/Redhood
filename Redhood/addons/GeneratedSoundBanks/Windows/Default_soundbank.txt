@@ -1,0 +1,32 @@
+Event	ID	Name			Wwise Object Path	Notes
+	377821069	WallJump			\Default Work Unit\Movement\WallJump	
+	674522502	Land			\Default Work Unit\Movement\Land	
+	712161704	Run			\Default Work Unit\Movement\Run	
+	1941804606	LedgeGrab			\Default Work Unit\Movement\LedgeGrab	
+	2512384458	Fall			\Default Work Unit\Movement\Fall	
+	2655407367	Crouch			\Default Work Unit\Movement\Crouch	
+	3202311090	WallLand			\Default Work Unit\Movement\WallLand	
+	3833651337	Jump			\Default Work Unit\Movement\Jump	
+
+Effect plug-ins	ID	Name	Type				Notes
+	33041549	Compressor_Rocks	Wwise Compressor			
+	3657550167	New_Parametric_EQ	Wwise Parametric EQ			
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	111870353	xfchiba_walking_sprinting_2	H:\Redhood\Redhood\addons\Wwise\.cache\Windows\SFX\xfchiba_walking_sprinting_2_7B24374B.wem		\Actor-Mixer Hierarchy\Default Work Unit\Movement\Walk\xfchiba_walking_sprinting_2		44280
+	175946782	Wall land Transient	H:\Redhood\Redhood\addons\Wwise\.cache\Windows\SFX\ESM_GF_fx_gravel_one_shots_footstep_boots_dry_jumping_crunchy_exterior_1_29E531AE.wem		\Actor-Mixer Hierarchy\Default Work Unit\Movement\Wall land\Wall land Transient		153456
+	244096525	xfchiba_walking_sprinting_3	H:\Redhood\Redhood\addons\Wwise\.cache\Windows\SFX\xfchiba_walking_sprinting_3_156D1077.wem		\Actor-Mixer Hierarchy\Default Work Unit\Movement\Walk\xfchiba_walking_sprinting_3		44384
+	352336099	xfchiba_walking_sprinting_1	H:\Redhood\Redhood\addons\Wwise\.cache\Windows\SFX\xfchiba_walking_sprinting_1_5BE63B83.wem		\Actor-Mixer Hierarchy\Default Work Unit\Movement\Walk\xfchiba_walking_sprinting_1		44384
+	368429757	Wall land slide	H:\Redhood\Redhood\addons\Wwise\.cache\Windows\SFX\ESM_EMDP1_fx_foley_loop_dumping_gravel_sack_bulk_falling_C5898EA9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Movement\Wall land\Wall land slide		10113336
+	449433574	Land	H:\Redhood\Redhood\addons\Wwise\.cache\Windows\SFX\ESM_Land_3_Airy_Whoosh_Pass_By_16577FE3.wem		\Actor-Mixer Hierarchy\Default Work Unit\Movement\Land		26492
+	643236160	Ledge Rocks	H:\Redhood\Redhood\addons\Wwise\.cache\Windows\SFX\ESM_Fantasy_Game_Material_Stone_Magic_Debris_Hit_2_Dry_Magic_RPG_Apothecary_Ancient_Medieval_Element_Accent_Impact_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Movement\Ledge grab\Ledge Rocks		384160
+	644015757	Crouch	H:\Redhood\Redhood\addons\Wwise\.cache\Windows\SFX\xfchiba_crouching_2_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Movement\Crouch		203636
+	689091618	Fall Base layer	H:\Redhood\Redhood\addons\Wwise\.cache\Windows\SFX\ESM_FG_nature_loop_ambience_winter_wind_1_snow_gusty_storm_intense_8D4A5E42.wem		\Actor-Mixer Hierarchy\Default Work Unit\Movement\Fall\Fall Base layer		23808096
+	730329172	xfchiba_walking_sprinting_0	H:\Redhood\Redhood\addons\Wwise\.cache\Windows\SFX\xfchiba_walking_sprinting_0_5AD20F55.wem		\Actor-Mixer Hierarchy\Default Work Unit\Movement\Walk\xfchiba_walking_sprinting_0		44180
+	740173626	Ledge Transient	H:\Redhood\Redhood\addons\Wwise\.cache\Windows\SFX\ESM_War_UI_Source_Hit_Leather_Catchers_Glove_Grab_Hit_06_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Movement\Ledge grab\Ledge Transient		43336
+	763072178	Jump_ground	H:\Redhood\Redhood\addons\Wwise\.cache\Windows\SFX\ESM_GF_fx_gravel_one_shots_footstep_boots_dry_jumping_crunchy_exterior_3_9E9A7786.wem		\Actor-Mixer Hierarchy\Default Work Unit\Movement\Jump\Jump_ground		76364
+	802950490	Jump_wall	H:\Redhood\Redhood\addons\Wwise\.cache\Windows\SFX\ESM_GF_fx_gravel_one_shots_footstep_boots_dry_jumping_crunchy_exterior_5_A0BD83F8.wem		\Actor-Mixer Hierarchy\Default Work Unit\Movement\Jump\Jump_wall		63428
+	803527269	Ledge random	H:\Redhood\Redhood\addons\Wwise\.cache\Windows\SFX\ESM_Stone_Debris_Splatter_9_Organic_Elemental_Debris_Shatter_Splatter_Foley_Sound_Design_Source_Rock__2266C457.wem		\Actor-Mixer Hierarchy\Default Work Unit\Movement\Ledge grab\Ledge random		686924
+	811143617	xfchiba_walking_sprinting_4	H:\Redhood\Redhood\addons\Wwise\.cache\Windows\SFX\xfchiba_walking_sprinting_4_F6664C62.wem		\Actor-Mixer Hierarchy\Default Work Unit\Movement\Walk\xfchiba_walking_sprinting_4		44076
+	1063940447	Fall Riser	H:\Redhood\Redhood\addons\Wwise\.cache\Windows\SFX\ESM_Wind_Loop_Rocky_Mountian_Steady_Medium_1_19098AB1.wem		\Actor-Mixer Hierarchy\Default Work Unit\Movement\Fall\Fall Riser		4152240
+

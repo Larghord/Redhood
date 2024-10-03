@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{824ECB51-5FC9-520E-BCAA-AC23E41424AF}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{47327B2A-C766-D37E-3EA8-92BDC4AEE558}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -162,36 +162,142 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="4154996803" Type="User" Language="SFX" Hash="{A3A83076-6FC4-1591-9ECA-EE7FD6FFF4F2}">
-			<ShortName>Test_soundbank</ShortName>
-			<Path>Test_soundbank.bnk</Path>
+		<SoundBank Id="2218482606" Type="User" Language="SFX" Hash="{89BD6493-8CC7-11A5-D837-4E5ABC026D4C}">
+			<ShortName>Default_soundbank</ShortName>
+			<Path>Default_soundbank.bnk</Path>
 			<Media>
+				<File Id="111870353" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>xfchiba_walking_sprinting_2.wav</ShortName>
+					<CachePath>SFX/xfchiba_walking_sprinting_2_7B24374B.wem</CachePath>
+				</File>
+				<File Id="175946782" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ESM_GF_fx_gravel_one_shots_footstep_boots_dry_jumping_crunchy_exterior_1.wav</ShortName>
+					<CachePath>SFX/ESM_GF_fx_gravel_one_shots_footstep_boots_dry_jumping_crunchy_exterior_1_29E531AE.wem</CachePath>
+				</File>
+				<File Id="244096525" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>xfchiba_walking_sprinting_3.wav</ShortName>
+					<CachePath>SFX/xfchiba_walking_sprinting_3_156D1077.wem</CachePath>
+				</File>
+				<File Id="352336099" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>xfchiba_walking_sprinting_1.wav</ShortName>
+					<CachePath>SFX/xfchiba_walking_sprinting_1_5BE63B83.wem</CachePath>
+				</File>
+				<File Id="368429757" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ESM_EMDP1_fx_foley_loop_dumping_gravel_sack_bulk_falling.wav</ShortName>
+					<CachePath>SFX/ESM_EMDP1_fx_foley_loop_dumping_gravel_sack_bulk_falling_C5898EA9.wem</CachePath>
+				</File>
+				<File Id="449433574" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ESM_Land_3_Airy_Whoosh_Pass_By.wav</ShortName>
+					<CachePath>SFX/ESM_Land_3_Airy_Whoosh_Pass_By_16577FE3.wem</CachePath>
+				</File>
+				<File Id="643236160" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ESM_Fantasy_Game_Material_Stone_Magic_Debris_Hit_2_Dry_Magic_RPG_Apothecary_Ancient_Medieval_Element_Accent_Impact.wav</ShortName>
+					<CachePath>SFX/ESM_Fantasy_Game_Material_Stone_Magic_Debris_Hit_2_Dry_Magic_RPG_Apothecary_Ancient_Medieval_Element_Accent_Impact_818F3B66.wem</CachePath>
+				</File>
+				<File Id="644015757" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>xfchiba_crouching_2.wav</ShortName>
+					<CachePath>SFX/xfchiba_crouching_2_818F3B66.wem</CachePath>
+				</File>
+				<File Id="689091618" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ESM_FG_nature_loop_ambience_winter_wind_1_snow_gusty_storm_intense.wav</ShortName>
+					<CachePath>SFX/ESM_FG_nature_loop_ambience_winter_wind_1_snow_gusty_storm_intense_8D4A5E42.wem</CachePath>
+				</File>
 				<File Id="730329172" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>xfchiba_walking_sprinting_0.wav</ShortName>
-					<CachePath>SFX/xfchiba_walking_sprinting_0_FBC78EF0.wem</CachePath>
+					<CachePath>SFX/xfchiba_walking_sprinting_0_5AD20F55.wem</CachePath>
+				</File>
+				<File Id="740173626" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ESM_War_UI_Source_Hit_Leather_Catchers_Glove_Grab_Hit_06.wav</ShortName>
+					<CachePath>SFX/ESM_War_UI_Source_Hit_Leather_Catchers_Glove_Grab_Hit_06_818F3B66.wem</CachePath>
+				</File>
+				<File Id="763072178" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ESM_GF_fx_gravel_one_shots_footstep_boots_dry_jumping_crunchy_exterior_3.wav</ShortName>
+					<CachePath>SFX/ESM_GF_fx_gravel_one_shots_footstep_boots_dry_jumping_crunchy_exterior_3_9E9A7786.wem</CachePath>
+				</File>
+				<File Id="802950490" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ESM_GF_fx_gravel_one_shots_footstep_boots_dry_jumping_crunchy_exterior_5.wav</ShortName>
+					<CachePath>SFX/ESM_GF_fx_gravel_one_shots_footstep_boots_dry_jumping_crunchy_exterior_5_A0BD83F8.wem</CachePath>
+				</File>
+				<File Id="803527269" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ESM_Stone_Debris_Splatter_9_Organic_Elemental_Debris_Shatter_Splatter_Foley_Sound_Design_Source_Rock_.wav</ShortName>
+					<CachePath>SFX/ESM_Stone_Debris_Splatter_9_Organic_Elemental_Debris_Shatter_Splatter_Foley_Sound_Design_Source_Rock__2266C457.wem</CachePath>
+				</File>
+				<File Id="811143617" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>xfchiba_walking_sprinting_4.wav</ShortName>
+					<CachePath>SFX/xfchiba_walking_sprinting_4_F6664C62.wem</CachePath>
+				</File>
+				<File Id="1063940447" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ESM_Wind_Loop_Rocky_Mountian_Steady_Medium_1.wav</ShortName>
+					<CachePath>SFX/ESM_Wind_Loop_Rocky_Mountian_Steady_Medium_1_19098AB1.wem</CachePath>
 				</File>
 			</Media>
 			<Plugins>
-				<Custom>
-					<Plugin Id="292199" Name="FM 03" LibName="Wwise Synth One" LibId="9699330"/>
-					<Plugin Id="667002179" Name="Wwise Parametric EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
-				</Custom>
+				<ShareSets>
+					<Plugin Id="33041549" Name="Compressor_Rocks" LibName="Wwise Compressor" LibId="7077891"/>
+					<Plugin Id="3657550167" Name="New_Parametric_EQ" LibName="Wwise Parametric EQ" LibId="6881283"/>
+				</ShareSets>
 			</Plugins>
 			<Events>
-				<Event Id="3157003241" Name="Test">
+				<Event Id="2655407367" Name="Crouch">
 					<MediaRefs>
-						<MediaRef Id="730329172"/>
+						<MediaRef Id="644015757"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2512384458" Name="Fall">
+					<MediaRefs>
+						<MediaRef Id="689091618"/>
+						<MediaRef Id="1063940447"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3833651337" Name="Jump">
+					<MediaRefs>
+						<MediaRef Id="763072178"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="674522502" Name="Land">
+					<MediaRefs>
+						<MediaRef Id="449433574"/>
 					</MediaRefs>
 					<PluginRefs>
-						<Custom>
-							<PluginRef Id="292199"/>
-							<PluginRef Id="667002179"/>
-						</Custom>
+						<ShareSets>
+							<PluginRef Id="3657550167"/>
+						</ShareSets>
 					</PluginRefs>
 				</Event>
+				<Event Id="1941804606" Name="LedgeGrab">
+					<MediaRefs>
+						<MediaRef Id="643236160"/>
+						<MediaRef Id="740173626"/>
+						<MediaRef Id="803527269"/>
+					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="33041549"/>
+						</ShareSets>
+					</PluginRefs>
+				</Event>
+				<Event Id="712161704" Name="Run">
+					<MediaRefs>
+						<MediaRef Id="111870353"/>
+						<MediaRef Id="244096525"/>
+						<MediaRef Id="352336099"/>
+						<MediaRef Id="730329172"/>
+						<MediaRef Id="811143617"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="377821069" Name="WallJump">
+					<MediaRefs>
+						<MediaRef Id="802950490"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3202311090" Name="WallLand">
+					<MediaRefs>
+						<MediaRef Id="175946782"/>
+						<MediaRef Id="368429757"/>
+					</MediaRefs>
+				</Event>
 			</Events>
-			<GameParameters/>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{4D6741ED-A303-683F-C375-CF505BC97BBC}</FileHash>
+	<FileHash>{C7520824-5395-923B-037D-3FDDEE945F51}</FileHash>
 </SoundBanksInfo>

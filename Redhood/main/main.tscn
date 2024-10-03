@@ -17,15 +17,9 @@ load_on = 1
 
 [node name="AkBank" type="AkBank" parent="AkBank"]
 bank = {
-"id": 4154996803,
-"name": "Test_soundbank"
+"id": 2218482606,
+"name": "Default_soundbank"
 }
 load_on = 1
-
-[node name="AkEvent2D" type="AkEvent2D" parent="AkBank/AkBank"]
-event = {
-"id": 3157003241,
-"name": "Test"
-}
 
 [node name="AkListener2D" type="AkListener2D" parent="AkBank"]

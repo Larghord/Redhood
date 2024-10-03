@@ -3,31 +3,720 @@
 	<AudioObjects>
 		<WorkUnit Name="Default Work Unit" ID="{93BF6870-99DA-468D-93C3-E61B213062CF}" PersistMode="Standalone">
 			<ChildrenList>
-				<Sound Name="Test" ID="{448C98C3-A3EA-4328-89AC-817F8F9A31D8}" ShortID="342840715">
+				<Folder Name="Movement" ID="{D41D3BC3-BD12-4CC3-91BC-38754E2F9A6D}" ShortID="712081032">
 					<PropertyList>
-						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+						<Property Name="Color" Type="int16" Value="10"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
 					</PropertyList>
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0547DDF-E7C0-49C9-ABBE-1439092B8821}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2AF9F1E8-04EC-4E5A-8EE2-D01DED10EF3F}"/>
-						</Reference>
-					</ReferenceList>
 					<ChildrenList>
-						<AudioFileSource Name="xfchiba_walking_sprinting_0" ID="{2C97C39E-4AA2-432D-AC74-3C7B620F39A9}">
-							<Language>SFX</Language>
-							<AudioFile>xfchiba_walking_sprinting_0.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="730329172"/>
-							</MediaIDList>
-						</AudioFileSource>
+						<Folder Name="Fall" ID="{04CC85A5-BA3A-4AC7-8470-357F32DA0CE5}" ShortID="135470266">
+							<ChildrenList>
+								<Sound Name="Fall Base layer" ID="{A5C8E051-4D0D-4BC7-84ED-E46A20BF513B}" ShortID="11307322">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-12</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0547DDF-E7C0-49C9-ABBE-1439092B8821}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2AF9F1E8-04EC-4E5A-8EE2-D01DED10EF3F}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ESM_FG_nature_loop_ambience_winter_wind_1_snow_gusty_storm_intense" ID="{CBD25AB4-BB99-4C7D-86E0-4419BF360130}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="1.25816535316876"/>
+												<Property Name="FadeInShape" Type="int16" Value="9"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>ESM_FG_nature_loop_ambience_winter_wind_1_snow_gusty_storm_intense.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="689091618"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ESM_FG_nature_loop_ambience_winter_wind_1_snow_gusty_storm_intense" ID="{CBD25AB4-BB99-4C7D-86E0-4419BF360130}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Fall Riser" ID="{02D2112C-86D7-4CD5-B693-90F04DBF5B77}" ShortID="881416311">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="OutputBusHighpass" Type="int16">
+											<ValueList>
+												<Value>46</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>7</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0547DDF-E7C0-49C9-ABBE-1439092B8821}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2AF9F1E8-04EC-4E5A-8EE2-D01DED10EF3F}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ESM_Wind_Loop_Rocky_Mountian_Steady_Medium_1" ID="{9F2EE153-371D-4A8B-AB3E-1D115B70250F}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="2.37871727650556"/>
+												<Property Name="FadeInShape" Type="int16" Value="8"/>
+												<Property Name="LoopBegin" Type="Real64" Value="5.7460295940502"/>
+												<Property Name="LoopEnd" Type="Real64" Value="17.1685156492098"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>ESM_Wind_Loop_Rocky_Mountian_Steady_Medium_1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1063940447"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ESM_Wind_Loop_Rocky_Mountian_Steady_Medium_1" ID="{9F2EE153-371D-4A8B-AB3E-1D115B70250F}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="Ledge grab" ID="{B7A58A99-155B-4BD3-A4ED-A316CF35FC95}" ShortID="478721654">
+							<ChildrenList>
+								<Sound Name="Ledge Transient" ID="{F48E8AEC-5172-414E-BB56-B83E30374246}" ShortID="863756273">
+									<PropertyList>
+										<Property Name="OutputBusLowpass" Type="int16">
+											<ValueList>
+												<Value>25</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{A7F6119C-F87C-4380-BE62-5CAD0B80BF0A}"/>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-16</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0547DDF-E7C0-49C9-ABBE-1439092B8821}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2AF9F1E8-04EC-4E5A-8EE2-D01DED10EF3F}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ESM_War_UI_Source_Hit_Leather_Catchers_Glove_Grab_Hit_06" ID="{B3B892C6-4161-466B-A8A2-CECFACB2E278}">
+											<Language>SFX</Language>
+											<AudioFile>ESM_War_UI_Source_Hit_Leather_Catchers_Glove_Grab_Hit_06.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="740173626"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Effects">
+											<Reference>
+												<Local>
+													<EffectSlot Name="" ID="{68D69275-0C22-43A1-AA99-0AE0BA2F4957}" ShortID="522553019">
+														<ReferenceList>
+															<Reference Name="Effect" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
+																<ObjectRef Name="Compressor_Rocks" ID="{240D6C25-D571-4DF3-B915-5EE22DD2685D}" WorkUnitID="{70F46671-A828-4029-A11A-36BB09D872B9}"/>
+															</Reference>
+														</ReferenceList>
+													</EffectSlot>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+									<ActiveSourceList>
+										<ActiveSource Name="ESM_War_UI_Source_Hit_Leather_Catchers_Glove_Grab_Hit_06" ID="{B3B892C6-4161-466B-A8A2-CECFACB2E278}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Ledge Rocks" ID="{76C90588-05C8-4081-A3AD-2DA78C84F453}" ShortID="962330111">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{952610C8-E8BA-4A03-9009-49D0B18FA4E8}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="354"/>
+															<Property Name="Min" Type="Real64" Value="-101"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-18</Value>
+											</ValueList>
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{76711A89-B63F-4000-B335-DF6A974622A0}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="3"/>
+															<Property Name="Min" Type="Real64" Value="-3"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0547DDF-E7C0-49C9-ABBE-1439092B8821}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2AF9F1E8-04EC-4E5A-8EE2-D01DED10EF3F}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ESM_Fantasy_Game_Material_Stone_Magic_Debris_Hit_2_Dry_Magic_RPG_Apothecary_Ancient_Medieval_Element_Accent_Impact" ID="{6AB9C01E-5FA6-4E12-9EB6-C27F97453CF7}">
+											<Language>SFX</Language>
+											<AudioFile>ESM_Fantasy_Game_Material_Stone_Magic_Debris_Hit_2_Dry_Magic_RPG_Apothecary_Ancient_Medieval_Element_Accent_Impact.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="643236160"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ESM_Fantasy_Game_Material_Stone_Magic_Debris_Hit_2_Dry_Magic_RPG_Apothecary_Ancient_Medieval_Element_Accent_Impact" ID="{6AB9C01E-5FA6-4E12-9EB6-C27F97453CF7}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Ledge random" ID="{33618622-F604-4A10-A127-1FEB779244B9}" ShortID="783990157">
+									<PropertyList>
+										<Property Name="Lowpass" Type="int16">
+											<ValueList>
+												<Value>16</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>150</Value>
+											</ValueList>
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{C01E19F7-94A1-49FF-83E3-9803785C1A2B}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="253"/>
+															<Property Name="Min" Type="Real64" Value="-101"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-13</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0547DDF-E7C0-49C9-ABBE-1439092B8821}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2AF9F1E8-04EC-4E5A-8EE2-D01DED10EF3F}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ESM_Stone_Debris_Splatter_9_Organic_Elemental_Debris_Shatter_Splatter_Foley_Sound_Design_Source_Rock_" ID="{D2927B1E-677F-4F3A-9C5A-FE4DED672F39}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.914406747425094"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="1.31131956636236"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>ESM_Stone_Debris_Splatter_9_Organic_Elemental_Debris_Shatter_Splatter_Foley_Sound_Design_Source_Rock_.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="803527269"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ESM_Stone_Debris_Splatter_9_Organic_Elemental_Debris_Shatter_Splatter_Foley_Sound_Design_Source_Rock_" ID="{D2927B1E-677F-4F3A-9C5A-FE4DED672F39}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</Folder>
+						<RandomSequenceContainer Name="Walk" ID="{8388AC22-05BD-49CA-955B-4F372AA3EAB0}" ShortID="797988083">
+							<PropertyList>
+								<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+								<Property Name="RandomAvoidRepeating" Type="bool" Value="False"/>
+								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-8</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0547DDF-E7C0-49C9-ABBE-1439092B8821}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2AF9F1E8-04EC-4E5A-8EE2-D01DED10EF3F}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="xfchiba_walking_sprinting_0" ID="{6CBFA42F-57BA-43A9-8CBB-CADB332045EF}" ShortID="702890208">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0547DDF-E7C0-49C9-ABBE-1439092B8821}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2AF9F1E8-04EC-4E5A-8EE2-D01DED10EF3F}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="xfchiba_walking_sprinting_0" ID="{8F989443-3C15-4D45-8B64-3335BBD4322E}">
+											<PropertyList>
+												<Property Name="CrossfadeShape" Type="int16" Value="0"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.150134914937499"/>
+												<Property Name="FadeOutShape" Type="int16" Value="1"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.249905251882998"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>xfchiba_walking_sprinting_0.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="730329172"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="xfchiba_walking_sprinting_0" ID="{8F989443-3C15-4D45-8B64-3335BBD4322E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="xfchiba_walking_sprinting_1" ID="{0D8EAC90-4E94-47EB-A0E2-BDE397283992}" ShortID="50831626">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0547DDF-E7C0-49C9-ABBE-1439092B8821}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2AF9F1E8-04EC-4E5A-8EE2-D01DED10EF3F}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="xfchiba_walking_sprinting_1" ID="{B8FDEE0F-F446-41B2-9DC4-C1134B2DFF66}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.241747513075582"/>
+												<Property Name="FadeOutShape" Type="int16" Value="1"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.251064905023986"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>xfchiba_walking_sprinting_1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="352336099"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="xfchiba_walking_sprinting_1" ID="{B8FDEE0F-F446-41B2-9DC4-C1134B2DFF66}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="xfchiba_walking_sprinting_2" ID="{DA225B05-A23F-4E1A-89E8-5C04BDEE52B8}" ShortID="702420525">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0547DDF-E7C0-49C9-ABBE-1439092B8821}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2AF9F1E8-04EC-4E5A-8EE2-D01DED10EF3F}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="xfchiba_walking_sprinting_2" ID="{374B7F09-A473-4091-9F81-4AEC6FC93D92}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.250485078453492"/>
+												<Property Name="FadeOutShape" Type="int16" Value="1"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.250485078453492"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>xfchiba_walking_sprinting_2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="111870353"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="xfchiba_walking_sprinting_2" ID="{374B7F09-A473-4091-9F81-4AEC6FC93D92}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="xfchiba_walking_sprinting_3" ID="{A8AF6D94-A433-4799-8236-545573779C88}" ShortID="19910907">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0547DDF-E7C0-49C9-ABBE-1439092B8821}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2AF9F1E8-04EC-4E5A-8EE2-D01DED10EF3F}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="xfchiba_walking_sprinting_3" ID="{0B8DBBB1-7590-4500-BF2B-96330218ACF6}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.251064905023986"/>
+												<Property Name="FadeOutShape" Type="int16" Value="1"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.251064905023986"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>xfchiba_walking_sprinting_3.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="244096525"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="xfchiba_walking_sprinting_3" ID="{0B8DBBB1-7590-4500-BF2B-96330218ACF6}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="xfchiba_walking_sprinting_4" ID="{82EBC4B1-AE82-40A7-9075-52F89BB21BF9}" ShortID="221117657">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0547DDF-E7C0-49C9-ABBE-1439092B8821}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2AF9F1E8-04EC-4E5A-8EE2-D01DED10EF3F}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="xfchiba_walking_sprinting_4" ID="{6C25E3B6-4B43-4D87-9EEA-7214C9630CCB}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.240048200184596"/>
+												<Property Name="FadeOutShape" Type="int16" Value="1"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.249325425312504"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>xfchiba_walking_sprinting_4.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="811143617"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="xfchiba_walking_sprinting_4" ID="{6C25E3B6-4B43-4D87-9EEA-7214C9630CCB}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<Folder Name="Jump" ID="{0B624247-2098-4A4B-B2F2-DED99895B3AE}" ShortID="748855491">
+							<ChildrenList>
+								<Sound Name="Jump_ground" ID="{B3267422-B64B-4A8B-81CB-7C4E85518F22}" ShortID="715412527">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{D537EFE1-88D6-4106-850B-7BC4785DB751}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="278"/>
+															<Property Name="Min" Type="Real64" Value="-126"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>2</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0547DDF-E7C0-49C9-ABBE-1439092B8821}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2AF9F1E8-04EC-4E5A-8EE2-D01DED10EF3F}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="xfchiba_jumping_0" ID="{AA57DB97-A5F6-4D55-AA51-8F1948719FE4}">
+											<Language>SFX</Language>
+											<AudioFile>xfchiba_jumping_0.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="701287083"/>
+											</MediaIDList>
+										</AudioFileSource>
+										<AudioFileSource Name="ESM_GF_fx_gravel_one_shots_footstep_boots_dry_jumping_crunchy_exterior_3" ID="{8E62E494-26A5-420B-BADC-4298FBBEC5E4}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.25511570182574"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.397227133044105"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>ESM_GF_fx_gravel_one_shots_footstep_boots_dry_jumping_crunchy_exterior_3.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="763072178"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ESM_GF_fx_gravel_one_shots_footstep_boots_dry_jumping_crunchy_exterior_3" ID="{8E62E494-26A5-420B-BADC-4298FBBEC5E4}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Jump_wall" ID="{8759BB4A-B98C-403B-8016-2A643536A541}" ShortID="162203698">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-10</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0547DDF-E7C0-49C9-ABBE-1439092B8821}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2AF9F1E8-04EC-4E5A-8EE2-D01DED10EF3F}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ESM_GF_fx_gravel_one_shots_footstep_boots_dry_jumping_crunchy_exterior_5" ID="{0639F07A-279F-4D41-8FB1-3DB0DB09E39B}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.1924193329718"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.781458107375271"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.11131982104121"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>ESM_GF_fx_gravel_one_shots_footstep_boots_dry_jumping_crunchy_exterior_5.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="802950490"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ESM_GF_fx_gravel_one_shots_footstep_boots_dry_jumping_crunchy_exterior_5" ID="{0639F07A-279F-4D41-8FB1-3DB0DB09E39B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</Folder>
+						<Sound Name="Land" ID="{AB61D4C1-8F47-458C-968F-47452ED8861E}" ShortID="529428219">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-10</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0547DDF-E7C0-49C9-ABBE-1439092B8821}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2AF9F1E8-04EC-4E5A-8EE2-D01DED10EF3F}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="ESM_Land_3_Airy_Whoosh_Pass_By" ID="{F1D5F350-360A-427A-8DE3-FD941296CCD3}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.144443706622201"/>
+										<Property Name="FadeOutShape" Type="int16" Value="1"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>ESM_Land_3_Airy_Whoosh_Pass_By.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="449433574"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Effects">
+									<Reference>
+										<Local>
+											<EffectSlot Name="" ID="{E0E15BD8-CE87-4583-B505-DB234DE5A062}" ShortID="106900169">
+												<ReferenceList>
+													<Reference Name="Effect" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+														<ObjectRef Name="New_Parametric_EQ" ID="{2F13AC23-26C0-4C0D-A732-0624024DFA14}" WorkUnitID="{F9402290-E44C-4761-9017-64407744B4EF}"/>
+													</Reference>
+												</ReferenceList>
+											</EffectSlot>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+							<ActiveSourceList>
+								<ActiveSource Name="ESM_Land_3_Airy_Whoosh_Pass_By" ID="{F1D5F350-360A-427A-8DE3-FD941296CCD3}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Folder Name="Wall land" ID="{0436ACD1-5A12-4EAC-B174-93194D16F7FE}" ShortID="352149875">
+							<ChildrenList>
+								<Sound Name="Wall land Transient" ID="{0C96E90B-C65E-4932-B46E-6774FDF87302}" ShortID="895398092">
+									<PropertyList>
+										<Property Name="OutputBusLowpass" Type="int16">
+											<ValueList>
+												<Value>25</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-8</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0547DDF-E7C0-49C9-ABBE-1439092B8821}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2AF9F1E8-04EC-4E5A-8EE2-D01DED10EF3F}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ESM_War_UI_Source_Hit_Leather_Catchers_Glove_Grab_Hit_05" ID="{3872C316-7830-4E25-8EDC-74B491F70587}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0872900849602314"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.201873689443239"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>ESM_War_UI_Source_Hit_Leather_Catchers_Glove_Grab_Hit_05.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="695525070"/>
+											</MediaIDList>
+										</AudioFileSource>
+										<AudioFileSource Name="ESM_GF_fx_gravel_one_shots_footstep_boots_dry_jumping_crunchy_exterior_1" ID="{43AEF119-D1BF-428C-ADC1-8C7F2B96DC53}">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="1.15468919468547"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="1.15468919468547"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>ESM_GF_fx_gravel_one_shots_footstep_boots_dry_jumping_crunchy_exterior_1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="175946782"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ESM_GF_fx_gravel_one_shots_footstep_boots_dry_jumping_crunchy_exterior_1" ID="{43AEF119-D1BF-428C-ADC1-8C7F2B96DC53}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Wall land slide" ID="{11450895-F24B-432A-B2A6-BA7DF51DC243}" ShortID="877313449">
+									<PropertyList>
+										<Property Name="OutputBusHighpass" Type="int16">
+											<ValueList>
+												<Value>19</Value>
+											</ValueList>
+										</Property>
+										<Property Name="OutputBusLowpass" Type="int16">
+											<ValueList>
+												<Value>19</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-21</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0547DDF-E7C0-49C9-ABBE-1439092B8821}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2AF9F1E8-04EC-4E5A-8EE2-D01DED10EF3F}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ESM_EMDP1_fx_foley_loop_dumping_gravel_sack_bulk_falling" ID="{412AE83C-7C65-4E96-BC36-F295A0C63519}">
+											<PropertyList>
+												<Property Name="CrossfadeShape" Type="int16" Value="8"/>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.238554814053805"/>
+												<Property Name="FadeInShape" Type="int16" Value="9"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>ESM_EMDP1_fx_foley_loop_dumping_gravel_sack_bulk_falling.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="368429757"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ESM_EMDP1_fx_foley_loop_dumping_gravel_sack_bulk_falling" ID="{412AE83C-7C65-4E96-BC36-F295A0C63519}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</Folder>
+						<Sound Name="Crouch" ID="{B8E3A3AB-91E3-4E0D-8AA4-B082DFEF3214}" ShortID="902988300">
+							<PropertyList>
+								<Property Name="OutputBusHighpass" Type="int16">
+									<ValueList>
+										<Value>27</Value>
+									</ValueList>
+								</Property>
+								<Property Name="OutputBusLowpass" Type="int16">
+									<ValueList>
+										<Value>13</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{9E8EA57B-78CB-4C15-9EF8-89E3555DE1DD}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="277"/>
+													<Property Name="Min" Type="Real64" Value="-202"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>2</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0547DDF-E7C0-49C9-ABBE-1439092B8821}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2AF9F1E8-04EC-4E5A-8EE2-D01DED10EF3F}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="xfchiba_crouching_2" ID="{440A76FF-9963-4397-A487-4197A59AFF50}">
+									<Language>SFX</Language>
+									<AudioFile>xfchiba_crouching_2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="644015757"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="xfchiba_crouching_2" ID="{440A76FF-9963-4397-A487-4197A59AFF50}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="xfchiba_walking_sprinting_0" ID="{2C97C39E-4AA2-432D-AC74-3C7B620F39A9}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

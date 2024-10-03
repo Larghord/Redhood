@@ -11,6 +11,7 @@ func enter() -> void:
 	animation_name = "fall"
 	parent.allow_coyote_time = false
 	parent.coyote_timer.stop()
+	parent.fall_sound.post_event()
 	super()
 
 
@@ -33,6 +34,7 @@ func process_physics(delta: float) -> State:
 	parent.move(direction)
 	
 	if parent.is_on_floor():
+		parent.land.post_event()
 		parent.can_attach_to_walls = true
 		parent.last_wall_norm = Vector2.ZERO
 		parent.jump_count = 0
@@ -46,3 +48,6 @@ func process_physics(delta: float) -> State:
 			return crouch_state
 		return idle_state
 	return null
+
+func exit() -> void:
+	parent.fall_sound.stop_event()

@@ -10,6 +10,7 @@ func enter() -> void:
 	parent.motion.x = 0
 	parent.jump_count = 1
 	parent.jump_modifier = parent.DEFAULT_MODIFIER
+	parent.ledge_grab.post_event()
 	super()
 
 func process_input(_event: InputEvent) -> State:
@@ -25,3 +26,5 @@ func process_physics(_delta: float) -> State:
 		return fall_state
 	
 	return null
+func exit() -> void:
+	parent.ledge_grab.stop_event()

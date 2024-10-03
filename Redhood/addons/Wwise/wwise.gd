@@ -2,10 +2,24 @@ class_name AK
 
 class EVENTS:
 
-	const TEST = 3157003241
+	const WALLJUMP = 377821069
+	const JUMP = 3833651337
+	const RUN = 712161704
+	const FALL = 2512384458
+	const LEDGEGRAB = 1941804606
+	const WALLLAND = 3202311090
+	const CROUCH = 2655407367
+	const LAND = 674522502
 
 	const _dict = {
-		"Test": TEST
+		"WallJump": WALLJUMP,
+		"Jump": JUMP,
+		"Run": RUN,
+		"Fall": FALL,
+		"LedgeGrab": LEDGEGRAB,
+		"WallLand": WALLLAND,
+		"Crouch": CROUCH,
+		"Land": LAND
 	}
 
 class STATES:
@@ -49,21 +63,19 @@ class TRIGGERS:
 class BANKS:
 
 	const INIT = 1355168291
-	const TEST_SOUNDBANK = 4154996803
+	const DEFAULT_SOUNDBANK = 2218482606
 
 	const _dict = {
 		"Init": INIT,
-		"Test_soundbank": TEST_SOUNDBANK
+		"Default_soundbank": DEFAULT_SOUNDBANK
 	}
 
 class BUSSES:
 
 	const MASTER_AUDIO_BUS = 3803692087
-	const TEST_BUS = 3463301806
 
 	const _dict = {
-		"Master Audio Bus": MASTER_AUDIO_BUS,
-		"Test_bus": TEST_BUS
+		"Master Audio Bus": MASTER_AUDIO_BUS
 	}
 
 class AUX_BUSSES:

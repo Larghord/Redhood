@@ -1,6 +1,15 @@
 class_name Player
 extends CharacterBody2D
 
+@onready var crouch = $SoundEvents/Crouch
+@onready var ledge_grab = $SoundEvents/LedgeGrab
+@onready var land = $SoundEvents/Land
+@onready var wall_jump = $SoundEvents/WallJump
+@onready var wall_land = $SoundEvents/WallLand
+@onready var fall_sound = $SoundEvents/Fall
+@onready var jump_sound = $SoundEvents/Jump
+@onready var Run_sound = $SoundEvents/Run
+
 @export var MAX_SPEED: float = 700.0
 @export var acceleration: float = 20.0
 @export_range(0.0,1.0) var friction:float = 0.35

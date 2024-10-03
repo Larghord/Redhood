@@ -1,5 +1,5 @@
 extends State
-@onready var Run_sound = $AkEvent2D
+
 @export var fall_state: State
 @export var idle_state: State
 @export var jump_state: State
@@ -13,7 +13,7 @@ func enter() -> void:
 	if parent.is_on_floor():
 		parent.allow_coyote_time = true
 	animation_name = "run"
-	Run_sound.GameEvent.trigger_on = 0
+	parent.Run_sound.post_event()
 	super()
 
 
@@ -41,3 +41,4 @@ func process_physics(_delta: float) -> State:
 func exit() -> void:
 	if !parent.coyote_timer.is_stopped():
 			parent.coyote_timer.stop()
+	parent.Run_sound.stop_event()

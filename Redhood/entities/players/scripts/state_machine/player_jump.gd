@@ -5,7 +5,7 @@ extends State
 @export var run_state: State
 @export var jump_state: State
 @export var wall_landing_state: State
-@export var wall_jump_state: State
+@export var wall_jump_state: State 
 @export var ledge_grab_state: State
 
 var _initial_run: bool = false
@@ -24,6 +24,7 @@ func enter() -> void:
 	parent.jump_release_timer.start()
 	parent.last_wall_norm = Vector2.ZERO
 	_initial_run = true
+	parent.jump_sound.post_event()
 	super()
 
 
@@ -52,6 +53,7 @@ func process_physics(delta: float) -> State:
 	parent.move(direction)
 	
 	if parent.is_on_floor() and !_initial_run:
+		parent.land.post_event()
 		parent.jump_modifier = parent.DEFAULT_MODIFIER
 		parent.jump_count = 0
 		if parent.in_jump_buffer:
@@ -60,6 +62,7 @@ func process_physics(delta: float) -> State:
 			return run_state
 		return idle_state
 	_initial_run = false
+	
 	
 	return null
 

@@ -12,8 +12,9 @@ func enter() -> void:
 	animation_name = "wall land"
 	parent.motion.y = 0
 	parent.motion.x = 0
-	parent.jump_count = 1
+	parent.jump_count = 1 
 	parent.jump_modifier = parent.DEFAULT_MODIFIER
+	parent.wall_land.post_event()
 	super()
 
 
@@ -46,3 +47,6 @@ func process_physics(_delta: float) -> State:
 	elif !parent.is_wall_detected and parent.velocity.y > 0.1:
 		return fall_state
 	return null
+	
+func exit() -> void:
+	parent.wall_land.stop_event()

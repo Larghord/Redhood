@@ -22,6 +22,7 @@ func enter() -> void:
 	parent.can_release_jump = false
 	_initial_run = true 
 	parent.jump_release_timer.start()
+	parent.wall_jump.post_event()
 	super()
 
 
