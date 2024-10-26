@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="150">
+	<RootPaths>
+		<ProjectRoot>../../Wwise</ProjectRoot>
+		<SourceFilesRoot>../../Wwise/.cache/Windows</SourceFilesRoot>
+		<SoundBanksRoot>.</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>../../Wwise/GeneratedSoundBanks/Windows</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{47327B2A-C766-D37E-3EA8-92BDC4AEE558}">
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+			<Plugins>
+				<AudioDevices>
+					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
+					<Plugin Id="3859886410" Name="System" LibName="System" LibId="11403271"/>
+				</AudioDevices>
+			</Plugins>
+			<Busses>
+				<Bus Id="3803692087" Name="Master Audio Bus"/>
+			</Busses>
+			<GameParameters>
+				<GameParameter Id="822163944" Name="SS_Air_RPM"/>
+				<GameParameter Id="1029930033" Name="SS_Air_Fury"/>
+				<GameParameter Id="1351367891" Name="SS_Air_Fear"/>
+				<GameParameter Id="2648548617" Name="SS_Air_Month"/>
+				<GameParameter Id="3002758120" Name="SS_Air_Freefall"/>
+				<GameParameter Id="3074696722" Name="SS_Air_Size"/>
+				<GameParameter Id="3203397129" Name="SS_Air_TimeOfDay"/>
+				<GameParameter Id="3715662592" Name="SS_Air_Storm"/>
+				<GameParameter Id="3847924954" Name="SS_Air_Presence"/>
+				<GameParameter Id="4160247818" Name="SS_Air_Turbulence"/>
+			</GameParameters>
+			<AcousticTextures>
+				<AcousticTexture Id="504532776" Name="Brick">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="12"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="18"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="23"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="35"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="513139656" Name="Mountain">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="0"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="0"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="0"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="0"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="841620460" Name="Concrete">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="6"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="6"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="6"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="14"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="1755085759" Name="Wood_Deep">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="1"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="8"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="20"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="35"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="1873957695" Name="Anechoic">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="100"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="100"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="100"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="100"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="1970351858" Name="Fabric">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="3"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="13"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="48"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="72"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="2058049674" Name="Wood">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="32"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="25"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="20"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="35"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="2412606308" Name="Carpet">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="46"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="45"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="76"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="100"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="2637588553" Name="Tile">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="67"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="41"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="12"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="0"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="2928161104" Name="Curtains">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="7"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="60"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="0"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="84"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="3195498748" Name="Cork_Tiles">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="14"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="30"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="73"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="100"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="3670307564" Name="Drywall">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="2"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="2"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="2"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="2"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="4168643977" Name="Acoustic_Banner">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="37"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="100"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="100"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="100"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="4262522749" Name="Wood_Bright">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="32"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="25"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="10"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="9"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+			</AcousticTextures>
+		</SoundBank>
+		<SoundBank Id="2218482606" Type="User" Language="SFX" Hash="{A299E81D-9E23-1971-E4C7-EACEC207E1A3}">
+			<ShortName>Default_soundbank</ShortName>
+			<Path>Default_soundbank.bnk</Path>
+			<Media>
+				<File Id="111870353" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>xfchiba_walking_sprinting_2.wav</ShortName>
+					<CachePath>SFX/xfchiba_walking_sprinting_2_7B24374B.wem</CachePath>
+				</File>
+				<File Id="175946782" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ESM_GF_fx_gravel_one_shots_footstep_boots_dry_jumping_crunchy_exterior_1.wav</ShortName>
+					<CachePath>SFX/ESM_GF_fx_gravel_one_shots_footstep_boots_dry_jumping_crunchy_exterior_1_B8ED102C.wem</CachePath>
+				</File>
+				<File Id="244096525" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>xfchiba_walking_sprinting_3.wav</ShortName>
+					<CachePath>SFX/xfchiba_walking_sprinting_3_7C61687F.wem</CachePath>
+				</File>
+				<File Id="352336099" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>xfchiba_walking_sprinting_1.wav</ShortName>
+					<CachePath>SFX/xfchiba_walking_sprinting_1_107B7DA3.wem</CachePath>
+				</File>
+				<File Id="368429757" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ESM_EMDP1_fx_foley_loop_dumping_gravel_sack_bulk_falling.wav</ShortName>
+					<CachePath>SFX/ESM_EMDP1_fx_foley_loop_dumping_gravel_sack_bulk_falling_1460811F.wem</CachePath>
+				</File>
+				<File Id="449433574" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ESM_Land_3_Airy_Whoosh_Pass_By.wav</ShortName>
+					<CachePath>SFX/ESM_Land_3_Airy_Whoosh_Pass_By_30679750.wem</CachePath>
+				</File>
+				<File Id="511112065" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>20241019_SS_RedHood_MAP01-Ambience_V1_2mix.wav_Stereo Out.wav</ShortName>
+					<CachePath>SFX/20241019_SS_RedHood_MAP01-Ambience_V1_2mix.wav_Stereo Out_6E340AAD.wem</CachePath>
+				</File>
+				<File Id="568771729" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Forrest_atmosphere.wav</ShortName>
+					<CachePath>SFX/Forrest_atmosphere_1973FE3E.wem</CachePath>
+				</File>
+				<File Id="643236160" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ESM_Fantasy_Game_Material_Stone_Magic_Debris_Hit_2_Dry_Magic_RPG_Apothecary_Ancient_Medieval_Element_Accent_Impact.wav</ShortName>
+					<CachePath>SFX/ESM_Fantasy_Game_Material_Stone_Magic_Debris_Hit_2_Dry_Magic_RPG_Apothecary_Ancient_Medieval_Element_Accent_Impact_818F3B66.wem</CachePath>
+				</File>
+				<File Id="644015757" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>xfchiba_crouching_2.wav</ShortName>
+					<CachePath>SFX/xfchiba_crouching_2_818F3B66.wem</CachePath>
+				</File>
+				<File Id="689091618" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ESM_FG_nature_loop_ambience_winter_wind_1_snow_gusty_storm_intense.wav</ShortName>
+					<CachePath>SFX/ESM_FG_nature_loop_ambience_winter_wind_1_snow_gusty_storm_intense_44268465.wem</CachePath>
+				</File>
+				<File Id="730329172" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>xfchiba_walking_sprinting_0.wav</ShortName>
+					<CachePath>SFX/xfchiba_walking_sprinting_0_B72AE97E.wem</CachePath>
+				</File>
+				<File Id="740173626" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ESM_War_UI_Source_Hit_Leather_Catchers_Glove_Grab_Hit_06.wav</ShortName>
+					<CachePath>SFX/ESM_War_UI_Source_Hit_Leather_Catchers_Glove_Grab_Hit_06_818F3B66.wem</CachePath>
+				</File>
+				<File Id="763072178" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ESM_GF_fx_gravel_one_shots_footstep_boots_dry_jumping_crunchy_exterior_3.wav</ShortName>
+					<CachePath>SFX/ESM_GF_fx_gravel_one_shots_footstep_boots_dry_jumping_crunchy_exterior_3_9CB682DF.wem</CachePath>
+				</File>
+				<File Id="802950490" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ESM_GF_fx_gravel_one_shots_footstep_boots_dry_jumping_crunchy_exterior_5.wav</ShortName>
+					<CachePath>SFX/ESM_GF_fx_gravel_one_shots_footstep_boots_dry_jumping_crunchy_exterior_5_6920DCBB.wem</CachePath>
+				</File>
+				<File Id="803527269" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ESM_Stone_Debris_Splatter_9_Organic_Elemental_Debris_Shatter_Splatter_Foley_Sound_Design_Source_Rock_.wav</ShortName>
+					<CachePath>SFX/ESM_Stone_Debris_Splatter_9_Organic_Elemental_Debris_Shatter_Splatter_Foley_Sound_Design_Source_Rock__EBC2A9DF.wem</CachePath>
+				</File>
+				<File Id="811143617" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>xfchiba_walking_sprinting_4.wav</ShortName>
+					<CachePath>SFX/xfchiba_walking_sprinting_4_513E182B.wem</CachePath>
+				</File>
+				<File Id="1063940447" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ESM_Wind_Loop_Rocky_Mountian_Steady_Medium_1.wav</ShortName>
+					<CachePath>SFX/ESM_Wind_Loop_Rocky_Mountian_Steady_Medium_1_82B2DF5A.wem</CachePath>
+				</File>
+			</Media>
+			<Plugins>
+				<ShareSets>
+					<Plugin Id="33041549" Name="Compressor_Rocks" LibName="Wwise Compressor" LibId="7077891"/>
+					<Plugin Id="3657550167" Name="New_Parametric_EQ" LibName="Wwise Parametric EQ" LibId="6881283"/>
+				</ShareSets>
+			</Plugins>
+			<Events>
+				<Event Id="2655407367" Name="Crouch">
+					<MediaRefs>
+						<MediaRef Id="644015757"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2512384458" Name="Fall">
+					<MediaRefs>
+						<MediaRef Id="689091618"/>
+						<MediaRef Id="1063940447"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1626612047" Name="Forrest_ambience">
+					<MediaRefs>
+						<MediaRef Id="568771729"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3833651337" Name="Jump">
+					<MediaRefs>
+						<MediaRef Id="763072178"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="674522502" Name="Land">
+					<MediaRefs>
+						<MediaRef Id="449433574"/>
+					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="3657550167"/>
+						</ShareSets>
+					</PluginRefs>
+				</Event>
+				<Event Id="1941804606" Name="LedgeGrab">
+					<MediaRefs>
+						<MediaRef Id="643236160"/>
+						<MediaRef Id="740173626"/>
+						<MediaRef Id="803527269"/>
+					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="33041549"/>
+						</ShareSets>
+					</PluginRefs>
+				</Event>
+				<Event Id="3991942870" Name="Music">
+					<MediaRefs>
+						<MediaRef Id="511112065"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="712161704" Name="Run">
+					<MediaRefs>
+						<MediaRef Id="111870353"/>
+						<MediaRef Id="244096525"/>
+						<MediaRef Id="352336099"/>
+						<MediaRef Id="730329172"/>
+						<MediaRef Id="811143617"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="377821069" Name="WallJump">
+					<MediaRefs>
+						<MediaRef Id="802950490"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3202311090" Name="WallLand">
+					<MediaRefs>
+						<MediaRef Id="175946782"/>
+						<MediaRef Id="368429757"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{B219686B-9BC1-AC40-912E-CE5060B86159}</FileHash>
+</SoundBanksInfo>
