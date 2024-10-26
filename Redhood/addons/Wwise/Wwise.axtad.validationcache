@@ -1,92 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ValidationCache Version="1" SchemaVersion="119">
-	<ValidationCacheItem File="H:\Redhood\Redhood\Wwise\Wwise.wproj" DateLow="1727346295" DateHigh="0"/>
-	<ValidationCacheItem File="H:\Redhood\Redhood\Wwise\Wwise.axtad.wsettings" DateLow="1727363622" DateHigh="0"/>
-	<ValidationCacheItem File="H:\Redhood\Redhood\Wwise\Virtual Acoustics\Factory Acoustic Textures.wwu" DateLow="1727344227" DateHigh="0"/>
-	<ValidationCacheItem File="H:\Redhood\Redhood\Wwise\Virtual Acoustics\Default Work Unit.wwu" DateLow="1727345275" DateHigh="0"/>
-	<ValidationCacheItem File="H:\Redhood\Redhood\Wwise\Triggers\Default Work Unit.wwu" DateLow="1727345275" DateHigh="0"/>
-	<ValidationCacheItem File="H:\Redhood\Redhood\Wwise\Switches\Default Work Unit.wwu" DateLow="1727345275" DateHigh="0"/>
-	<ValidationCacheItem File="H:\Redhood\Redhood\Wwise\States\Default Work Unit.wwu" DateLow="1727345275" DateHigh="0"/>
-	<ValidationCacheItem File="H:\Redhood\Redhood\Wwise\Soundcaster Sessions\Default Work Unit.wwu" DateLow="1727345275" DateHigh="0"/>
-	<ValidationCacheItem File="H:\Redhood\Redhood\Wwise\SoundBanks\Test_2.wwu" DateLow="1727346019" DateHigh="0"/>
-	<ValidationCacheItem File="H:\Redhood\Redhood\Wwise\SoundBanks\Default Work Unit.wwu" DateLow="1727363622" DateHigh="0"/>
-	<ValidationCacheItem File="H:\Redhood\Redhood\Wwise\Queries\Factory Queries.wwu" DateLow="1727344227" DateHigh="0"/>
-	<ValidationCacheItem File="H:\Redhood\Redhood\Wwise\Queries\Default Work Unit.wwu" DateLow="1727345275" DateHigh="0"/>
-	<ValidationCacheItem File="H:\Redhood\Redhood\Wwise\Presets\Factory Spatial Audio.wwu" DateLow="1727344227" DateHigh="0"/>
-	<ValidationCacheItem File="H:\Redhood\Redhood\Wwise\Presets\Factory Reflect.wwu" DateLow="1727344245" DateHigh="0"/>
-	<ValidationCacheItem File="H:\Redhood\Redhood\Wwise\Presets\Default Work Unit.wwu" DateLow="1727345275" DateHigh="0"/>
-	<ValidationCacheItem File="H:\Redhood\Redhood\Wwise\Modulators\Default Work Unit.wwu" DateLow="1727345275" DateHigh="0"/>
-	<ValidationCacheItem File="H:\Redhood\Redhood\Wwise\Mixing Sessions\Default Work Unit.wwu" DateLow="1727345275" DateHigh="0"/>
-	<ValidationCacheItem File="H:\Redhood\Redhood\Wwise\Metadata\Default Work Unit.wwu" DateLow="1727345275" DateHigh="0"/>
-	<ValidationCacheItem File="H:\Redhood\Redhood\Wwise\Master-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1727345275" DateHigh="0"/>
-	<ValidationCacheItem File="H:\Redhood\Redhood\Wwise\Interactive Music Hierarchy\Default Work Unit.wwu" DateLow="1727345275" DateHigh="0"/>
-	<ValidationCacheItem File="H:\Redhood\Redhood\Wwise\Game Parameters\Factory Soundseed Air Game Syncs.wwu" DateLow="1727344246" DateHigh="0"/>
-	<ValidationCacheItem File="H:\Redhood\Redhood\Wwise\Game Parameters\Default Work Unit.wwu" DateLow="1727345275" DateHigh="0"/>
-	<ValidationCacheItem File="H:\Redhood\Redhood\Wwise\Events\Default Work Unit.wwu" DateLow="1727346295" DateHigh="0"/>
-	<ValidationCacheItem File="H:\Redhood\Redhood\Wwise\Effects\Factory Reflect.wwu" DateLow="1727344245" DateHigh="0"/>
-	<ValidationCacheItem File="H:\Redhood\Redhood\Wwise\Effects\Factory McDSP Effects.wwu" DateLow="1727344251" DateHigh="0"/>
-	<ValidationCacheItem File="H:\Redhood\Redhood\Wwise\Effects\Factory Mastering Suite.wwu" DateLow="1727344244" DateHigh="0"/>
-	<ValidationCacheItem File="H:\Redhood\Redhood\Wwise\Effects\Factory iZotope Singleband Distortion.wwu" DateLow="1727344249" DateHigh="0"/>
-	<ValidationCacheItem File="H:\Redhood\Redhood\Wwise\Effects\Factory iZotope Multiband Distortion.wwu" DateLow="1727344249" DateHigh="0"/>
-	<ValidationCacheItem File="H:\Redhood\Redhood\Wwise\Effects\Factory iZotope Hybrid Reverb Effects.wwu" DateLow="1727344249" DateHigh="0"/>
-	<ValidationCacheItem File="H:\Redhood\Redhood\Wwise\Effects\Factory iZotope Filters.wwu" DateLow="1727344249" DateHigh="0"/>
-	<ValidationCacheItem File="H:\Redhood\Redhood\Wwise\Effects\Factory iZotope Dynamics.wwu" DateLow="1727344249" DateHigh="0"/>
-	<ValidationCacheItem File="H:\Redhood\Redhood\Wwise\Effects\Factory iZotope Delay.wwu" DateLow="1727344249" DateHigh="0"/>
-	<ValidationCacheItem File="H:\Redhood\Redhood\Wwise\Effects\Factory iZotope Box Modeler.wwu" DateLow="1727344249" DateHigh="0"/>
-	<ValidationCacheItem File="H:\Redhood\Redhood\Wwise\Effects\Factory Effects.wwu" DateLow="1727344227" DateHigh="0"/>
-	<ValidationCacheItem File="H:\Redhood\Redhood\Wwise\Effects\Factory Auro Headphone.wwu" DateLow="1727344246" DateHigh="0"/>
-	<ValidationCacheItem File="H:\Redhood\Redhood\Wwise\Effects\Default Work Unit.wwu" DateLow="1727345275" DateHigh="0"/>
-	<ValidationCacheItem File="H:\Redhood\Redhood\Wwise\Dynamic Dialogue\Default Work Unit.wwu" DateLow="1727345275" DateHigh="0"/>
-	<ValidationCacheItem File="H:\Redhood\Redhood\Wwise\Conversion Settings\Factory Conversion Settings.wwu" DateLow="1727344227" DateHigh="0"/>
-	<ValidationCacheItem File="H:\Redhood\Redhood\Wwise\Conversion Settings\Default Work Unit.wwu" DateLow="1727345275" DateHigh="0"/>
-	<ValidationCacheItem File="H:\Redhood\Redhood\Wwise\Control Surface Sessions\Default Work Unit.wwu" DateLow="1727345275" DateHigh="0"/>
-	<ValidationCacheItem File="H:\Redhood\Redhood\Wwise\Audio Devices\Default Work Unit.wwu" DateLow="1727345275" DateHigh="0"/>
-	<ValidationCacheItem File="H:\Redhood\Redhood\Wwise\Attenuations\Default Work Unit.wwu" DateLow="1727345275" DateHigh="0"/>
-	<ValidationCacheItem File="H:\Redhood\Redhood\Wwise\Actor-Mixer Hierarchy\Factory Synth One.wwu" DateLow="1727344227" DateHigh="0"/>
-	<ValidationCacheItem File="H:\Redhood\Redhood\Wwise\Actor-Mixer Hierarchy\Factory Soundseed Air Objects.wwu" DateLow="1727344246" DateHigh="0"/>
-	<ValidationCacheItem File="H:\Redhood\Redhood\Wwise\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1727346295" DateHigh="0"/>
-	<ValidationCacheItem File="H:\Redhood\Redhood\addons\Wwise\Wwise.wproj" DateLow="1727713784" DateHigh="0"/>
-	<ValidationCacheItem File="H:\Redhood\Redhood\addons\Wwise\Wwise.axtad.wsettings" DateLow="1727927056" DateHigh="0"/>
-	<ValidationCacheItem File="H:\Redhood\Redhood\addons\Wwise\Virtual Acoustics\Factory Acoustic Textures.wwu" DateLow="1727344227" DateHigh="0"/>
-	<ValidationCacheItem File="H:\Redhood\Redhood\addons\Wwise\Virtual Acoustics\Default Work Unit.wwu" DateLow="1727345275" DateHigh="0"/>
-	<ValidationCacheItem File="H:\Redhood\Redhood\addons\Wwise\Triggers\Default Work Unit.wwu" DateLow="1727345275" DateHigh="0"/>
-	<ValidationCacheItem File="H:\Redhood\Redhood\addons\Wwise\Switches\Default Work Unit.wwu" DateLow="1727345275" DateHigh="0"/>
-	<ValidationCacheItem File="H:\Redhood\Redhood\addons\Wwise\States\Default Work Unit.wwu" DateLow="1727345275" DateHigh="0"/>
-	<ValidationCacheItem File="H:\Redhood\Redhood\addons\Wwise\Soundcaster Sessions\Default Work Unit.wwu" DateLow="1727345275" DateHigh="0"/>
-	<ValidationCacheItem File="H:\Redhood\Redhood\addons\Wwise\SoundBanks\Default Work Unit.wwu" DateLow="1727926761" DateHigh="0"/>
-	<ValidationCacheItem File="H:\Redhood\Redhood\addons\Wwise\Queries\Factory Queries.wwu" DateLow="1727344227" DateHigh="0"/>
-	<ValidationCacheItem File="H:\Redhood\Redhood\addons\Wwise\Queries\Default Work Unit.wwu" DateLow="1727345275" DateHigh="0"/>
-	<ValidationCacheItem File="H:\Redhood\Redhood\addons\Wwise\Presets\Factory Spatial Audio.wwu" DateLow="1727344227" DateHigh="0"/>
-	<ValidationCacheItem File="H:\Redhood\Redhood\addons\Wwise\Presets\Factory Reflect.wwu" DateLow="1727344245" DateHigh="0"/>
-	<ValidationCacheItem File="H:\Redhood\Redhood\addons\Wwise\Presets\Default Work Unit.wwu" DateLow="1727345275" DateHigh="0"/>
-	<ValidationCacheItem File="H:\Redhood\Redhood\addons\Wwise\Modulators\Default Work Unit.wwu" DateLow="1727345275" DateHigh="0"/>
-	<ValidationCacheItem File="H:\Redhood\Redhood\addons\Wwise\Mixing Sessions\Default Work Unit.wwu" DateLow="1727345275" DateHigh="0"/>
-	<ValidationCacheItem File="H:\Redhood\Redhood\addons\Wwise\Metadata\Default Work Unit.wwu" DateLow="1727914276" DateHigh="0"/>
-	<ValidationCacheItem File="H:\Redhood\Redhood\addons\Wwise\Master-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1727345275" DateHigh="0"/>
-	<ValidationCacheItem File="H:\Redhood\Redhood\addons\Wwise\Interactive Music Hierarchy\Default Work Unit.wwu" DateLow="1727345275" DateHigh="0"/>
-	<ValidationCacheItem File="H:\Redhood\Redhood\addons\Wwise\Game Parameters\Factory Soundseed Air Game Syncs.wwu" DateLow="1727344246" DateHigh="0"/>
-	<ValidationCacheItem File="H:\Redhood\Redhood\addons\Wwise\Game Parameters\Default Work Unit.wwu" DateLow="1727345275" DateHigh="0"/>
-	<ValidationCacheItem File="H:\Redhood\Redhood\addons\Wwise\Events\Default Work Unit.wwu" DateLow="1727926761" DateHigh="0"/>
-	<ValidationCacheItem File="H:\Redhood\Redhood\addons\Wwise\Effects\Factory Reflect.wwu" DateLow="1727344245" DateHigh="0"/>
-	<ValidationCacheItem File="H:\Redhood\Redhood\addons\Wwise\Effects\Factory McDSP Effects.wwu" DateLow="1727344251" DateHigh="0"/>
-	<ValidationCacheItem File="H:\Redhood\Redhood\addons\Wwise\Effects\Factory Mastering Suite.wwu" DateLow="1727344244" DateHigh="0"/>
-	<ValidationCacheItem File="H:\Redhood\Redhood\addons\Wwise\Effects\Factory iZotope Singleband Distortion.wwu" DateLow="1727344249" DateHigh="0"/>
-	<ValidationCacheItem File="H:\Redhood\Redhood\addons\Wwise\Effects\Factory iZotope Multiband Distortion.wwu" DateLow="1727344249" DateHigh="0"/>
-	<ValidationCacheItem File="H:\Redhood\Redhood\addons\Wwise\Effects\Factory iZotope Hybrid Reverb Effects.wwu" DateLow="1727344249" DateHigh="0"/>
-	<ValidationCacheItem File="H:\Redhood\Redhood\addons\Wwise\Effects\Factory iZotope Filters.wwu" DateLow="1727344249" DateHigh="0"/>
-	<ValidationCacheItem File="H:\Redhood\Redhood\addons\Wwise\Effects\Factory iZotope Dynamics.wwu" DateLow="1727922917" DateHigh="0"/>
-	<ValidationCacheItem File="H:\Redhood\Redhood\addons\Wwise\Effects\Factory iZotope Delay.wwu" DateLow="1727344249" DateHigh="0"/>
-	<ValidationCacheItem File="H:\Redhood\Redhood\addons\Wwise\Effects\Factory iZotope Box Modeler.wwu" DateLow="1727344249" DateHigh="0"/>
-	<ValidationCacheItem File="H:\Redhood\Redhood\addons\Wwise\Effects\Factory Effects.wwu" DateLow="1727344227" DateHigh="0"/>
-	<ValidationCacheItem File="H:\Redhood\Redhood\addons\Wwise\Effects\Factory Auro Headphone.wwu" DateLow="1727344246" DateHigh="0"/>
-	<ValidationCacheItem File="H:\Redhood\Redhood\addons\Wwise\Effects\Default Work Unit.wwu" DateLow="1727926761" DateHigh="0"/>
-	<ValidationCacheItem File="H:\Redhood\Redhood\addons\Wwise\Dynamic Dialogue\Default Work Unit.wwu" DateLow="1727345275" DateHigh="0"/>
-	<ValidationCacheItem File="H:\Redhood\Redhood\addons\Wwise\Conversion Settings\Factory Conversion Settings.wwu" DateLow="1727344227" DateHigh="0"/>
-	<ValidationCacheItem File="H:\Redhood\Redhood\addons\Wwise\Conversion Settings\Default Work Unit.wwu" DateLow="1727345275" DateHigh="0"/>
-	<ValidationCacheItem File="H:\Redhood\Redhood\addons\Wwise\Control Surface Sessions\Default Work Unit.wwu" DateLow="1727345275" DateHigh="0"/>
-	<ValidationCacheItem File="H:\Redhood\Redhood\addons\Wwise\Audio Devices\Default Work Unit.wwu" DateLow="1727345275" DateHigh="0"/>
-	<ValidationCacheItem File="H:\Redhood\Redhood\addons\Wwise\Attenuations\Default Work Unit.wwu" DateLow="1727345275" DateHigh="0"/>
-	<ValidationCacheItem File="H:\Redhood\Redhood\addons\Wwise\Actor-Mixer Hierarchy\Factory Synth One.wwu" DateLow="1727344227" DateHigh="0"/>
-	<ValidationCacheItem File="H:\Redhood\Redhood\addons\Wwise\Actor-Mixer Hierarchy\Factory Soundseed Air Objects.wwu" DateLow="1727344246" DateHigh="0"/>
-	<ValidationCacheItem File="H:\Redhood\Redhood\addons\Wwise\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1727926979" DateHigh="0"/>
+	<ValidationCacheItem File="H:\Redhood\Redhood\addons\Wwise\Wwise.wproj" DateLow="1729978193" DateHigh="0"/>
+	<ValidationCacheItem File="H:\Redhood\Redhood\addons\Wwise\Virtual Acoustics\Factory Acoustic Textures.wwu" DateLow="1729978193" DateHigh="0"/>
+	<ValidationCacheItem File="H:\Redhood\Redhood\addons\Wwise\Virtual Acoustics\Default Work Unit.wwu" DateLow="1729978193" DateHigh="0"/>
+	<ValidationCacheItem File="H:\Redhood\Redhood\addons\Wwise\Triggers\Default Work Unit.wwu" DateLow="1729978193" DateHigh="0"/>
+	<ValidationCacheItem File="H:\Redhood\Redhood\addons\Wwise\Switches\Default Work Unit.wwu" DateLow="1729978193" DateHigh="0"/>
+	<ValidationCacheItem File="H:\Redhood\Redhood\addons\Wwise\States\Default Work Unit.wwu" DateLow="1729978193" DateHigh="0"/>
+	<ValidationCacheItem File="H:\Redhood\Redhood\addons\Wwise\Soundcaster Sessions\Default Work Unit.wwu" DateLow="1729978193" DateHigh="0"/>
+	<ValidationCacheItem File="H:\Redhood\Redhood\addons\Wwise\SoundBanks\Default Work Unit.wwu" DateLow="1729978193" DateHigh="0"/>
+	<ValidationCacheItem File="H:\Redhood\Redhood\addons\Wwise\Queries\Factory Queries.wwu" DateLow="1729978193" DateHigh="0"/>
+	<ValidationCacheItem File="H:\Redhood\Redhood\addons\Wwise\Queries\Default Work Unit.wwu" DateLow="1729978193" DateHigh="0"/>
+	<ValidationCacheItem File="H:\Redhood\Redhood\addons\Wwise\Presets\Factory Spatial Audio.wwu" DateLow="1729978193" DateHigh="0"/>
+	<ValidationCacheItem File="H:\Redhood\Redhood\addons\Wwise\Presets\Factory Reflect.wwu" DateLow="1729978193" DateHigh="0"/>
+	<ValidationCacheItem File="H:\Redhood\Redhood\addons\Wwise\Presets\Default Work Unit.wwu" DateLow="1729978193" DateHigh="0"/>
+	<ValidationCacheItem File="H:\Redhood\Redhood\addons\Wwise\Modulators\Default Work Unit.wwu" DateLow="1729978192" DateHigh="0"/>
+	<ValidationCacheItem File="H:\Redhood\Redhood\addons\Wwise\Mixing Sessions\Default Work Unit.wwu" DateLow="1729978192" DateHigh="0"/>
+	<ValidationCacheItem File="H:\Redhood\Redhood\addons\Wwise\Metadata\Default Work Unit.wwu" DateLow="1729978192" DateHigh="0"/>
+	<ValidationCacheItem File="H:\Redhood\Redhood\addons\Wwise\Master-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1729978192" DateHigh="0"/>
+	<ValidationCacheItem File="H:\Redhood\Redhood\addons\Wwise\Interactive Music Hierarchy\Default Work Unit.wwu" DateLow="1729978192" DateHigh="0"/>
+	<ValidationCacheItem File="H:\Redhood\Redhood\addons\Wwise\Game Parameters\Factory Soundseed Air Game Syncs.wwu" DateLow="1729978192" DateHigh="0"/>
+	<ValidationCacheItem File="H:\Redhood\Redhood\addons\Wwise\Game Parameters\Default Work Unit.wwu" DateLow="1729978192" DateHigh="0"/>
+	<ValidationCacheItem File="H:\Redhood\Redhood\addons\Wwise\Events\Default Work Unit.wwu" DateLow="1729978192" DateHigh="0"/>
+	<ValidationCacheItem File="H:\Redhood\Redhood\addons\Wwise\Effects\Factory Reflect.wwu" DateLow="1729978192" DateHigh="0"/>
+	<ValidationCacheItem File="H:\Redhood\Redhood\addons\Wwise\Effects\Factory McDSP Effects.wwu" DateLow="1729978192" DateHigh="0"/>
+	<ValidationCacheItem File="H:\Redhood\Redhood\addons\Wwise\Effects\Factory Mastering Suite.wwu" DateLow="1729978192" DateHigh="0"/>
+	<ValidationCacheItem File="H:\Redhood\Redhood\addons\Wwise\Effects\Factory iZotope Singleband Distortion.wwu" DateLow="1729978192" DateHigh="0"/>
+	<ValidationCacheItem File="H:\Redhood\Redhood\addons\Wwise\Effects\Factory iZotope Multiband Distortion.wwu" DateLow="1729978192" DateHigh="0"/>
+	<ValidationCacheItem File="H:\Redhood\Redhood\addons\Wwise\Effects\Factory iZotope Hybrid Reverb Effects.wwu" DateLow="1729978192" DateHigh="0"/>
+	<ValidationCacheItem File="H:\Redhood\Redhood\addons\Wwise\Effects\Factory iZotope Filters.wwu" DateLow="1729978192" DateHigh="0"/>
+	<ValidationCacheItem File="H:\Redhood\Redhood\addons\Wwise\Effects\Factory iZotope Dynamics.wwu" DateLow="1729978192" DateHigh="0"/>
+	<ValidationCacheItem File="H:\Redhood\Redhood\addons\Wwise\Effects\Factory iZotope Delay.wwu" DateLow="1729978192" DateHigh="0"/>
+	<ValidationCacheItem File="H:\Redhood\Redhood\addons\Wwise\Effects\Factory iZotope Box Modeler.wwu" DateLow="1729978192" DateHigh="0"/>
+	<ValidationCacheItem File="H:\Redhood\Redhood\addons\Wwise\Effects\Factory Effects.wwu" DateLow="1729978192" DateHigh="0"/>
+	<ValidationCacheItem File="H:\Redhood\Redhood\addons\Wwise\Effects\Factory Auro Headphone.wwu" DateLow="1729978192" DateHigh="0"/>
+	<ValidationCacheItem File="H:\Redhood\Redhood\addons\Wwise\Effects\Default Work Unit.wwu" DateLow="1729978192" DateHigh="0"/>
+	<ValidationCacheItem File="H:\Redhood\Redhood\addons\Wwise\Dynamic Dialogue\Default Work Unit.wwu" DateLow="1729978192" DateHigh="0"/>
+	<ValidationCacheItem File="H:\Redhood\Redhood\addons\Wwise\Conversion Settings\Factory Conversion Settings.wwu" DateLow="1729978192" DateHigh="0"/>
+	<ValidationCacheItem File="H:\Redhood\Redhood\addons\Wwise\Conversion Settings\Default Work Unit.wwu" DateLow="1729978192" DateHigh="0"/>
+	<ValidationCacheItem File="H:\Redhood\Redhood\addons\Wwise\Control Surface Sessions\Default Work Unit.wwu" DateLow="1729978192" DateHigh="0"/>
+	<ValidationCacheItem File="H:\Redhood\Redhood\addons\Wwise\Audio Devices\Default Work Unit.wwu" DateLow="1729978192" DateHigh="0"/>
+	<ValidationCacheItem File="H:\Redhood\Redhood\addons\Wwise\Attenuations\Default Work Unit.wwu" DateLow="1729978192" DateHigh="0"/>
+	<ValidationCacheItem File="H:\Redhood\Redhood\addons\Wwise\Actor-Mixer Hierarchy\Factory Synth One.wwu" DateLow="1729978192" DateHigh="0"/>
+	<ValidationCacheItem File="H:\Redhood\Redhood\addons\Wwise\Actor-Mixer Hierarchy\Factory Soundseed Air Objects.wwu" DateLow="1729978192" DateHigh="0"/>
+	<ValidationCacheItem File="H:\Redhood\Redhood\addons\Wwise\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1729978192" DateHigh="0"/>
 </ValidationCache>

@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	3157003241	Test			\Default Work Unit\Test	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	730329172	Test	H:\Redhood\Redhood\addons\Wwise\.cache\Windows\SFX\xfchiba_walking_sprinting_0_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Test		81512
+

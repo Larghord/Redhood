@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{744972E5-EDBC-46AC-BF08-40B7D210680F}" SchemaVersion="119">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{744972E5-EDBC-46AC-BF08-40B7D210680F}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="Movement" ID="{D5E210A4-2683-4C8E-B1BC-2D1F389E368C}" ShortID="258503824">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="10"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Event Name="WallJump" ID="{C84C3F07-41D8-467E-98ED-F13AC4F9486A}">
+							<ChildrenList>
+								<Action Name="" ID="{00BAD4DF-6562-4020-9464-49492D614B11}" ShortID="504396099">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Jump_wall" ID="{8759BB4A-B98C-403B-8016-2A643536A541}" WorkUnitID="{93BF6870-99DA-468D-93C3-E61B213062CF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Jump" ID="{7486ED2B-8513-40C5-8179-4687F6FEA064}">
+							<ChildrenList>
+								<Action Name="" ID="{4395AB97-A9A4-4AB0-BE81-527C5E352146}" ShortID="142331133">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Jump_ground" ID="{B3267422-B64B-4A8B-81CB-7C4E85518F22}" WorkUnitID="{93BF6870-99DA-468D-93C3-E61B213062CF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Run" ID="{709D1291-CD22-42D4-A936-6D7CA9E934FC}">
+							<ChildrenList>
+								<Action Name="" ID="{F5306968-8C2F-4F01-AC48-64B7302DDD4E}" ShortID="565081322">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Walk" ID="{8388AC22-05BD-49CA-955B-4F372AA3EAB0}" WorkUnitID="{93BF6870-99DA-468D-93C3-E61B213062CF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Fall" ID="{2B50452C-3C2C-4163-9009-C29A80ABAA83}">
+							<ChildrenList>
+								<Action Name="" ID="{D75BC895-C1C5-4341-B8A9-23BCC02AD2D5}" ShortID="737236958">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Fall Base layer" ID="{A5C8E051-4D0D-4BC7-84ED-E46A20BF513B}" WorkUnitID="{93BF6870-99DA-468D-93C3-E61B213062CF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{526936AA-1E0D-4A06-BB5B-883FAA31B446}" ShortID="700850256">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="0.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Fall Riser" ID="{02D2112C-86D7-4CD5-B693-90F04DBF5B77}" WorkUnitID="{93BF6870-99DA-468D-93C3-E61B213062CF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="LedgeGrab" ID="{71E3124A-F7C8-41EF-9FD6-0A5784C88589}">
+							<ChildrenList>
+								<Action Name="" ID="{03F660EB-D1D5-4E98-BEA2-423D71665BAA}" ShortID="269612052">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Ledge Rocks" ID="{76C90588-05C8-4081-A3AD-2DA78C84F453}" WorkUnitID="{93BF6870-99DA-468D-93C3-E61B213062CF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{DE16566A-1FC5-4D51-966F-AC36A6BF36C3}" ShortID="430931813">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Ledge Transient" ID="{F48E8AEC-5172-414E-BB56-B83E30374246}" WorkUnitID="{93BF6870-99DA-468D-93C3-E61B213062CF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{6E915371-B8AC-404D-8BA9-ACA7E16034A4}" ShortID="64297759">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="3"/>
+										<Property Name="Probability" Type="Real64" Value="12"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Ledge random" ID="{33618622-F604-4A10-A127-1FEB779244B9}" WorkUnitID="{93BF6870-99DA-468D-93C3-E61B213062CF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="WallLand" ID="{044B5183-1193-40AE-9C23-D975BFAD1393}">
+							<ChildrenList>
+								<Action Name="" ID="{04D58323-CC6A-4677-9A03-D9590A92AE51}" ShortID="143403246">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Wall land slide" ID="{11450895-F24B-432A-B2A6-BA7DF51DC243}" WorkUnitID="{93BF6870-99DA-468D-93C3-E61B213062CF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{349E783F-ED51-491E-AA18-1D9074D42999}" ShortID="356726256">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Wall land Transient" ID="{0C96E90B-C65E-4932-B46E-6774FDF87302}" WorkUnitID="{93BF6870-99DA-468D-93C3-E61B213062CF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Crouch" ID="{BF1D17FF-83E5-4979-9A0F-62B09C61E2AC}">
+							<ChildrenList>
+								<Action Name="" ID="{2D6A23B7-1DE7-4F71-9FBD-6B830DB16BDC}" ShortID="753560516">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Crouch" ID="{B8E3A3AB-91E3-4E0D-8AA4-B082DFEF3214}" WorkUnitID="{93BF6870-99DA-468D-93C3-E61B213062CF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Land" ID="{A3CE11D0-ADC4-4EB3-80F2-58F5D85439F2}">
+							<ChildrenList>
+								<Action Name="" ID="{37421646-492A-4CC8-8639-F045C4527B25}" ShortID="323823101">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Land" ID="{AB61D4C1-8F47-458C-968F-47452ED8861E}" WorkUnitID="{93BF6870-99DA-468D-93C3-E61B213062CF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

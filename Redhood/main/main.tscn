@@ -7,8 +7,6 @@
 script = ExtResource("1_3e0f5")
 
 [node name="Forest1" parent="." instance=ExtResource("2_oshje")]
-<<<<<<< Updated upstream
-=======
 
 [node name="AkBank" type="AkBank" parent="."]
 bank = {
@@ -29,8 +27,3 @@ load_on = 1
 [node name="Node" type="Node" parent="."]
 
 [node name="Music" type="AkEvent2D" parent="Node"]
-event = {
-"id": 3991942870,
-"name": "Music"
-}
->>>>>>> Stashed changes

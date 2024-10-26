@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{F9402290-E44C-4761-9017-64407744B4EF}" SchemaVersion="119">
+	<Effects>
+		<WorkUnit Name="Default Work Unit" ID="{F9402290-E44C-4761-9017-64407744B4EF}" PersistMode="Standalone">
+			<ChildrenList>
+				<Effect Name="New_Time_Stretch" ID="{75D9B9B2-040A-4C23-8399-065A799BC369}" PluginName="Wwise Time Stretch" CompanyID="0" PluginID="130" PluginType="3">
+					<PropertyList>
+						<Property Name="TimeStretch" Type="Real32" Value="341"/>
+					</PropertyList>
+				</Effect>
+				<Effect Name="New_Parametric_EQ" ID="{2F13AC23-26C0-4C0D-A732-0624024DFA14}" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+					<PropertyList>
+						<Property Name="FrequencyBand2" Type="Real32" Value="641"/>
+						<Property Name="GainBand1" Type="Real32" Value="6.5"/>
+						<Property Name="GainBand2" Type="Real32" Value="0.5"/>
+					</PropertyList>
+				</Effect>
+			</ChildrenList>
+		</WorkUnit>
+	</Effects>
+</WwiseDocument>

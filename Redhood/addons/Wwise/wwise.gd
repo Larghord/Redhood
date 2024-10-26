@@ -2,28 +2,24 @@ class_name AK
 
 class EVENTS:
 
-	const RUN = 712161704
-	const LEDGEGRAB = 1941804606
-	const FALL = 2512384458
+	const WALLJUMP = 377821069
 	const JUMP = 3833651337
+	const RUN = 712161704
+	const FALL = 2512384458
+	const LEDGEGRAB = 1941804606
 	const WALLLAND = 3202311090
 	const CROUCH = 2655407367
 	const LAND = 674522502
-	const WALLJUMP = 377821069
-	const FORREST_AMBIENCE = 1626612047
-	const MUSIC = 3991942870
 
 	const _dict = {
-		"Run": RUN,
-		"LedgeGrab": LEDGEGRAB,
-		"Fall": FALL,
+		"WallJump": WALLJUMP,
 		"Jump": JUMP,
+		"Run": RUN,
+		"Fall": FALL,
+		"LedgeGrab": LEDGEGRAB,
 		"WallLand": WALLLAND,
 		"Crouch": CROUCH,
-		"Land": LAND,
-		"WallJump": WALLJUMP,
-		"Forrest_ambience": FORREST_AMBIENCE,
-		"Music": MUSIC
+		"Land": LAND
 	}
 
 class STATES:
@@ -36,28 +32,28 @@ class SWITCHES:
 
 class GAME_PARAMETERS:
 
-	const SS_AIR_FREEFALL = 3002758120
 	const SS_AIR_FEAR = 1351367891
-	const SS_AIR_MONTH = 2648548617
 	const SS_AIR_STORM = 3715662592
+	const SS_AIR_FREEFALL = 3002758120
+	const SS_AIR_SIZE = 3074696722
+	const SS_AIR_FURY = 1029930033
 	const SS_AIR_PRESENCE = 3847924954
+	const SS_AIR_MONTH = 2648548617
+	const SS_AIR_RPM = 822163944
 	const SS_AIR_TIMEOFDAY = 3203397129
 	const SS_AIR_TURBULENCE = 4160247818
-	const SS_AIR_SIZE = 3074696722
-	const SS_AIR_RPM = 822163944
-	const SS_AIR_FURY = 1029930033
 
 	const _dict = {
-		"SS_Air_Freefall": SS_AIR_FREEFALL,
 		"SS_Air_Fear": SS_AIR_FEAR,
-		"SS_Air_Month": SS_AIR_MONTH,
 		"SS_Air_Storm": SS_AIR_STORM,
-		"SS_Air_Presence": SS_AIR_PRESENCE,
-		"SS_Air_TimeOfDay": SS_AIR_TIMEOFDAY,
-		"SS_Air_Turbulence": SS_AIR_TURBULENCE,
+		"SS_Air_Freefall": SS_AIR_FREEFALL,
 		"SS_Air_Size": SS_AIR_SIZE,
+		"SS_Air_Fury": SS_AIR_FURY,
+		"SS_Air_Presence": SS_AIR_PRESENCE,
+		"SS_Air_Month": SS_AIR_MONTH,
 		"SS_Air_RPM": SS_AIR_RPM,
-		"SS_Air_Fury": SS_AIR_FURY
+		"SS_Air_TimeOfDay": SS_AIR_TIMEOFDAY,
+		"SS_Air_Turbulence": SS_AIR_TURBULENCE
 	}
 
 class TRIGGERS:
@@ -99,4 +95,3 @@ class AUDIO_DEVICES:
 class EXTERNAL_SOURCES:
 
 	const _dict = {}
-
