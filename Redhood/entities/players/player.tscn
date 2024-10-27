@@ -689,3 +689,15 @@ event = {
 "id": 2655407367,
 "name": "Crouch"
 }
+
+[node name="Slide_Start" type="AkEvent2D" parent="SoundEvents"]
+event = {
+"id": 372282906,
+"name": "Slide_Grass_Start"
+}
+
+[node name="Slide_End" type="AkEvent2D" parent="SoundEvents"]
+event = {
+"id": 3877024505,
+"name": "Slide_Grass_End"
+}

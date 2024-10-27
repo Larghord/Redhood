@@ -9,6 +9,8 @@ extends CharacterBody2D
 @onready var fall_sound = $SoundEvents/Fall
 @onready var jump_sound = $SoundEvents/Jump
 @onready var Run_sound = $SoundEvents/Run
+@onready var slide_start: AkEvent2D = $SoundEvents/Slide_Start
+@onready var slide_end: AkEvent2D = $SoundEvents/Slide_End
 
 @export var MAX_SPEED: float = 700.0
 @export var acceleration: float = 50.0

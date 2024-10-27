@@ -23,3 +23,11 @@ bank = {
 load_on = 1
 
 [node name="AkListener2D" type="AkListener2D" parent="AkBank"]
+
+[node name="Music" type="Node" parent="."]
+
+[node name="Music_Event" type="AkEvent2D" parent="Music"]
+event = {
+"id": 1784391046,
+"name": "Forrest_Music_Calm"
+}

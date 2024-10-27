@@ -715,6 +715,159 @@
 								<ActiveSource Name="xfchiba_crouching_2" ID="{440A76FF-9963-4397-A487-4197A59AFF50}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<Folder Name="Slide" ID="{3E3A5762-5724-49A1-91F0-B9C1FD85CB14}" ShortID="191955994">
+							<ChildrenList>
+								<Sound Name="Slide Grass End" ID="{4D647F29-6C66-4B79-ADDD-DB26C1395609}" ShortID="363810880">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-6</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0547DDF-E7C0-49C9-ABBE-1439092B8821}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2AF9F1E8-04EC-4E5A-8EE2-D01DED10EF3F}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Slide_end" ID="{277391FC-201A-447D-A9F7-36A7A3E49FF5}">
+											<Language>SFX</Language>
+											<AudioFile>Slide_end.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="409055721"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Slide_end" ID="{277391FC-201A-447D-A9F7-36A7A3E49FF5}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Slide Grass Loop" ID="{E5825706-9BD1-4604-B05F-4576802709CA}" ShortID="581716736">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-8</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0547DDF-E7C0-49C9-ABBE-1439092B8821}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2AF9F1E8-04EC-4E5A-8EE2-D01DED10EF3F}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Slide_loop" ID="{BA8FB562-5938-4058-AED2-17A036B4AC42}">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="8.01138807506326"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="14.7697294226872"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Slide_loop.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="610952777"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Slide_loop" ID="{BA8FB562-5938-4058-AED2-17A036B4AC42}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</Folder>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Ambience" ID="{0D384F4A-DB12-4BFA-8750-86CCCDDC4F65}" ShortID="1003789174">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="2"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Sound Name="Forrest Ambience" ID="{6ABBAE02-D719-4B00-9F5C-B6C566F9EBFE}" ShortID="923009053">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-22</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0547DDF-E7C0-49C9-ABBE-1439092B8821}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2AF9F1E8-04EC-4E5A-8EE2-D01DED10EF3F}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Forrest_atmosphere" ID="{D9088BD2-1D5B-4F8E-926F-5E68586538BF}">
+									<PropertyList>
+										<Property Name="LoopBegin" Type="Real64" Value="5.08658540649855"/>
+										<Property Name="LoopEnd" Type="Real64" Value="130.783483369487"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Forrest_atmosphere.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="620959188"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Forrest_atmosphere" ID="{D9088BD2-1D5B-4F8E-926F-5E68586538BF}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Music" ID="{1BC12977-C530-48D5-B7C0-C6283A141CA5}" ShortID="1073996">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="11"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Sound Name="Forrest Music Calm" ID="{690ABCEF-4B6F-48AF-A196-B6CA38CF1B7A}" ShortID="386404405">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-21</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0547DDF-E7C0-49C9-ABBE-1439092B8821}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2AF9F1E8-04EC-4E5A-8EE2-D01DED10EF3F}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="20241019_SS_RedHood_MAP01-Ambience_V1_2mix_wav_Stereo Out" ID="{71D97316-5F10-4F90-8044-7004FEDCC15E}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.32580819110774"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="114.842692290311"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>20241019_SS_RedHood_MAP01-Ambience_V1_2mix.wav_Stereo Out.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="706669504"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="20241019_SS_RedHood_MAP01-Ambience_V1_2mix_wav_Stereo Out" ID="{71D97316-5F10-4F90-8044-7004FEDCC15E}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>

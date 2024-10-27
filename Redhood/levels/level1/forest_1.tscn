@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=4 uid="uid://cnjp71l5duvsj"]
+[gd_scene load_steps=9 format=4 uid="uid://cnjp71l5duvsj"]
 
 [ext_resource type="Texture2D" uid="uid://bqmfweuxx53li" path="res://assets/world/world1/World1.png" id="1_6hu47"]
+[ext_resource type="Script" path="res://levels/level1/forest_1.gd" id="1_xxxsj"]
 [ext_resource type="PackedScene" uid="uid://pbattpuig1yt" path="res://entities/players/player.tscn" id="2_xc366"]
 [ext_resource type="Texture2D" uid="uid://dfitj8gh0fly1" path="res://assets/world/world1/TempBackground.png" id="3_vh2h4"]
 [ext_resource type="PackedScene" uid="uid://dymmm2tjh5gkt" path="res://assets/tools/wall_land_zone/wall_land_zone.tscn" id="4_62i6n"]
@@ -176,6 +177,7 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_lmlav")
 
 [node name="Forest1" type="Node2D"]
+script = ExtResource("1_xxxsj")
 
 [node name="TileMapLayers" type="Node2D" parent="."]
 position = Vector2(-315, 19)
@@ -256,3 +258,11 @@ offset_right = -9.9
 offset_bottom = -11.1
 scale = Vector2(2.548, 2.532)
 color = Color(0.403922, 1, 1, 0.286275)
+
+[node name="Ambience" type="Node" parent="."]
+
+[node name="Ambience_Event" type="AkEvent2D" parent="Ambience"]
+event = {
+"id": 1626612047,
+"name": "Forrest_Ambience"
+}

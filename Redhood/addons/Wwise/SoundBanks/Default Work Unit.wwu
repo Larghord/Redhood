@@ -5,14 +5,9 @@
 			<ChildrenList>
 				<SoundBank Name="Default_soundbank" ID="{96A0C959-C111-4347-BD0F-8F6BE4A9D84F}">
 					<ObjectInclusionList>
-						<ObjectRef Name="WallLand" ID="{044B5183-1193-40AE-9C23-D975BFAD1393}" WorkUnitID="{744972E5-EDBC-46AC-BF08-40B7D210680F}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Jump" ID="{7486ED2B-8513-40C5-8179-4687F6FEA064}" WorkUnitID="{744972E5-EDBC-46AC-BF08-40B7D210680F}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Fall" ID="{2B50452C-3C2C-4163-9009-C29A80ABAA83}" WorkUnitID="{744972E5-EDBC-46AC-BF08-40B7D210680F}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="LedgeGrab" ID="{71E3124A-F7C8-41EF-9FD6-0A5784C88589}" WorkUnitID="{744972E5-EDBC-46AC-BF08-40B7D210680F}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Run" ID="{709D1291-CD22-42D4-A936-6D7CA9E934FC}" WorkUnitID="{744972E5-EDBC-46AC-BF08-40B7D210680F}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="WallJump" ID="{C84C3F07-41D8-467E-98ED-F13AC4F9486A}" WorkUnitID="{744972E5-EDBC-46AC-BF08-40B7D210680F}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Crouch" ID="{BF1D17FF-83E5-4979-9A0F-62B09C61E2AC}" WorkUnitID="{744972E5-EDBC-46AC-BF08-40B7D210680F}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Land" ID="{A3CE11D0-ADC4-4EB3-80F2-58F5D85439F2}" WorkUnitID="{744972E5-EDBC-46AC-BF08-40B7D210680F}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Ambience" ID="{A8FAD2BD-ED7B-41B8-9192-8F22B45481B0}" WorkUnitID="{744972E5-EDBC-46AC-BF08-40B7D210680F}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Music" ID="{5363F508-5DEE-443C-890E-785B37C87C22}" WorkUnitID="{744972E5-EDBC-46AC-BF08-40B7D210680F}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Movement" ID="{D5E210A4-2683-4C8E-B1BC-2D1F389E368C}" WorkUnitID="{744972E5-EDBC-46AC-BF08-40B7D210680F}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

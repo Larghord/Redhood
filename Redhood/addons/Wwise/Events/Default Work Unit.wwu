@@ -132,6 +132,80 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Folder Name="Slide" ID="{D751604C-654C-49BA-869E-0C93D2521EBD}" ShortID="631786256">
+							<ChildrenList>
+								<Event Name="Slide_Grass_Start" ID="{E410805B-161F-4BC5-B247-ACE262B687C2}">
+									<ChildrenList>
+										<Action Name="" ID="{B43FC724-60A6-46D3-AC5A-01882401FAB5}" ShortID="556756832">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Slide Grass Loop" ID="{E5825706-9BD1-4604-B05F-4576802709CA}" WorkUnitID="{93BF6870-99DA-468D-93C3-E61B213062CF}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Slide_Grass_End" ID="{C3046B07-357B-4F8F-A62C-EA4C44478084}">
+									<ChildrenList>
+										<Action Name="" ID="{C2290927-5069-48F0-A7D7-54D297E88878}" ShortID="932952111">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Slide Grass Loop" ID="{E5825706-9BD1-4604-B05F-4576802709CA}" WorkUnitID="{93BF6870-99DA-468D-93C3-E61B213062CF}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{4B8C9040-6B72-47F0-BC98-00837AA29612}" ShortID="197607353">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Slide Grass End" ID="{4D647F29-6C66-4B79-ADDD-DB26C1395609}" WorkUnitID="{93BF6870-99DA-468D-93C3-E61B213062CF}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Music" ID="{5363F508-5DEE-443C-890E-785B37C87C22}" ShortID="654666475">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="11"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Event Name="Forrest_Music_Calm" ID="{198D0226-1F73-439D-835E-FD7CD6AD2811}">
+							<ChildrenList>
+								<Action Name="" ID="{24CEB4FC-2BE6-4EDF-BB5D-8AD417D8B2F9}" ShortID="952341569">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Forrest Music Calm" ID="{690ABCEF-4B6F-48AF-A196-B6CA38CF1B7A}" WorkUnitID="{93BF6870-99DA-468D-93C3-E61B213062CF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Ambience" ID="{A8FAD2BD-ED7B-41B8-9192-8F22B45481B0}" ShortID="164455964">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="1"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Event Name="Forrest_Ambience" ID="{E032CF80-83D6-4EB4-8615-2F047E48C116}">
+							<ChildrenList>
+								<Action Name="" ID="{11C97662-7315-4C45-8E8A-B94A76141CEC}" ShortID="529952280">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Forrest Ambience" ID="{6ABBAE02-D719-4B00-9F5C-B6C566F9EBFE}" WorkUnitID="{93BF6870-99DA-468D-93C3-E61B213062CF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>

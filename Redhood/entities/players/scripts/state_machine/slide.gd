@@ -10,6 +10,7 @@ extends State
 func enter() -> void:
 	animation_name = "slide"
 	parent.motion.x = parent.velocity.x * 1.4
+	parent.slide_start.post_event()
 	super()
 
 func process_physics(_delta: float) -> State:
@@ -29,5 +30,5 @@ func process_physics(_delta: float) -> State:
 	
 	if Input.is_action_pressed("jump"):
 		return jump_state
-	
 	return null
+	
